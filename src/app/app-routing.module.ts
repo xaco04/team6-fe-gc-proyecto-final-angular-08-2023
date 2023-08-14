@@ -1,10 +1,18 @@
 import { NgModule } from '@angular/core';
+import { FormsModule } from '@angular/forms';
 import { RouterModule, Routes } from '@angular/router';
 
-const routes: Routes = [];
+import { DashboardAdminComponent } from './components/admin/dashboard-admin/dashboard-admin.component';
+
+const routes: Routes = [
+  {
+    path: 'dashboard-admin',
+    component: DashboardAdminComponent
+  }
+];
 
 @NgModule({
-  imports: [RouterModule.forRoot(routes)],
+  imports: [RouterModule.forRoot(routes),FormsModule],
   exports: [RouterModule]
 })
 export class AppRoutingModule { }
