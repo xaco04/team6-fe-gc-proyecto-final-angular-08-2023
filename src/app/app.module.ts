@@ -23,13 +23,15 @@ import { MdbValidationModule } from 'mdb-angular-ui-kit/validation';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { DashboardAdminComponent } from './components/admin/dashboard-admin/dashboard-admin.component';
 import { UsrManagementListAdminComponent } from './components/admin/usr-management-list-admin/usr-management-list-admin.component';
+import { UsrManagementAddAdminComponent } from './components/admin/usr-management-add-admin/usr-management-add-admin.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     SidebarAdminComponent,
     DashboardAdminComponent,
-    UsrManagementListAdminComponent
+    UsrManagementListAdminComponent,
+    UsrManagementAddAdminComponent
   ],
   imports: [
     BrowserModule,

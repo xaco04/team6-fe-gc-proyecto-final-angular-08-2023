@@ -4,6 +4,7 @@ import { RouterModule, Routes } from '@angular/router';
 
 import { DashboardAdminComponent } from './components/admin/dashboard-admin/dashboard-admin.component';
 import { UsrManagementListAdminComponent } from './components/admin/usr-management-list-admin/usr-management-list-admin.component';
+import { UsrManagementAddAdminComponent } from './components/admin/usr-management-add-admin/usr-management-add-admin.component';
 
 const routes: Routes = [
   {
@@ -13,6 +14,10 @@ const routes: Routes = [
   {
     path: 'usrManagement-list-admin',
     component: UsrManagementListAdminComponent
+  },
+  {
+    path: 'usrManagement-add-admin',
+    component: UsrManagementAddAdminComponent
   }
 ];
 
