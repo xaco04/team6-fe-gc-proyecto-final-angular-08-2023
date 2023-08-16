@@ -1,4 +1,3 @@
-
 .title {
     margin-left: 5vw;
 }
@@ -18,7 +17,13 @@
 .form-group div input{
     margin-left: 2vw;
 }
+.campos{
+    margin-left: 100px;
 
+}
 .parametros{
     display: flex;
+}
+.check {
+    margin-left: none;
 }

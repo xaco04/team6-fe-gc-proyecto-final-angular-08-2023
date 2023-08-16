@@ -3,39 +3,48 @@
         <h1 class="h1 text-primary">Gestión de Usuarios</h1>
     </div>
 </nav>
+
 <div class="container mt-3">
     <div class="cont-form">
-        <h1>Añadir Nuevo Usuario</h1>
-        <br>
+        <h1>Modificar Usuario</h1>
         <form>
             <div class="form-group row">
                 <label for="inputNombreUsuario" class="col-sm-2 col-form-label">Nombre de Usuario</label>
                 <div class="parametros col-sm-10">
-                    <input type="text" class="form-control" id="inputNombreUsuario" >
+                    <input type="text" class="form-control" id="inputNombreUsuario" [disabled]="!editNombreUsuario">
+                    <input class="check" type="checkbox" (change)="toggleEditNombreUsuario()">
                 </div>
+                
             </div>
             <div class="form-group row">
                 <label for="inputEmail" class="col-sm-2 col-form-label">Email</label>
                 <div class="parametros col-sm-10">
-                    <input type="email" class="form-control" id="inputEmail" >
+                    <input type="email" class="form-control" id="inputEmail" [disabled]="!editEmail">
+                    <input class="check" type="checkbox" (change)="toggleEditEmail()">
+
                 </div>
             </div>
             <div class="form-group row">
                 <label for="inputNombre" class="col-sm-2 col-form-label">Nombre</label>
                 <div class="parametros col-sm-10">
-                    <input type="text" class="form-control" id="inputNombre" >
+                    <input type="text" class="form-control" id="inputNombre" [disabled]="!editNombre" >
+                    <input class="check" type="checkbox" (change)="toggleEditNombre()">
+
                 </div>
             </div>
             <div class="form-group row">
                 <label for="inputApellidos" class="col-sm-2 col-form-label">Apellidos</label>
                 <div class="parametros col-sm-10">
-                    <input type="text" class="form-control" id="inputApellidos" >
+                    <input type="text" class="form-control" id="inputApellidos" [disabled]="!editApellidos">
+                    <input class="check" type="checkbox" (change)="toggleEditApellidos()">
+
                 </div>
             </div>
             <div class="form-group row">
                 <label for="inputPassword" class="col-sm-2 col-form-label">Contraseña</label>
                 <div class="parametros col-sm-10">
-                    <input type="password" class="form-control" id="inputPassword" >
+                    <input type="password" class="form-control" id="inputPassword" [disabled]="!editContrasena">
+                    <input class="check" type="checkbox" (change)="toggleEditContrasena()">
                 </div>
             </div>
             <fieldset class="form-group">
@@ -71,7 +80,7 @@
             </fieldset>
             <div class="form-group row">
                 <div class="col-sm-10">
-                    <button type="submit" class="btn btn-primary">Añadir Nuevo Usuario</button>
+                    <button type="submit" class="btn btn-primary">Modificar Usuario</button>
                 </div>
             </div>
         </form>
