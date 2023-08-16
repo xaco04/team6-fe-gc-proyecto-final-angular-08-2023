@@ -1,0 +1,24 @@
+
+.title {
+    margin-left: 5vw;
+}
+
+
+.cont-form {
+    width: 60vw;
+    margin: 0 auto; /* Centra horizontalmente */
+}
+.form-control {
+    width: 450px; /* Ajusta el valor según tus preferencias */
+}
+
+.form-group {
+    margin-bottom: 2vw;
+}
+.form-group div input{
+    margin-left: 2vw;
+}
+
+.parametros{
+    display: flex;
+}
