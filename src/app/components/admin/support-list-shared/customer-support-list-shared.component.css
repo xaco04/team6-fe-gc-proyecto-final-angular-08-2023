@@ -1,6 +1,18 @@
 .title {
   margin-left: 5vw;
 }
+.navbar {
+  border-top-right-radius: 10px ;
+  border-top-left-radius: 10px;
+}
+
+
+.custom-cont{
+  background-image: url(../../../../assets/background-admin.png);
+  border-radius: 10px;
+  height: 100%;
+
+}
 
 .custom-parameters {
   display: flex;
