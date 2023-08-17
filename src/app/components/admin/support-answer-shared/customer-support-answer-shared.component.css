@@ -1,0 +1,14 @@
+
+.navbar {
+    border-top-right-radius: 10px ;
+    border-top-left-radius: 10px;
+}
+.title {
+    margin-left: 5vw;
+}
+.custom-cont{
+    background-image: url(../../../../assets/background-admin.png);
+    border-radius: 10px;
+    height: 100%;
+
+}

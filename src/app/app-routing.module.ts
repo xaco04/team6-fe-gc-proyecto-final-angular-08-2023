@@ -5,6 +5,7 @@ import { RouterModule, Routes } from '@angular/router';
 import { DashboardAdminComponent } from './components/admin/dashboard-admin/dashboard-admin.component';
 import { UsrManagementListAdminComponent } from './components/admin/usr-management-list-admin/usr-management-list-admin.component';
 import { CustomerSupportListSharedComponent } from './components/admin/support-list-shared/customer-support-list-shared.component';
+import { CustomerSupportAnswerSharedComponent } from './components/admin/support-answer-shared/customer-support-answer-shared.component';
 
 const routes: Routes = [
   {
@@ -18,6 +19,11 @@ const routes: Routes = [
   {
     path: 'customerSupport-list-shared',
     component: CustomerSupportListSharedComponent
+  }
+  ,
+  {
+    path: 'customerSupport-answer-shared',
+    component: CustomerSupportAnswerSharedComponent
   }
 ];
 

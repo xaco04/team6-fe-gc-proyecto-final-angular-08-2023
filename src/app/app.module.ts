@@ -24,6 +24,7 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { DashboardAdminComponent } from './components/admin/dashboard-admin/dashboard-admin.component';
 import { UsrManagementListAdminComponent } from './components/admin/usr-management-list-admin/usr-management-list-admin.component';
 import { CustomerSupportListSharedComponent } from './components/admin/support-list-shared/customer-support-list-shared.component';
+import { CustomerSupportAnswerSharedComponent } from './components/admin/support-answer-shared/customer-support-answer-shared.component';
 
 @NgModule({
   declarations: [
@@ -31,7 +32,8 @@ import { CustomerSupportListSharedComponent } from './components/admin/support-l
     SidebarAdminComponent,
     DashboardAdminComponent,
     UsrManagementListAdminComponent,
-    CustomerSupportListSharedComponent
+    CustomerSupportListSharedComponent,
+    CustomerSupportAnswerSharedComponent,
   ],
   imports: [
     BrowserModule,
