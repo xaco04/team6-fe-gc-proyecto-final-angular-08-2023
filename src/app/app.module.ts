@@ -27,6 +27,7 @@ import { CustomerSupportListSharedComponent } from './components/admin/support-l
 import { UsrManagementAddAdminComponent } from './components/admin/usr-management-add-admin/usr-management-add-admin.component';
 import { UsrManagementModifyAdminComponent } from './components/admin/usr-management-modify-admin/usr-management-modify-admin.component';
 import { CustomerSupportAnswerSharedComponent } from './components/admin/support-answer-shared/customer-support-answer-shared.component';
+import { ProfileAdminComponent } from './components/admin/profile-admin/profile-admin.component';
 
 @NgModule({
   declarations: [
@@ -38,6 +39,7 @@ import { CustomerSupportAnswerSharedComponent } from './components/admin/support
     UsrManagementAddAdminComponent,
     UsrManagementModifyAdminComponent,
     CustomerSupportAnswerSharedComponent,
+    ProfileAdminComponent
   ],
   imports: [
     BrowserModule,

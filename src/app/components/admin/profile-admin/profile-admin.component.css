@@ -1,0 +1,22 @@
+
+.profile-button {
+    box-shadow: none;
+    border: none
+}
+
+
+.custom-cont{
+    background-image: url(../../../../assets/Background2.png);
+    border-radius: 10px;
+    height: 100%;
+
+}
+
+.title {
+    margin-left: 5vw;
+}
+
+.navbar {
+    border-top-right-radius: 10px ;
+    border-top-left-radius: 10px;
+}
