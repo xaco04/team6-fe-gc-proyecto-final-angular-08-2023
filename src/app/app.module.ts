@@ -22,12 +22,16 @@ import { MdbTooltipModule } from 'mdb-angular-ui-kit/tooltip';
 import { MdbValidationModule } from 'mdb-angular-ui-kit/validation';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { DashboardAdminComponent } from './components/admin/dashboard-admin/dashboard-admin.component';
+import { RewardMUsrAdminComponent } from './components/admin/reward-m-usr-admin/reward-m-usr-admin.component';
+import { PriceSharedComponent } from './components/shared/price-shared/price-shared.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     SidebarAdminComponent,
-    DashboardAdminComponent
+    DashboardAdminComponent,
+    RewardMUsrAdminComponent,
+    PriceSharedComponent
   ],
   imports: [
     BrowserModule,

@@ -1,0 +1,20 @@
+
+.price_container{
+
+
+    background-position: center;
+    background-size: cover;
+}
+
+.price{
+
+    width: 18em;
+    height: 45vh;
+
+    background-color: red;
+}
+
+
+
+
+
