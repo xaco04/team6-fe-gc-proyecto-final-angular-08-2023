@@ -9,6 +9,7 @@ import { UsrManagementAddAdminComponent } from './components/admin/usr-managemen
 import { UsrManagementModifyAdminComponent } from './components/admin/usr-management-modify-admin/usr-management-modify-admin.component';
 import { CustomerSupportAnswerSharedComponent } from './components/admin/support-answer-shared/customer-support-answer-shared.component';
 import { ProfileAdminComponent } from './components/admin/profile-admin/profile-admin.component';
+import { AnalysisListAdminComponent } from './components/admin/analysis-list-admin/analysis-list-admin.component';
 
 const routes: Routes = [
   {
@@ -39,7 +40,12 @@ const routes: Routes = [
   {
     path: 'profile-admin',
     component: ProfileAdminComponent
+  },
+  {
+    path: 'analysis-list-admin',
+    component: AnalysisListAdminComponent
   }
+
 ];
 
 @NgModule({
