@@ -1,12 +1,20 @@
-<div class="container price_container d-flex flex-column justify-content-around align-items-center">
-    <div class="row">
-        <div class="col">
-            <div class="card price" style="width: 18em;">
-                <img src="{{price.imagen}}" class="card-img-top" alt="...">
-            <div class="card-body">
-                <h5 class="card-title text-center">{{price.nombre}}</h5>
-                <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                <a href="#" class="btn btn-primary">Canjear</a>
+<div class="container-fluid price_container d-flex flex-column justify-content-around align-items-center" style="background-image: url('{{price.imagen}}');"> 
+    <div class="row hola">
+        <div class="col price d-flex flex-column justify-content-around align-items-center">
+            <div class="row h-25">
+                <div class="col d-flex justify-content-center align-items-end">
+                    <h2 class="m-0 fs-2">{{price.nombre}}</h2>
+                </div>
+            </div>
+            <div class="row h-50 w-75">
+                <div class="col d-flex justify-content-center align-items-center">
+                    <p class="m-0">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                </div>
+            </div>
+            <div class="row h-25 w-75">
+                <div class="col d-flex justify-content-center align-items-center">
+                    <button class="price_button w-100 fs-4 btn btn-primary">Canjear</button>
+                </div>
             </div>
         </div>
     </div>
