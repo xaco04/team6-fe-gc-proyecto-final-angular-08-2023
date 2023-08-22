@@ -3,7 +3,7 @@
     margin-left: 5vw;
 }
 .custom-cont{
-    background-image: url(../../../../assets/Background2.png);
+    background-image: url(../../../../assets/background4.png);
     border-radius: 10px;
     height: 100%;
 
@@ -15,9 +15,11 @@
 }
 
 .cont-form {
-    width: 60vw;
+    width: 50vw;
     margin: 0 auto; /* Centra horizontalmente */
 }
+
+
 .form-control {
     width: 450px; /* Ajusta el valor según tus preferencias */
 }
@@ -28,6 +30,14 @@
 .form-group div input{
     margin-left: 2vw;
 }
+
+.form-group div select{
+    margin-left: 2vw;
+}
+
+
+
+
 
 .parametros{
     display: flex;

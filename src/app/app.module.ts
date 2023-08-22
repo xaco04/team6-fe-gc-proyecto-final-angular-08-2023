@@ -29,6 +29,8 @@ import { UsrManagementModifyAdminComponent } from './components/admin/usr-manage
 import { CustomerSupportAnswerSharedComponent } from './components/admin/support-answer-shared/customer-support-answer-shared.component';
 import { ProfileAdminComponent } from './components/admin/profile-admin/profile-admin.component';
 import { AnalysisListAdminComponent } from './components/admin/analysis-list-admin/analysis-list-admin.component';
+import { RewardMUsrAdminComponent } from './components/admin/reward-m-usr-admin/reward-m-usr-admin.component';
+import { PriceSharedComponent } from './components/shared/price-shared/price-shared.component';
 
 @NgModule({
   declarations: [
@@ -41,7 +43,9 @@ import { AnalysisListAdminComponent } from './components/admin/analysis-list-adm
     UsrManagementModifyAdminComponent,
     CustomerSupportAnswerSharedComponent,
     ProfileAdminComponent,
-    AnalysisListAdminComponent
+    AnalysisListAdminComponent,
+    RewardMUsrAdminComponent,
+    PriceSharedComponent
   ],
   imports: [
     BrowserModule,

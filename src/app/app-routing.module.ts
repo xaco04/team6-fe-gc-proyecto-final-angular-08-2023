@@ -10,6 +10,7 @@ import { UsrManagementModifyAdminComponent } from './components/admin/usr-manage
 import { CustomerSupportAnswerSharedComponent } from './components/admin/support-answer-shared/customer-support-answer-shared.component';
 import { ProfileAdminComponent } from './components/admin/profile-admin/profile-admin.component';
 import { AnalysisListAdminComponent } from './components/admin/analysis-list-admin/analysis-list-admin.component';
+import { RewardMUsrAdminComponent } from './components/admin/reward-m-usr-admin/reward-m-usr-admin.component';
 
 const routes: Routes = [
   {
@@ -31,6 +32,10 @@ const routes: Routes = [
   {
     path: 'usrManagement-modify-admin',
     component: UsrManagementModifyAdminComponent
+  },
+  {
+    path: 'rewarmanagement-musr-admin',
+    component: RewardMUsrAdminComponent
   }
   ,
   {
