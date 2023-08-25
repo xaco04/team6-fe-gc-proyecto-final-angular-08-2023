@@ -31,6 +31,7 @@ import { ProfileAdminComponent } from './components/admin/profile-admin/profile-
 import { AnalysisListAdminComponent } from './components/admin/analysis-list-admin/analysis-list-admin.component';
 import { RewardMUsrAdminComponent } from './components/admin/reward-m-usr-admin/reward-m-usr-admin.component';
 import { PriceSharedComponent } from './components/shared/price-shared/price-shared.component';
+import { UserSidebarComponent } from './user/user-sidebar/user-sidebar.component';
 
 @NgModule({
   declarations: [
@@ -45,7 +46,8 @@ import { PriceSharedComponent } from './components/shared/price-shared/price-sha
     ProfileAdminComponent,
     AnalysisListAdminComponent,
     RewardMUsrAdminComponent,
-    PriceSharedComponent
+    PriceSharedComponent,
+    UserSidebarComponent
   ],
   imports: [
     BrowserModule,

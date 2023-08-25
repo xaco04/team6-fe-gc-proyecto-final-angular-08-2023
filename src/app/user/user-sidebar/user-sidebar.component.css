@@ -1,0 +1,32 @@
+.logo_gc{
+
+    height: 15vh;
+}
+
+.sidebar_menu_options{
+
+    background-color: #0052AB;
+}
+
+.menu_option{
+
+    height: 6vh;
+
+    color: white;
+
+    border-bottom: 0.1em solid white;
+}
+
+.menu_option:hover i{
+
+    animation-name: menu_hover;
+    animation-duration: 0.4s;
+    animation-timing-function: ease-in;
+    animation-fill-mode: forwards;
+}
+
+@keyframes menu_hover {
+    
+    from { font-size: 1em; }
+    to { font-size: 1.2em; }
+}
