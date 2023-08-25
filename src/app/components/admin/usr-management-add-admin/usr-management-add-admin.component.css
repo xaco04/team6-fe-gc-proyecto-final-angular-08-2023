@@ -14,15 +14,15 @@
     border-top-left-radius: 10px;
 }
 
+.full-height {
+    height: 85vh;
+}
+
 .cont-form {
-    width: 50vw;
     margin: 0 auto; /* Centra horizontalmente */
 }
 
 
-.form-control {
-    width: 450px; /* Ajusta el valor según tus preferencias */
-}
 
 .form-group {
     margin-bottom: 2vw;
@@ -35,10 +35,3 @@
     margin-left: 2vw;
 }
 
-
-
-
-
-.parametros{
-    display: flex;
-}

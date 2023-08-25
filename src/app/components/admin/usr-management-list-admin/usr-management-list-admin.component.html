@@ -2,7 +2,7 @@
 
     <nav class="navbar navbar-dark bg-dark ">
         <div class="title">
-            <h1 class="h1 text-primary">Listado de Usuarios del Sistema</h1>
+            <h1 class="h1" style="color: #c7d5e0;">Listado de Usuarios del Sistema</h1>
         </div>
     </nav>
 
@@ -44,123 +44,34 @@
                 <thead>
                     <tr>
                         <th scope="col" class="text-start">ID <i class="bi bi-arrow-down-up text-secondary float-end"></i></th>
-                        <th scope="col" class="text-start">Email <i class="bi bi-arrow-down-up text-secondary float-end"></i></th>
+                        <th scope="col" class="text-start">Status <i class="bi bi-arrow-down-up text-secondary float-end"></i></th>
                         <th scope="col" class="text-start">Nombre <i class="bi bi-arrow-down-up text-secondary float-end"></i></th>
                         <th scope="col" class="text-start d-none d-md-table-cell">Apellidos <i class="bi bi-arrow-down-up text-secondary float-end"></i></th>
-                        <th scope="col" class="text-start">Alias<i class="bi bi-arrow-down-up text-secondary float-end"></i></th>
-                        <th scope="col" class="text-start">Departamento <i class="bi bi-arrow-down-up text-secondary float-end"></i></th>
+                        <th scope="col" class="text-start">Username<i class="bi bi-arrow-down-up text-secondary float-end"></i></th>
+                        <th scope="col" class="text-start">Password <i class="bi bi-arrow-down-up text-secondary float-end"></i></th>
                         <th scope="col" class="text-start">Acción <i class="bi bi-arrow-down-up text-secondary float-end"></i></th>
                     </tr>
             </thead>
             <tbody>
-                <tr>
-                    <th scope="row">1</th>
-                    <td>administrador@grupocastilla.cat</td>
-                    <td>Administrador</td>
-                    <td>Administrador</td>
-                    <td>admin</td>
-                    <td class="d-none d-md-table-cell">Team 6</td>
-                    <td class="d-flex justify-content-center">
-                        <div
-                            class="btn-group"
-                            role="group"
-                            aria-label="Basic mixed styles example"
-                        >
-                            <button routerLink="/usrManagement-modify-admin" type="button" class="btn btn-success">
-                                <i class="bi bi-pencil-square"></i>
-                            </button>
-                            <button type="button" class="btn btn-danger">
-                                <i class="bi bi-trash-fill"></i>
-                            </button>
-                        </div>
-                    </td>
-                </tr>
-                <tr>
-                    <th scope="row">2</th>
-                    <td>administrador@grupocastilla.cat</td>
-                    <td>Administrador</td>
-                    <td>Administrador</td>
-                    <td>admin</td>
-                    <td class="d-none d-md-table-cell">Team 6</td>
-                    <td class="d-flex justify-content-center">
-                        <div
-                            class="btn-group"
-                            role="group"
-                            aria-label="Basic mixed styles example"
-                            >
-                            <button routerLink="/usrManagement-modify-admin" type="button" class="btn btn-success">
-                            <i class="bi bi-pencil-square"></i>
-                            </button>
-                            <button type="button" class="btn btn-danger">
-                            <i class="bi bi-trash-fill"></i>
-                            </button>
-                        </div>
-                    </td>
-                </tr>
-                <tr>
-                    <th scope="row">3</th>
-                    <td>administrador@grupocastilla.cat</td>
-                    <td>Administrador</td>
-                    <td>Administrador</td>
-                    <td>admin</td>
-                    <td class="d-none d-md-table-cell">Team 6</td>
-                    <td class="d-flex justify-content-center">
-                        <div
-                            class="btn-group"
-                            role="group"
-                            aria-label="Basic mixed styles example"
-                        >
-                            <button routerLink="/usrManagement-modify-admin" type="button" class="btn btn-success">
-                            <i class="bi bi-pencil-square"></i>
-                            </button>
-                            <button type="button" class="btn btn-danger">
-                            <i class="bi bi-trash-fill"></i>
-                            </button>
-                        </div>
-                    </td>
-                </tr>
-                <tr>
-                    <th scope="row">4</th>
-                    <td>administrador@grupocastilla.cat</td>
-                    <td>Administrador</td>
-                    <td>Administrador</td>
-                    <td>admin</td>
-                    <td class="d-none d-md-table-cell">Team 6</td>
-                    <td class="d-flex justify-content-center">
-                    <div
-                        class="btn-group"
-                        role="group"
-                        aria-label="Basic mixed styles example"
-                    >
-                        <button routerLink="/usrManagement-modify-admin" type="button" class="btn btn-success">
-                        <i class="bi bi-pencil-square"></i>
-                        </button>
-                        <button type="button" class="btn btn-danger">
-                        <i class="bi bi-trash-fill"></i>
-                        </button>
-                    </div>
-                    </td>
-                </tr>
-                <tr>
-                    <th scope="row">5</th>
-                    <td>administrador@grupocastilla.cat</td>
-                    <td>Administrador</td>
-                    <td>Administrador</td>
-                    <td>admin</td>
-                    <td class="d-none d-md-table-cell">Team 6</td>
-                    <td class="d-flex justify-content-center">
-                    <div
-                        class="btn-group"
-                        role="group"
-                        aria-label="Basic mixed styles example"
-                    >
-                        <button routerLink="/usrManagement-modify-admin" type="button" class="btn btn-success">
-                        <i class="bi bi-pencil-square"></i>
-                        </button>
-                        <button type="button" class="btn btn-danger">
-                        <i class="bi bi-trash-fill"></i>
-                        </button>
-                    </div>
+                    <tr *ngFor="let user of users">
+                        <th scope="row">{{ user.id }}</th>
+                        <td>{{ user.isActive }}</td>
+                        <td> {{ user.name }}</td>
+                        <td>{{ user.surname }}</td>
+                        <td>{{ user.username }}</td>
+                        <td>{{ user.password}}</td>
+                        <td class="d-flex justify-content-center">
+                            <div
+                                class="btn-group"
+                                role="group"
+                                aria-label="Basic mixed styles example">
+                                    <button routerLink="/usrManagement-modify-admin" type="button" class="btn btn-success">
+                                        <i class="bi bi-pencil-square"></i>
+                                    </button>
+                                    <button type="button" class="btn btn-danger">
+                                        <i class="bi bi-trash-fill"></i>
+                                    </button>
+                            </div>
                     </td>
                 </tr>
             </tbody>

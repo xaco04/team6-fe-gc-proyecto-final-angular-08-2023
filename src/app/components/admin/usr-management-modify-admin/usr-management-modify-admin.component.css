@@ -14,18 +14,24 @@
     border-top-left-radius: 10px;
 }
 
+.full-height {
+    height: 85vh;
+}
+
+
 .cont-form {
-    width: 60vw;
     margin: 0 auto; /* Centra horizontalmente */
 }
-.form-control {
-    width: 450px; /* Ajusta el valor según tus preferencias */
-}
+
 
 .form-group {
     margin-bottom: 2vw;
 }
 .form-group div input{
+    margin-left: 2vw;
+}
+
+.form-group div select{
     margin-left: 2vw;
 }
 .campos{
@@ -34,6 +40,7 @@
 }
 .parametros{
     display: flex;
+    margin-left: 2vw
 }
 .check {
     margin-left: none;

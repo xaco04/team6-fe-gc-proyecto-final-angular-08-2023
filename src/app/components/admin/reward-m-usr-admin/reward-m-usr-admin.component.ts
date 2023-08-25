@@ -1,6 +1,6 @@
 
 import { Component, Input, OnInit } from '@angular/core';
-import { UsersSharedService, User } from 'src/app/services/shared/users-shared.service';
+import { UserService } from 'src/app/services/shared/users-shared.service';
 import { RewardsSharedService, Premio } from 'src/app/services/shared/rewards-shared.service';
 
 
@@ -13,21 +13,16 @@ import { RewardsSharedService, Premio } from 'src/app/services/shared/rewards-sh
 
 export class RewardMUsrAdminComponent implements OnInit{
 
-  user: User = {} as User;
-  prices: any;
-  
-  constructor(private usersService: UsersSharedService, 
-    private premiosService: RewardsSharedService) {}
+  users: any[] = []
 
-  ngOnInit() {
+  constructor(private userService: UserService) {}
 
-    this.prices = this.premiosService.getPremios();
-
-    // Obtener la información del usuario con id 1
-    const user = this.usersService.getUserById(1);
-    if (user !== undefined) {
-      this.user = user;
-    }
+  ngOnInit(): void {
+      this.users = this.userService.getUsers();
   }
-
 }
+
+
+
+
+

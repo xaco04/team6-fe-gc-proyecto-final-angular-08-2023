@@ -1,46 +1,58 @@
 import { Injectable } from '@angular/core';
 
-
-export interface User{
-
-  id: number,
-  nombre: string,
-  apellido: string,
-  activado: boolean,
-  rol: string,
-  puntos: number
-}
-
 @Injectable({
   providedIn: 'root'
 })
+export class UserService {
+  private users: any[] = [
+    { id: 1, 
+      isActive: 'Active', 
+      name: 'Administrador', 
+      surname: 'Administrador', 
+      username: 'admin',
+      password: 'admin',
+      image: '../../../../assets/avatar.png',
+      points: 50,
+      role: 'admin',
+},
 
-export class UsersSharedService {
+{ id: 1, 
+  isActive: 'Active', 
+  name: 'Xavier Jordi', 
+  surname: 'Vico', 
+  username: 'xavi04',
+  password: '1234',
+  image: '../../../../assets/avatar.png' ,
+  points: 50,
+  role: 'user',
+},
 
-  private users: User[] = [
-    {
-      id: 1,
-      nombre: 'Roberto',
-      apellido: 'Carrera',
-      activado: true,
-      rol: 'usuario',
-      puntos: 52
-    },
-    {
-      id: 1,
-      nombre: 'Miguel',
-      apellido: 'Maldonado',
-      activado: false,
-      rol: 'usuario',
-      puntos: 22
-    }
+{ id: 1, 
+  isActive: 'Active', 
+  name: 'Roberto', 
+  surname: 'Carrera', 
+  username: 'RCarrera',
+  password: '1234',
+  image: '../../../../assets/avatar.png',
+  points: 50,
+  role: 'user',
+},
+
+{ id: 1, 
+  isActive: 'Active', 
+  name: 'Joan', 
+  surname: 'de la Huerta Planas', 
+  username: 'xavi04',
+  password: '1234',
+  image: '../../../../assets/avatar.png',
+  points: 50,
+  role: 'user',
+},
+
+
   ];
 
-  constructor() { }
-  
-  getUserById(id: number): User | undefined{
-
-    return this.users.find(user => user.id === id);
+  getUsers(): any[] {
+    return this.users;
   }
-  
 }
