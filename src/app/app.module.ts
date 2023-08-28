@@ -33,6 +33,7 @@ import { RewardMUsrAdminComponent } from './components/admin/reward-m-usr-admin/
 import { PriceSharedComponent } from './components/shared/price-shared/price-shared.component';
 import { UserSidebarComponent } from './user/user-sidebar/user-sidebar.component';
 import { LoginComponent } from './components/shared/login/login.component';
+import { UserHomeComponent } from './components/user/user-home/user-home.component';
 
 @NgModule({
   declarations: [
@@ -49,7 +50,8 @@ import { LoginComponent } from './components/shared/login/login.component';
     RewardMUsrAdminComponent,
     PriceSharedComponent,
     UserSidebarComponent,
-    LoginComponent
+    LoginComponent,
+    UserHomeComponent
   ],
   imports: [
     BrowserModule,
