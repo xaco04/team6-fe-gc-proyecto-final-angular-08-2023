@@ -11,8 +11,16 @@ import { CustomerSupportAnswerSharedComponent } from './components/admin/support
 import { ProfileAdminComponent } from './components/admin/profile-admin/profile-admin.component';
 import { AnalysisListAdminComponent } from './components/admin/analysis-list-admin/analysis-list-admin.component';
 import { RewardMUsrAdminComponent } from './components/admin/reward-m-usr-admin/reward-m-usr-admin.component';
+import { LoginComponent } from './components/shared/login/login.component';
 
 const routes: Routes = [
+  {
+    path: '', pathMatch: 'full', redirectTo: '/login'
+  },
+  {
+    path: 'login',
+    component: LoginComponent
+  },
   {
     path: 'dashboard-admin',
     component: DashboardAdminComponent
@@ -49,6 +57,11 @@ const routes: Routes = [
   {
     path: 'analysis-list-admin',
     component: AnalysisListAdminComponent
+  },
+  //Debe ir siempre la última
+  {
+    path: '**',
+    component: LoginComponent
   }
 
 ];
