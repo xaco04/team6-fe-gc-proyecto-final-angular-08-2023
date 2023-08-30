@@ -35,6 +35,7 @@ import { UserSidebarComponent } from './user/user-sidebar/user-sidebar.component
 import { LoginComponent } from './components/shared/login/login.component';
 import { UserHomeComponent } from './components/user/user-home/user-home.component';
 import { UserProfileComponent } from './components/user/user-profile/user-profile.component';
+import { RecoveryComponent } from './components/shared/recovery/recovery.component';
 
 @NgModule({
   declarations: [
@@ -53,7 +54,8 @@ import { UserProfileComponent } from './components/user/user-profile/user-profil
     UserSidebarComponent,
     LoginComponent,
     UserHomeComponent,
-    UserProfileComponent
+    UserProfileComponent,
+    RecoveryComponent
   ],
   imports: [
     BrowserModule,

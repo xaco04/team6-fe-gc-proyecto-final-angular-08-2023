@@ -1,0 +1,21 @@
+.imagen_gc{
+
+    width: 20em;
+}
+
+.login_input{
+
+    height: 2.5em;
+    width: 15em;
+
+    border-radius: 0.2em;    
+    border: 0.1em solid #0053abc9;
+}
+
+.login_button{
+
+    height: 3em;
+    width: 15em;
+
+    background-color: #0052AB;
+}

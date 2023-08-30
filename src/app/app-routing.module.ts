@@ -14,6 +14,7 @@ import { RewardMUsrAdminComponent } from './components/admin/reward-m-usr-admin/
 import { LoginComponent } from './components/shared/login/login.component';
 import { UserHomeComponent } from './components/user/user-home/user-home.component';
 import { UserProfileComponent } from './components/user/user-profile/user-profile.component';
+import { RecoveryComponent } from './components/shared/recovery/recovery.component';
 
 const routes: Routes = [
   {
@@ -22,6 +23,10 @@ const routes: Routes = [
   {
     path: 'login',
     component: LoginComponent
+  },
+  {
+    path: 'recovery',
+    component: RecoveryComponent
   },
   {
     path: 'inicio',
