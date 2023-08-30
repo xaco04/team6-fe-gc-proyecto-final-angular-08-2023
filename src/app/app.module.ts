@@ -34,6 +34,7 @@ import { PriceSharedComponent } from './components/shared/price-shared/price-sha
 import { UserSidebarComponent } from './user/user-sidebar/user-sidebar.component';
 import { LoginComponent } from './components/shared/login/login.component';
 import { UserHomeComponent } from './components/user/user-home/user-home.component';
+import { UserProfileComponent } from './components/user/user-profile/user-profile.component';
 
 @NgModule({
   declarations: [
@@ -51,7 +52,8 @@ import { UserHomeComponent } from './components/user/user-home/user-home.compone
     PriceSharedComponent,
     UserSidebarComponent,
     LoginComponent,
-    UserHomeComponent
+    UserHomeComponent,
+    UserProfileComponent
   ],
   imports: [
     BrowserModule,
