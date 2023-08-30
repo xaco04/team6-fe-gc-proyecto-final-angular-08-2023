@@ -1,4 +1,4 @@
-import { NgModule } from '@angular/core';
+import { Component, NgModule } from '@angular/core';
 import { FormsModule } from '@angular/forms';
 import { RouterModule, Routes } from '@angular/router';
 
@@ -13,6 +13,7 @@ import { AnalysisListAdminComponent } from './components/admin/analysis-list-adm
 import { RewardMUsrAdminComponent } from './components/admin/reward-m-usr-admin/reward-m-usr-admin.component';
 import { LoginComponent } from './components/shared/login/login.component';
 import { UserHomeComponent } from './components/user/user-home/user-home.component';
+import { UserProfileComponent } from './components/user/user-profile/user-profile.component';
 
 const routes: Routes = [
   {
@@ -25,6 +26,10 @@ const routes: Routes = [
   {
     path: 'inicio',
     component: UserHomeComponent
+  },
+  {
+    path: 'perfil',
+    component: UserProfileComponent
   },
   {
     path: 'dashboard-admin',
