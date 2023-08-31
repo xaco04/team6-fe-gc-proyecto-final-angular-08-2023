@@ -11,6 +11,7 @@ import { CustomerSupportAnswerSharedComponent } from './components/admin/support
 import { ProfileAdminComponent } from './components/admin/profile-admin/profile-admin.component';
 import { AnalysisListAdminComponent } from './components/admin/analysis-list-admin/analysis-list-admin.component';
 import { RewardMUsrAdminComponent } from './components/admin/reward-m-usr-admin/reward-m-usr-admin.component';
+import { RecipeComponent } from './components/chef/recipe/recipe.component';
 
 const routes: Routes = [
   {
@@ -49,6 +50,10 @@ const routes: Routes = [
   {
     path: 'analysis-list-admin',
     component: AnalysisListAdminComponent
+  },
+  {
+    path: 'recipe',
+    component: RecipeComponent
   }
 
 ];

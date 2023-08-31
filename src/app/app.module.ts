@@ -32,6 +32,7 @@ import { AnalysisListAdminComponent } from './components/admin/analysis-list-adm
 import { RewardMUsrAdminComponent } from './components/admin/reward-m-usr-admin/reward-m-usr-admin.component';
 import { PriceSharedComponent } from './components/shared/price-shared/price-shared.component';
 import { UserSidebarComponent } from './user/user-sidebar/user-sidebar.component';
+import { RecipeComponent } from './components/chef/recipe/recipe.component';
 
 @NgModule({
   declarations: [
@@ -47,7 +48,8 @@ import { UserSidebarComponent } from './user/user-sidebar/user-sidebar.component
     AnalysisListAdminComponent,
     RewardMUsrAdminComponent,
     PriceSharedComponent,
-    UserSidebarComponent
+    UserSidebarComponent,
+    RecipeComponent
   ],
   imports: [
     BrowserModule,
