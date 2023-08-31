@@ -1,0 +1,35 @@
+.inicio_container{
+    height: 95vh;
+    width: 150vh;
+    border-radius: 10px;
+}
+
+.inicio_plato{
+    margin: 1em;
+    height: 8vh;
+    border-radius: 10px;
+    background-image: linear-gradient(to top, rgba(0, 0, 0, 0.3) 15%, rgba(255, 255, 255, 0.1) 90%), url(../../../../assets/croquetas.jpg);
+    background-size: cover;
+}
+.titulos{
+    max-width: 90%;
+    font-size: 20px;
+    text-align: center;
+    margin: 0;
+    color: white;
+}
+.acabado{
+    max-width: 90%;
+    font-size: 80px;
+    text-align: center;
+    margin: 0;
+    border: none;
+    background: none;
+}
+.icon{
+    width: 8vh;
+    margin-top:-20px;
+}
+.platoInfo{
+    margin-bottom: -20px;
+}

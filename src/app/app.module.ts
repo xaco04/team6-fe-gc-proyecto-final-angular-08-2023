@@ -36,6 +36,7 @@ import { LoginComponent } from './components/shared/login/login.component';
 import { UserHomeComponent } from './components/user/user-home/user-home.component';
 import { UserProfileComponent } from './components/user/user-profile/user-profile.component';
 import { RecoveryComponent } from './components/shared/recovery/recovery.component';
+import { OrdersComponent } from './components/chef/orders/orders.component';
 
 @NgModule({
   declarations: [
@@ -55,7 +56,8 @@ import { RecoveryComponent } from './components/shared/recovery/recovery.compone
     LoginComponent,
     UserHomeComponent,
     UserProfileComponent,
-    RecoveryComponent
+    RecoveryComponent,
+    OrdersComponent
   ],
   imports: [
     BrowserModule,

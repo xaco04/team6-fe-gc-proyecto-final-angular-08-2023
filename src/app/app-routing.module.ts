@@ -15,7 +15,7 @@ import { LoginComponent } from './components/shared/login/login.component';
 import { UserHomeComponent } from './components/user/user-home/user-home.component';
 import { UserProfileComponent } from './components/user/user-profile/user-profile.component';
 import { RecoveryComponent } from './components/shared/recovery/recovery.component';
-
+import { OrdersComponent } from './components/chef/orders/orders.component';
 const routes: Routes = [
   {
     path: '', pathMatch: 'full', redirectTo: '/login'
@@ -72,6 +72,10 @@ const routes: Routes = [
   {
     path: 'analysis-list-admin',
     component: AnalysisListAdminComponent
+  },
+  {
+    path: 'orders',
+    component: OrdersComponent
   },
   //Debe ir siempre la última
   {
