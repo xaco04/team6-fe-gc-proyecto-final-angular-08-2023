@@ -1,0 +1,51 @@
+.add_dish{
+
+    height: 80vh;
+
+    background-color: rgba(230, 230, 230, 0.233);
+    box-shadow: rgba(0, 0, 0, 0.1) 0px 1px 3px 0px, rgba(0, 0, 0, 0.06) 0px 1px 2px 0px;
+    
+    border-radius: 0.5em;
+    border: 1px solid rgb(218, 218, 218);
+
+    cursor: pointer;
+    
+    /* transition: transform 1s; */
+}
+
+.adding_dish{
+
+    border-radius: 0.5em;
+}
+
+.add_dish:hover .add_icon{
+
+    transform: scale(1.5);
+}
+
+.add_icon{
+
+    color: #0052AB;
+    transition: transform 0.5s;
+}
+
+@media (min-width: 1520px) {
+    .w-xxl-75 {
+
+        width: 75% !important;
+    }
+}
+
+@media (max-width: 1520px) {
+    .w-xxl-100 {
+
+        width: 100% !important;
+    }
+}
+
+@media (max-width: 1199px) {
+    .h-xl-50 {
+
+        height: 50% !important;
+    }
+}
