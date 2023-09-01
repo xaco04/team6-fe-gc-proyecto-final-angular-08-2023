@@ -33,6 +33,7 @@ export class RewardsService {
       id: 2,
       isActive: true,
       name: "POSTRE",
+      // jpeg no admitido
       image: '../../assets/rewards/Postres.jpeg',
       description: 'Descuento de 1 postre',
       cost: 80,

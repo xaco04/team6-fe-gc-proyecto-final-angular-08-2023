@@ -40,6 +40,7 @@ import { RewardComponent } from './components/shared/reward/reward.component';
 import { RewardMAdmAdminComponent } from './components/admin/reward-m-adm-admin/reward-m-adm-admin.component';
 import { EditPriceSharedComponent } from './components/shared/edit-price-shared/edit-price-shared.component';
 import { SidebarUserComponent } from './utils/user/sidebar-user/sidebar-user.component';
+import { UserDishComponent } from './components/user/user-dish/user-dish.component';
 
 @NgModule({
   declarations: [
@@ -63,6 +64,7 @@ import { SidebarUserComponent } from './utils/user/sidebar-user/sidebar-user.com
     RewardMAdmAdminComponent,
     EditPriceSharedComponent,
     SidebarUserComponent,
+    UserDishComponent,
   ],
   
   imports: [
