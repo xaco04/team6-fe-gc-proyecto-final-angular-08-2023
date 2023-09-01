@@ -16,57 +16,57 @@ export class AllergensService {
   private allergens: Allergen[] = [
     {
       id: 1,
-      isActive: true,
+      isActive: false,
       name: 'Huevos',
-      image: '../../assets/huevo.png'
+      image: '../../assets/allergens/huevo.png'
     },
     {
       id: 2,
-      isActive: true,
+      isActive: false,
       name: 'Leche',
-      image: '../../assets/leche.png'
+      image: '../../assets/allergens/leche.png'
     },
     {
       id: 3,
-      isActive: true,
+      isActive: false,
       name: 'Cacahuetes',
-      image: '../../assets/cacahuete.png'
+      image: '../../assets/allergens/cacahuete.png'
     },
     {
       id: 4,
-      isActive: true,
+      isActive: false,
       name: 'Frutos secos',
-      image: '../../assets/frutos_secos.png'
+      image: '../../assets/allergens/frutos_secos.png'
     },
     {
       id: 5,
-      isActive: true,
+      isActive: false,
       name: 'Pescado',
-      image: '../../assets/pescado.png'
+      image: '../../assets/allergens/pescado.png'
     },
     {
       id: 6,
-      isActive: true,
+      isActive: false,
       name: 'Mariscos',
-      image: '../../assets/marisco.png'
+      image: '../../assets/allergens/marisco.png'
     },
     {
       id: 7,
-      isActive: true,
+      isActive: false,
       name: 'Gluten',
-      image: '../../assets/gluten.png'
+      image: '../../assets/allergens/gluten.png'
     },
     {
       id: 8,
-      isActive: true,
+      isActive: false,
       name: 'Soja',
-      image: '../../assets/soja.png'
+      image: '../../assets/allergens/soja.png'
     },
     {
       id: 9,
-      isActive: true,
+      isActive: false,
       name: 'Crustaceos',
-      image: '../../assets/crustaceo.png'
+      image: '../../assets/allergens/crustaceo.png'
     }
   ];
 
