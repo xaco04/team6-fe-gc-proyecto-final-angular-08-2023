@@ -83,12 +83,12 @@ export class RewardsService {
 
   constructor() { }
 
-  filtrarPremios(isActive: boolean): Reward[]{
+  filterRewards(isActive: boolean): Reward[]{
 
     return this.rewards.filter(reward => reward.isActive === isActive);
   }
 
-  getPremios(): Reward[]{
+  getRewards(): Reward[]{
 
     return this.rewards;
   }

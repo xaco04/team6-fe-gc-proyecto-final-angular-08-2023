@@ -18,7 +18,8 @@
                 <img class="img-fluid h-100" src="../../assets/user.jpg" />
             </div>
             <div class="user_name">
-                <h2 class="name"> {{user.nombre}} </h2>
+                <!-- <h2 class="name"> {{user.nombre}} </h2> -->
+                <h2 class="name"> Roberto </h2>
             </div>
             <div class="user_level d-flex justify-content-between align-items-center">
                 <h3>Nivel</h3>
@@ -48,8 +49,8 @@
     <div class="row main">
         <div class="prices col-xxl-9 col-lg-12">
             <div class="row">
-                <div *ngFor="let price of prices" class="col-xxl-4 col-lg-4 col-sm-12 pb-4">
-                    <app-price [price] = 'price'></app-price>
+                <div *ngFor="let reward of rewards" class="col-xxl-4 col-lg-4 col-sm-12 pb-4">
+                    <app-reward [reward] = 'reward'></app-reward>
                 </div>
             </div>
         </div>
@@ -96,8 +97,8 @@
                 <hr class="w-75">
             </div>
             <div class="row w-100 d-flex justify-content-center align-items-center">
-                <div *ngFor="let allergen of alergenos" class="col-lg-4 col-md-6 col-sm-6 p-2 d-flex justify-content-around align-items-center">
-                    <a (click)="activateAllergie(this.allergen)" href="javascript:void(0)" class="ms-2 fs-4 fw-light allergen" [class.allergen_active] = "allergen.activada"><img src="{{allergen.imagen}}" alt="" class="me-3">{{allergen.nombre}}</a>
+                <div *ngFor="let allergen of allergens" class="col-lg-4 col-md-6 col-sm-6 p-2 d-flex justify-content-around align-items-center">
+                    <a (click)="activateAllergen(this.allergen)" href="javascript:void(0)" class="ms-2 fs-4 fw-light allergen" [class.allergen_active] = "allergen.isActive"><img src="{{allergen.image}}" alt="" class="me-3">{{allergen.name}}</a>
                 </div>
             </div>
         </div>      

@@ -1,5 +1,4 @@
 import { Component, OnInit, Input } from '@angular/core';
-import { UsersService, User } from '../services/users.service';
 import { AllergensService, Allergen } from '../../../services/shared/allergens.service';
 import { RewardsService, Reward } from '../../../services/shared/rewards.service';
 
@@ -10,24 +9,16 @@ import { RewardsService, Reward } from '../../../services/shared/rewards.service
 })
 export class UserProfileComponent implements OnInit {
 
-  user: User = {} as User;
   @Input() allergens: Allergen[] = [];
-  prices: any;
+  rewards: any;
   
-  constructor(private usersService: UsersService, 
-    private allergensService: AllergensService,
-    private premiosService: RewardsService) {}
+  constructor(private allergensService: AllergensService,
+    private rewardsService: RewardsService) {}
 
   ngOnInit() {
 
     this.allergens = this.allergensService.getAllergens();
-    this.prices = this.premiosService.getPremios();
-
-    // Obtener la información del usuario con id 1
-    const user = this.usersService.getUserById(1);
-    if (user !== undefined) {
-      this.user = user;
-    }
+    this.rewards = this.rewardsService.getRewards();
   }
 
   activateAllergen(allergen: Allergen){
