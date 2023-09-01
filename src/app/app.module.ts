@@ -32,7 +32,6 @@ import { ProfileAdminComponent } from './components/admin/profile-admin/profile-
 import { AnalysisListAdminComponent } from './components/admin/analysis-list-admin/analysis-list-admin.component';
 import { RewardMUsrAdminComponent } from './components/admin/reward-m-usr-admin/reward-m-usr-admin.component';
 import { PriceSharedComponent } from './components/shared/price-shared/price-shared.component';
-import { UserSidebarComponent } from './user/user-sidebar/user-sidebar.component';
 import { LoginComponent } from './components/shared/login/login.component';
 import { UserHomeComponent } from './components/user/user-home/user-home.component';
 import { UserProfileComponent } from './components/user/user-profile/user-profile.component';
@@ -40,6 +39,7 @@ import { RecoveryComponent } from './components/shared/recovery/recovery.compone
 import { RewardComponent } from './components/shared/reward/reward.component';
 import { RewardMAdmAdminComponent } from './components/admin/reward-m-adm-admin/reward-m-adm-admin.component';
 import { EditPriceSharedComponent } from './components/shared/edit-price-shared/edit-price-shared.component';
+import { SidebarUserComponent } from './utils/user/sidebar-user/sidebar-user.component';
 
 @NgModule({
   declarations: [
@@ -55,7 +55,6 @@ import { EditPriceSharedComponent } from './components/shared/edit-price-shared/
     AnalysisListAdminComponent,
     RewardMUsrAdminComponent,
     PriceSharedComponent,
-    UserSidebarComponent,
     LoginComponent,
     UserHomeComponent,
     UserProfileComponent,
@@ -63,6 +62,7 @@ import { EditPriceSharedComponent } from './components/shared/edit-price-shared/
     RewardComponent,
     RewardMAdmAdminComponent,
     EditPriceSharedComponent,
+    SidebarUserComponent,
   ],
   
   imports: [
