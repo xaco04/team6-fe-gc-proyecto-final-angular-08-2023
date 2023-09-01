@@ -1,6 +1,6 @@
 import { Component, OnInit, Input } from '@angular/core';
 import { UsersService, User } from '../services/users.service';
-import { AlergiasService, Alergia } from '../services/alergias.service';
+import { AllergensService, Allergen } from '../../../services/shared/allergens.service';
 import { RewardsService, Reward } from '../../../services/shared/rewards.service';
 
 @Component({
@@ -11,16 +11,16 @@ import { RewardsService, Reward } from '../../../services/shared/rewards.service
 export class UserProfileComponent implements OnInit {
 
   user: User = {} as User;
-  @Input() alergenos: Alergia[] = [];
+  @Input() allergens: Allergen[] = [];
   prices: any;
   
   constructor(private usersService: UsersService, 
-    private alergiasService: AlergiasService,
+    private allergensService: AllergensService,
     private premiosService: RewardsService) {}
 
   ngOnInit() {
 
-    this.alergenos = this.alergiasService.getAlergias();
+    this.allergens = this.allergensService.getAllergens();
     this.prices = this.premiosService.getPremios();
 
     // Obtener la información del usuario con id 1
@@ -30,15 +30,15 @@ export class UserProfileComponent implements OnInit {
     }
   }
 
-  activateAllergie(allergen: Alergia){
+  activateAllergen(allergen: Allergen){
 
-    if(allergen.activada == true){
+    if(allergen.isActive == true){
 
-      allergen.activada = false;
+      allergen.isActive = false;
     }
     else{
       
-      allergen.activada = true;
+      allergen.isActive = true;
     }
   }
 
