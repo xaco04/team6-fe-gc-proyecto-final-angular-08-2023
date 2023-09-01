@@ -41,6 +41,7 @@ import { RewardMAdmAdminComponent } from './components/admin/reward-m-adm-admin/
 import { EditPriceSharedComponent } from './components/shared/edit-price-shared/edit-price-shared.component';
 import { SidebarUserComponent } from './utils/user/sidebar-user/sidebar-user.component';
 import { UserDishComponent } from './components/user/user-dish/user-dish.component';
+import { UserDishInfoComponent } from './components/user/user-dish-info/user-dish-info.component';
 
 @NgModule({
   declarations: [
@@ -65,6 +66,7 @@ import { UserDishComponent } from './components/user/user-dish/user-dish.compone
     EditPriceSharedComponent,
     SidebarUserComponent,
     UserDishComponent,
+    UserDishInfoComponent,
   ],
   
   imports: [
