@@ -2,26 +2,26 @@
     <div class="modal-dialog moda-xl modal-dialog-centered">
         <div class="modal-content">
             <div class="modal-header">
-                <h2 class="modal-title" [attr.id]="'dish_info_'+index"> {{plato.nombre}} </h2>
+                <h2 class="modal-title" [attr.id]="'dish_info_'+index"> {{dish.name}} </h2>
                 <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
             </div>
             <div class=" modal-body">
                 <div class="row">
                     <div class="col-12">
-                        <img class="img-fluid" src="{{plato.imagen}}" alt="">
+                        <img class="img-fluid" src="{{dish.image}}" alt="">
                     </div>
                     <div class="col-12 h-75">
                         <div class="row">
                             <div class="col-12">
                                 <h3 class="text-start">Ingredientes</h3>
                             </div>
-                            <div *ngFor="let ingrediente of dish.ingredientes" class="col-6 d-flex justify-content-center align-items-center">
+                            <div *ngFor="let ingrediente of dish.ingredients" class="col-6 d-flex justify-content-center align-items-center">
                                 <h4 class="text-start m-0">{{ingrediente}}</h4>
                             </div>
                         </div>
                     </div>
                     <div class="col-12 d-flex justify-content-around align-items-center">
-                        <h4 *ngFor="let allergen of dish.">
+                        <h4 *ngFor="let allergen of dish">
                             <img src="{{allergen}}" alt=""> 
                         </h4>
                     </div>

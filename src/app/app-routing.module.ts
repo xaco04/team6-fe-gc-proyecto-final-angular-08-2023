@@ -17,6 +17,7 @@ import { UserProfileComponent } from './components/user/user-profile/user-profil
 import { RecoveryComponent } from './components/shared/recovery/recovery.component';
 import { RewardMAdmAdminComponent } from './components/admin/reward-m-adm-admin/reward-m-adm-admin.component';
 import { EditPriceSharedComponent } from './components/shared/edit-price-shared/edit-price-shared.component';
+import { UserCreateMenuComponent } from './components/user/user-create-menu/user-create-menu.component';
 
 
 const routes: Routes = [
@@ -34,6 +35,10 @@ const routes: Routes = [
   {
     path: 'inicio',
     component: UserHomeComponent
+  },
+  {
+    path: 'crear_menu',
+    component: UserCreateMenuComponent
   },
   {
     path: 'perfil',

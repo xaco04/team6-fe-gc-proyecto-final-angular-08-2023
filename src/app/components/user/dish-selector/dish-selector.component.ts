@@ -16,7 +16,7 @@ export class DishSelectorComponent {
   @Input() suggested: boolean = false;
   @Input() highlighted: boolean = false;
   
-  @Input() platos: Dish[] = [];
+  @Input() dishes: Dish[] = [];
   @Input() recommended_dishes: Dish[] = [];
   @Input() suggested_dishes: Dish[] = [];
   @Input() highlighted_dishes: Dish[] = [];
@@ -25,7 +25,7 @@ export class DishSelectorComponent {
 
   ngOnInit() {
 
-    this.platos = this.dishesService.filterDishes(this.category)
+    this.dishes = this.dishesService.filterDishes(this.category)
 
     if(this.recommended){
 

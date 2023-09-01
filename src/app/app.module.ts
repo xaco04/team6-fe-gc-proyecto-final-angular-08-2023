@@ -70,6 +70,7 @@ import { UserCreateMenuComponent } from './components/user/user-create-menu/user
     UserDishComponent,
     DishSelectorComponent,
     UserCreateMenuComponent,
+    UserDishInfoComponent
   ],
   
   imports: [
