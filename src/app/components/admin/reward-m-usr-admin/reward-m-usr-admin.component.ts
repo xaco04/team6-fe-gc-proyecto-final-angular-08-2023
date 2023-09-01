@@ -1,7 +1,7 @@
 
 import { Component, Input, OnInit } from '@angular/core';
 import { UserService } from 'src/app/services/shared/users-shared.service';
-import { RewardsSharedService, Premio } from 'src/app/services/shared/rewards-shared.service';
+import { RewardsSharedService, Premio } from 'src/app/services/shared/rewards.service';
 
 
 @Component({

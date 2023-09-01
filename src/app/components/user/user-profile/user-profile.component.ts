@@ -1,7 +1,7 @@
 import { Component, OnInit, Input } from '@angular/core';
 import { UsersService, User } from '../services/users.service';
 import { AlergiasService, Alergia } from '../services/alergias.service';
-import { PremiosService, Premio } from '../services/premios.service';
+import { RewardsService, Reward } from '../../../services/shared/rewards.service';
 
 @Component({
   selector: 'app-user-profile',
@@ -16,7 +16,7 @@ export class UserProfileComponent implements OnInit {
   
   constructor(private usersService: UsersService, 
     private alergiasService: AlergiasService,
-    private premiosService: PremiosService) {}
+    private premiosService: RewardsService) {}
 
   ngOnInit() {
 
