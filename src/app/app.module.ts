@@ -1,5 +1,6 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
+import { FormsModule } from '@angular/forms';
 
 
 import { AppRoutingModule } from './app-routing.module';
@@ -37,6 +38,8 @@ import { UserHomeComponent } from './components/user/user-home/user-home.compone
 import { UserProfileComponent } from './components/user/user-profile/user-profile.component';
 import { RecoveryComponent } from './components/shared/recovery/recovery.component';
 import { RewardComponent } from './components/shared/reward/reward.component';
+import { RewardMAdmAdminComponent } from './components/admin/reward-m-adm-admin/reward-m-adm-admin.component';
+import { EditPriceSharedComponent } from './components/shared/edit-price-shared/edit-price-shared.component';
 
 @NgModule({
   declarations: [
@@ -57,8 +60,11 @@ import { RewardComponent } from './components/shared/reward/reward.component';
     UserHomeComponent,
     UserProfileComponent,
     RecoveryComponent,
-    RewardComponent
+    RewardComponent,
+    RewardMAdmAdminComponent,
+    EditPriceSharedComponent,
   ],
+  
   imports: [
     BrowserModule,
     AppRoutingModule,
@@ -78,6 +84,7 @@ import { RewardComponent } from './components/shared/reward/reward.component';
     MdbTooltipModule,
     MdbValidationModule,
     BrowserAnimationsModule,
+    FormsModule,
   ],
   providers: [],
   bootstrap: [AppComponent]

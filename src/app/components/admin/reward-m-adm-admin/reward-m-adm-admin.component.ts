@@ -1,18 +1,14 @@
-
-import { Component, Input, OnInit } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { UserService } from 'src/app/services/shared/users-shared.service';
 import { RewardsService, Reward } from 'src/app/services/shared/rewards.service';
 
 
 @Component({
-  selector: 'app-reward-m-usr-admin',
-  templateUrl: './reward-m-usr-admin.component.html',
-  styleUrls: ['./reward-m-usr-admin.component.css']
+  selector: 'app-reward-m-adm-admin',
+  templateUrl: './reward-m-adm-admin.component.html',
+  styleUrls: ['./reward-m-adm-admin.component.css']
 })
-
-
-export class RewardMUsrAdminComponent implements OnInit{
-
+export class RewardMAdmAdminComponent implements OnInit {
   users: any[] = []
   rewards: any[] = []
 
@@ -23,8 +19,3 @@ export class RewardMUsrAdminComponent implements OnInit{
       this.rewards = this.rewardsService.getRewards();
   }
 }
-
-
-
-
-

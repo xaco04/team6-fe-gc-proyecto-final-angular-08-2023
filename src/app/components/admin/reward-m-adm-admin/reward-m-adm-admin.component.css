@@ -35,7 +35,7 @@ h2, h5{
 
 .banner{
 
-    height: 30vh;
+    height: 20vh;
     background-color: gray;
 }
 
@@ -46,7 +46,7 @@ h2, h5{
 
 .left_mountain, .center_mountain, .right_mountain{
 
-    height: 25vh;
+    height: 5vh;
 }
 
 .left_mountain{

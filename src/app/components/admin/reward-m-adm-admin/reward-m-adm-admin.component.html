@@ -1,4 +1,3 @@
-
 <div class="custom-cont">
     <nav class="navbar navbar-dark bg-dark ">
         <div class="title">
@@ -21,14 +20,8 @@
                 </div>
             </div>
             <div class="col-2 banner_center h-75 align-self-end d-flex flex-column justify-content-around align-items-center">
-                <div class="user_photo">
-                    <img class="img-fluid h-100" [src]="users[0]?.image" />
-                </div>
                 <div class="user_name">
                     <h2 class="name"> {{users[0]?.name}} </h2>
-                </div>
-                <div class="user_level d-flex justify-content-between align-items-center">
-                    <h3>Puntos {{users[0]?.points}}</h3>
                 </div>
             </div>
             <div class="col-5 banner_right d-flex justify-content-center align-items-end">
@@ -51,53 +44,16 @@
                     <h2>Premios</h2>
                 </div>
                 <div class="col-md-6 d-flex justify-content-end">
-                    <a routerLink="/rewarmanagement-madm-admin" class="enlace btn btn-primary">Modo Administrador</a>
+                    <a routerLink="/rewarmanagement-musr-admin" class="enlace btn btn-primary">Modo Usuario</a>
                 </div>
             </div>
         </div>
         <hr>
         <div class="row main">
-            <div class="prices col-xxl-9 col-lg-12">
+            <div class="prices col-xxl-12 col-lg-12">
                 <div class="row">
                     <div *ngFor="let reward of rewards" class="col-xxl-4 col-lg-4 col-sm-12 pb-4">
-                        <app-price-shared [reward] = 'reward' ></app-price-shared>
-                    </div>
-                </div>
-            </div>
-            <div class="points_level col-xxl-3 col-lg-6 col-md-6 order-md-1 order-lg-1 d-flex flex-column justify-content-around align-items-center">
-                <div class="row w-100">
-                    <div class="col-10">
-                        <h2>Puntos</h2>
-                    </div>
-                </div>
-                <div class="row w-100">
-                    <div class="col-9">
-                        <h5 class="mb-3 fw-light">Puntos totales</h5>
-                        <h5 class="fw-light">Próxima recompensa</h5>
-                    </div>
-                    <div class="col-3">
-                        <h5 class="text-end mb-3 fw-light">68</h5>
-                        <h5 class="text-end fw-light">122</h5>
-                    </div>
-                </div>
-                <div class="row w-100">
-                    <div class="col-10">
-                        <h2>Nivel</h2>
-                    </div>
-                </div>
-                <div class="row w-100">
-                    <div class="col-7">
-                        <h5 class="mb-3 fw-light">Nivel actual</h5>
-                        <h5 class="fw-light">Próximo nivel</h5>
-                    </div>
-                    <div class="col-5">
-                        <h5 class="text-end mb-3 fw-light">3</h5>
-                        <h5 class="text-end fw-light">22 puntos</h5>
-                    </div>
-                </div>
-                <div class="row w-100">
-                    <div class="progress">
-                        <div class="progress-bar progress-bar-striped bg-warning" role="progressbar" style="width: 75%" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100"></div>
+                        <app-edit-price-shared [reward] = 'reward' ></app-edit-price-shared>
                     </div>
                 </div>
             </div>

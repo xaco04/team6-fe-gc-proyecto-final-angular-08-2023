@@ -15,6 +15,9 @@ import { LoginComponent } from './components/shared/login/login.component';
 import { UserHomeComponent } from './components/user/user-home/user-home.component';
 import { UserProfileComponent } from './components/user/user-profile/user-profile.component';
 import { RecoveryComponent } from './components/shared/recovery/recovery.component';
+import { RewardMAdmAdminComponent } from './components/admin/reward-m-adm-admin/reward-m-adm-admin.component';
+import { EditPriceSharedComponent } from './components/shared/edit-price-shared/edit-price-shared.component';
+
 
 const routes: Routes = [
   {
@@ -53,7 +56,7 @@ const routes: Routes = [
     component: UsrManagementAddAdminComponent
   },
   {
-    path: 'usrManagement-modify-admin',
+    path: 'usrManagement-modify-admin/:id/:isActive/:name/:surname/:username/:password',
     component: UsrManagementModifyAdminComponent
   },
   {
@@ -73,11 +76,21 @@ const routes: Routes = [
     path: 'analysis-list-admin',
     component: AnalysisListAdminComponent
   },
+  {
+    path: 'rewarmanagement-madm-admin',
+    component: RewardMAdmAdminComponent
+  },
+  {
+    path: 'edit-price-shared',
+    component: EditPriceSharedComponent
+  },  
   //Debe ir siempre la última
   {
     path: '**',
     component: LoginComponent
   }
+  ,
+
 
 ];
 

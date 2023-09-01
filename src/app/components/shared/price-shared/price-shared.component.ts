@@ -6,6 +6,6 @@ import { Component, Input } from '@angular/core';
   styleUrls: ['./price-shared.component.css']
 })
 export class PriceSharedComponent {
-  @Input() price: any;
+  @Input() reward: any;
 
 }
