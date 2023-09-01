@@ -43,6 +43,7 @@ import { SidebarUserComponent } from './utils/user/sidebar-user/sidebar-user.com
 import { UserDishComponent } from './components/user/user-dish/user-dish.component';
 import { UserDishInfoComponent } from './components/user/user-dish-info/user-dish-info.component';
 import { DishSelectorComponent } from './components/user/dish-selector/dish-selector.component';
+import { UserCreateMenuComponent } from './components/user/user-create-menu/user-create-menu.component';
 
 @NgModule({
   declarations: [
@@ -68,6 +69,7 @@ import { DishSelectorComponent } from './components/user/dish-selector/dish-sele
     SidebarUserComponent,
     UserDishComponent,
     DishSelectorComponent,
+    UserCreateMenuComponent,
   ],
   
   imports: [
