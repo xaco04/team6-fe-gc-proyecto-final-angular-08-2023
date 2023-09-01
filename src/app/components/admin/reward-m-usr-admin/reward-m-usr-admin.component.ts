@@ -14,11 +14,13 @@ import { RewardsSharedService, Premio } from 'src/app/services/shared/rewards-sh
 export class RewardMUsrAdminComponent implements OnInit{
 
   users: any[] = []
+  premios: any[] = []
 
-  constructor(private userService: UserService) {}
+  constructor(private userService: UserService, private rewardsSharedService: RewardsSharedService ) {}
 
   ngOnInit(): void {
       this.users = this.userService.getUsers();
+      this.premios = this.rewardsSharedService.getPremios();
   }
 }
 

@@ -1,5 +1,6 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
+import { FormsModule } from '@angular/forms';
 
 
 import { AppRoutingModule } from './app-routing.module';
@@ -32,6 +33,7 @@ import { AnalysisListAdminComponent } from './components/admin/analysis-list-adm
 import { RewardMUsrAdminComponent } from './components/admin/reward-m-usr-admin/reward-m-usr-admin.component';
 import { PriceSharedComponent } from './components/shared/price-shared/price-shared.component';
 import { RewardMAdmAdminComponent } from './components/admin/reward-m-adm-admin/reward-m-adm-admin.component';
+import { EditPriceSharedComponent } from './components/shared/edit-price-shared/edit-price-shared.component';
 
 @NgModule({
   declarations: [
@@ -47,7 +49,8 @@ import { RewardMAdmAdminComponent } from './components/admin/reward-m-adm-admin/
     AnalysisListAdminComponent,
     RewardMUsrAdminComponent,
     PriceSharedComponent,
-    RewardMAdmAdminComponent
+    RewardMAdmAdminComponent,
+    EditPriceSharedComponent,
   ],
   imports: [
     BrowserModule,
@@ -68,6 +71,7 @@ import { RewardMAdmAdminComponent } from './components/admin/reward-m-adm-admin/
     MdbTooltipModule,
     MdbValidationModule,
     BrowserAnimationsModule,
+    FormsModule,
   ],
   providers: [],
   bootstrap: [AppComponent]

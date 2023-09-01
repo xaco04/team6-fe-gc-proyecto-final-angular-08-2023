@@ -11,6 +11,9 @@ import { CustomerSupportAnswerSharedComponent } from './components/admin/support
 import { ProfileAdminComponent } from './components/admin/profile-admin/profile-admin.component';
 import { AnalysisListAdminComponent } from './components/admin/analysis-list-admin/analysis-list-admin.component';
 import { RewardMUsrAdminComponent } from './components/admin/reward-m-usr-admin/reward-m-usr-admin.component';
+import { RewardMAdmAdminComponent } from './components/admin/reward-m-adm-admin/reward-m-adm-admin.component';
+import { EditPriceSharedComponent } from './components/shared/edit-price-shared/edit-price-shared.component';
+
 
 const routes: Routes = [
   {
@@ -30,7 +33,7 @@ const routes: Routes = [
     component: UsrManagementAddAdminComponent
   },
   {
-    path: 'usrManagement-modify-admin',
+    path: 'usrManagement-modify-admin/:id/:isActive/:name/:surname/:username/:password',
     component: UsrManagementModifyAdminComponent
   },
   {
@@ -49,7 +52,16 @@ const routes: Routes = [
   {
     path: 'analysis-list-admin',
     component: AnalysisListAdminComponent
+  },
+  {
+    path: 'rewarmanagement-madm-admin',
+    component: RewardMAdmAdminComponent
+  },
+  {
+    path: 'edit-price-shared',
+    component: EditPriceSharedComponent
   }
+
 
 ];
 
