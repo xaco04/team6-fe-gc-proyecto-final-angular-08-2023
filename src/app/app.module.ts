@@ -42,6 +42,7 @@ import { EditPriceSharedComponent } from './components/shared/edit-price-shared/
 import { SidebarUserComponent } from './utils/user/sidebar-user/sidebar-user.component';
 import { UserDishComponent } from './components/user/user-dish/user-dish.component';
 import { UserDishInfoComponent } from './components/user/user-dish-info/user-dish-info.component';
+import { DishSelectorComponent } from './components/user/dish-selector/dish-selector.component';
 
 @NgModule({
   declarations: [
@@ -66,7 +67,7 @@ import { UserDishInfoComponent } from './components/user/user-dish-info/user-dis
     EditPriceSharedComponent,
     SidebarUserComponent,
     UserDishComponent,
-    UserDishInfoComponent,
+    DishSelectorComponent,
   ],
   
   imports: [

@@ -310,17 +310,17 @@ filterDishes(category: number): Dish[]{
   return this.dishes.filter(dish => dish.category === category);
 }
 
-filtrarRecomendados(): Dish[]{
+filterRecommended(): Dish[]{
 
   return this.dishes.filter(dish => dish.isRecommended === true);
 }
 
-filtrarSugeridos(): Dish[]{
+filterSuggested(): Dish[]{
 
   return this.dishes.filter(dish => dish.isSuggested === true);
 }
 
-filtrarDestacados(): Dish[]{
+filterHighlighted(): Dish[]{
 
   return this.dishes.filter(dish => dish.isHighlighted === true);
 }
