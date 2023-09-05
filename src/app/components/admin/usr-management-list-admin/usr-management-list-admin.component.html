@@ -49,6 +49,7 @@
                         <th scope="col" class="text-start d-none d-md-table-cell">Apellidos <i class="bi bi-arrow-down-up text-secondary float-end"></i></th>
                         <th scope="col" class="text-start">Username<i class="bi bi-arrow-down-up text-secondary float-end"></i></th>
                         <th scope="col" class="text-start">Password <i class="bi bi-arrow-down-up text-secondary float-end"></i></th>
+                        <th scope="col" class="text-start">Rol <i class="bi bi-arrow-down-up text-secondary float-end"></i></th>
                         <th scope="col" class="text-start">Acción <i class="bi bi-arrow-down-up text-secondary float-end"></i></th>
                     </tr>
             </thead>
@@ -60,12 +61,14 @@
                         <td>{{ user.surname }}</td>
                         <td>{{ user.username }}</td>
                         <td>{{ user.password}}</td>
+                        <td>{{ user.role}}</td>
+
                         <td class="d-flex justify-content-center">
                             <div
                                 class="btn-group"
                                 role="group"
                                 aria-label="Basic mixed styles example">
-                                    <button routerLink="/usrManagement-modify-admin" type="button" class="btn btn-success">
+                                    <button [routerLink]="['/usrManagement-modify-admin', user.id, user.isActive, user.name, user.surname, user.username, user.password]" type="button" class="btn btn-success">
                                         <i class="bi bi-pencil-square"></i>
                                     </button>
                                     <button type="button" class="btn btn-danger">

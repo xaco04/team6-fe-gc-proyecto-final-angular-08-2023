@@ -10,25 +10,25 @@
             <br><br>
             <form>
                 <div class="form-group row">
-                    <label for="inputNombreUsuario" class="col-sm-2 col-form-label">Username</label>
+                    <label for="inputNombreUsuario" class="col-sm-2 col-form-label">Id</label>
                     <div class="parametros col-sm-9">
-                        <input type="text" class="form-control" id="inputNombreUsuario" [disabled]="!editNombreUsuario">
-                        <input class="check" type="checkbox" (change)="toggleEditNombreUsuario()">
+                        <input type="text" class="form-control" id="inputNombreUsuario" [disabled]="!editId" [placeholder]="userId">
+                        <input class="check" type="checkbox" (change)="toggleEditId()">
                     </div>
                     
                 </div>
                 <div class="form-group row">
-                    <label for="inputEmail" class="col-sm-2 col-form-label">Email</label>
+                    <label for="inputEmail" class="col-sm-2 col-form-label">Status</label>
                     <div class="parametros col-sm-9">
-                        <input type="email" class="form-control" id="inputEmail" [disabled]="!editEmail">
-                        <input class="check" type="checkbox" (change)="toggleEditEmail()">
+                        <input type="email" class="form-control" id="inputEmail" [disabled]="!editStatus" [placeholder]="userStatus">
+                        <input class="check" type="checkbox" (change)="toggleEditStatus()">
 
                     </div>
                 </div>
                 <div class="form-group row">
                     <label for="inputNombre" class="col-sm-2 col-form-label">Nombre</label>
                     <div class="parametros col-sm-9">
-                        <input type="text" class="form-control" id="inputNombre" [disabled]="!editNombre" >
+                        <input type="text" class="form-control" id="inputNombre" [disabled]="!editNombre" [placeholder]="userName">
                         <input class="check" type="checkbox" (change)="toggleEditNombre()">
 
                     </div>
@@ -36,15 +36,23 @@
                 <div class="form-group row">
                     <label for="inputApellidos" class="col-sm-2 col-form-label">Apellidos</label>
                     <div class="parametros col-sm-9">
-                        <input type="text" class="form-control" id="inputApellidos" [disabled]="!editApellidos">
+                        <input type="text" class="form-control" id="inputApellidos" [disabled]="!editApellidos" [placeholder]="userSurname">
                         <input class="check" type="checkbox" (change)="toggleEditApellidos()">
+
+                    </div>
+                </div>
+                <div class="form-group row">
+                    <label for="inputUsername" class="col-sm-2 col-form-label">Username</label>
+                    <div class="parametros col-sm-9">
+                        <input type="text" class="form-control" id="inputApellidos" [disabled]="!editUsername" [placeholder]="userUsername">
+                        <input class="check" type="checkbox" (change)="toggleEditUsername()">
 
                     </div>
                 </div>
                 <div class="form-group row">
                     <label for="inputPassword" class="col-sm-2 col-form-label">Contraseña</label>
                     <div class="parametros col-sm-9">
-                        <input type="password" class="form-control" id="inputPassword" [disabled]="!editContrasena">
+                        <input type="password" class="form-control" id="inputPassword" [disabled]="!editContrasena" [placeholder]="userPassword">
                         <input class="check" type="checkbox" (change)="toggleEditContrasena()">
                     </div>
                 </div>
