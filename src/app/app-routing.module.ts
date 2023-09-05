@@ -18,6 +18,7 @@ import { RecoveryComponent } from './components/shared/recovery/recovery.compone
 import { RewardMAdmAdminComponent } from './components/admin/reward-m-adm-admin/reward-m-adm-admin.component';
 import { EditPriceSharedComponent } from './components/shared/edit-price-shared/edit-price-shared.component';
 import { UserCreateMenuComponent } from './components/user/user-create-menu/user-create-menu.component';
+import { RecipesListAdminComponent } from './components/admin/recipes-list-admin/recipes-list-admin.component';
 
 
 const routes: Routes = [
@@ -88,13 +89,18 @@ const routes: Routes = [
   {
     path: 'edit-price-shared',
     component: EditPriceSharedComponent
-  },  
-  //Debe ir siempre la última
+  }
+  ,
+  {
+    path: 'recipes-list',
+    component: RecipesListAdminComponent
+  }
+  ,  
+  // Debe ir siempre la última
   {
     path: '**',
     component: LoginComponent
   }
-  ,
 
 
 ];

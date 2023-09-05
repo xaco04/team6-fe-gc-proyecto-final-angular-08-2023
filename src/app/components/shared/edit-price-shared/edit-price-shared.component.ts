@@ -14,15 +14,15 @@ export class EditPriceSharedComponent {
 
   editarPrecio() {
     this.editing = true;
-    this.editedNombre = this.reward.nombre;
-    this.editedImagen = this.reward.imagen;
-    this.editedDescripcion = this.reward.descripcion;
+    this.editedNombre = this.reward.name;
+    this.editedImagen = this.reward.image;
+    this.editedDescripcion = this.reward.description;
   }
 
   guardarCambios() {
-    this.reward.nombre = this.editedNombre;
-    this.reward.imagen = this.editedImagen;
-    this.reward.descripcion = this.editedDescripcion;
+    this.reward.name = this.editedNombre;
+    this.reward.image = this.editedImagen;
+    this.reward.description = this.editedDescripcion;
     this.editing = false;
   }
 }
