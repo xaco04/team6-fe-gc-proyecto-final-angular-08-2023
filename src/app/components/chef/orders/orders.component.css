@@ -9,12 +9,14 @@
 
 .dishes{
 
-    height: 12vh;
+    height: 10vh;
 }
 
 .button_finished{
 
     border-radius: 0.3em;
+    border: none;
+    background: none;
 }
 
 .finished{
@@ -31,4 +33,9 @@
 
     width: 0;
     display: none;
+}
+.dish-name{
+    font-size: 25px;
+    color: white;
+    text-shadow: rgb(0, 0, 0) 4px 0 10px;
 }
