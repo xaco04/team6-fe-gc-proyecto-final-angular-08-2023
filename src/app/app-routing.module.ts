@@ -15,6 +15,7 @@ import { LoginComponent } from './components/shared/login/login.component';
 import { UserHomeComponent } from './components/user/user-home/user-home.component';
 import { UserProfileComponent } from './components/user/user-profile/user-profile.component';
 import { RecoveryComponent } from './components/shared/recovery/recovery.component';
+import { OrdersComponent } from './components/chef/orders/orders.component';
 import { RewardMAdmAdminComponent } from './components/admin/reward-m-adm-admin/reward-m-adm-admin.component';
 import { EditPriceSharedComponent } from './components/shared/edit-price-shared/edit-price-shared.component';
 import { UserCreateMenuComponent } from './components/user/user-create-menu/user-create-menu.component';
@@ -82,6 +83,10 @@ const routes: Routes = [
     component: AnalysisListAdminComponent
   },
   {
+    path: 'orders',
+    component: OrdersComponent
+  },
+  {
     path: 'rewarmanagement-madm-admin',
     component: RewardMAdmAdminComponent
   },
@@ -94,9 +99,6 @@ const routes: Routes = [
     path: '**',
     component: LoginComponent
   }
-  ,
-
-
 ];
 
 @NgModule({
