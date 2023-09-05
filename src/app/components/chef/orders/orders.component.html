@@ -1,146 +1,21 @@
-<div class="container-fluid inicio_container h-100">
-  <div class="row h-100">
-      <div class="col-xxl-12 col-xl-12 col-lg-6 h-100 ">
-          <div class="row h-100 d-flex flex-column justify-content-around align-items pedido">
-            <div class="col-12 h-25">
-                  <div class="row">
-                      <div class="col-12">
-                        <h2>Pedido Nº1 / Hora de recogida:</h2>
-                      </div>
-                  </div>
-                  <div class="row bg-dark">
-                    <button class="col inicio_plato">
-                      <h2 class="titulos">ENSALADA MIXTA</h2>
-                    </button>
-                    <button class="col inicio_plato">
-                      <h2 class="titulos">POLLO CON PATATAS FRITAS</h2>
-                    </button>
-                    <button class="col inicio_plato">
-                      <h2 class="titulos">AGUA</h2>
-                    </button>
-                    <button class="col inicio_plato">
-                      <h2 class="titulos">TARTA DE QUESO</h2>
-                    </button>
-                    <button class="col inicio_plato">
-                      <h2 class="titulos">PATATAS BRAVAS</h2>
-                    </button>
-                    <button class="col acabado">
-                      <img src="../../assets/listo.png" class="icon">
-                    </button>
-                  </div>
-                </div>
-                <div class="col-12 h-25">
-                  <div class="row">
-                      <div class="col-12">
-                        <h2>Pedido Nº1 / Hora de recogida:</h2>
-                      </div>
-                  </div>
-                  <div class="row">
-                    <button class="col inicio_plato">
-                      <h2 class="titulos">ENSALADA MIXTA</h2>
-                    </button>
-                    <button class="col inicio_plato">
-                      <h2 class="titulos">POLLO CON PATATAS FRITAS</h2>
-                    </button>
-                    <button class="col inicio_plato">
-                      <h2 class="titulos">AGUA</h2>
-                    </button>
-                    <button class="col inicio_plato">
-                      <h2 class="titulos">TARTA DE QUESO</h2>
-                    </button>
-                    <button class="col inicio_plato">
-                      <h2 class="titulos">PATATAS BRAVAS</h2>
-                    </button>
-                    <button class="col acabado">
-                      <img src="../../assets/listo.png" class="icon">
-                    </button>
-                  </div>
-                </div>
-                <div class="col-12 h-25">
-                  <div class="row">
-                      <div class="col-12">
-                        <h2>Pedido Nº1 / Hora de recogida:</h2>
-                      </div>
-                  </div>
-                  <div class="row">
-                    <button class="col inicio_plato">
-                      <h2 class="titulos">ENSALADA MIXTA</h2>
-                    </button>
-                    <button class="col inicio_plato">
-                      <h2 class="titulos">POLLO CON PATATAS FRITAS</h2>
-                    </button>
-                    <button class="col inicio_plato">
-                      <h2 class="titulos">AGUA</h2>
-                    </button>
-                    <button class="col inicio_plato">
-                      <h2 class="titulos">TARTA DE QUESO</h2>
-                    </button>
-                    <button class="col inicio_plato">
-                      <h2 class="titulos">PATATAS BRAVAS</h2>
-                    </button>
-                    <button class="col acabado">
-                      <img src="../../assets/listo.png" class="icon">
-                    </button>
-                  </div>
-                </div>
-                <div class="col-12 h-25">
-                  <div class="row">
-                      <div class="col-12">
-                        <h2>Pedido Nº1 / Hora de recogida:</h2>
-                      </div>
-                  </div>
-                  <div class="row">
-                    <button class="col inicio_plato">
-                      <h2 class="titulos">ENSALADA MIXTA</h2>
-                    </button>
-                    <button class="col inicio_plato">
-                      <h2 class="titulos">POLLO CON PATATAS FRITAS</h2>
-                    </button>
-                    <button class="col inicio_plato">
-                      <h2 class="titulos">AGUA</h2>
-                    </button>
-                    <button class="col inicio_plato">
-                      <h2 class="titulos">TARTA DE QUESO</h2>
-                    </button>
-                    <button class="col inicio_plato">
-                      <h2 class="titulos">PATATAS BRAVAS</h2>
-                    </button>
-                    <button class="col acabado">
-                      <img src="../../assets/listo.png" class="icon">
-                    </button>
-                  </div>
-                </div>
-                <div class="col-12 h-25">
-                  <div class="row">
-                      <div class="col-12">
-                        <h2>Pedido Nº1 / Hora de recogida:</h2>
-                      </div>
-                  </div>
-                  <div class="row">
-                    <button class="col inicio_plato">
-                      <h2 class="titulos">ENSALADA MIXTA</h2>
-                    </button>
-                    <button class="col inicio_plato">
-                      <h2 class="titulos">POLLO CON PATATAS FRITAS</h2>
-                    </button>
-                    <button class="col inicio_plato">
-                      <h2 class="titulos">AGUA</h2>
-                    </button>
-                    <button class="col inicio_plato">
-                      <h2 class="titulos">TARTA DE QUESO</h2>
-                    </button>
-                    <button class="col inicio_plato">
-                      <h2 class="titulos">PATATAS BRAVAS</h2>
-                    </button>
-                    <button class="col acabado">
-                      <img src="../../assets/listo.png" class="icon">
-                    </button>
-                  </div>
-                </div>
-                
-              
-  
-</div>
-</div>
-</div>
+<div class="container-fluid order vh-100">
+  <div *ngFor="let order of orders" class="row">
+    <div class="col-xxl-12 col-xl-12 col-lg-6 h-100 d-flex justify-content-start align-items-center">
+      <h2 class="m-0 d-flex justify-content-start align-items-center">Pedido nº{{ order.n_pedido }} / Hora de recogida: {{order.hora_recogida}}</h2>
+    </div>
+    <div class="col-xxl-12 d-flex justify-content-between align-items-center dishes">
+      <div class="row h-100 w-100">
+        <div *ngFor="let dish of dishes" class="col-2 d-flex justify-content-center align-items-center">
+          <button class="h-100 w-100 d-flex justify-content-center align-items-center home_dish"  style="background-image: url({{dish.image}});">
+            <h2 class="m-0 d-flex justify-content-center align-items-center"> {{dish.nombre}} </h2>
+          </button>
+        </div>
+        <div class="col-2 d-flex justify-content-center align-items-center">
+          <button class="button_finished">
+            <img src="../../assets/listo.png" class="img-fluid finished">
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
 </div>
