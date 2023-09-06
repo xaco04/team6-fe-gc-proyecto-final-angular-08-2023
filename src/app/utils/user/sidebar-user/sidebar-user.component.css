@@ -1,32 +1,68 @@
 .logo_gc{
 
-    height: 15vh;
+    height: 10vh;
 }
 
 .sidebar_menu_options{
 
-    background-color: #0052AB;
+    height: 20vh;
 }
 
 .menu_option{
 
-    height: 6vh;
-
-    color: white;
-
-    border-bottom: 0.1em solid white;
+    color: #0052AB;
 }
 
-.menu_option:hover i{
+.cart{
 
-    animation-name: menu_hover;
-    animation-duration: 0.4s;
-    animation-timing-function: ease-in;
-    animation-fill-mode: forwards;
+    height: 40vh;
+    overflow-y: auto;
 }
 
-@keyframes menu_hover {
+.total{
+
+    height: 10vh;
+}
+
+.cart::-webkit-scrollbar{
     
-    from { font-size: 1em; }
-    to { font-size: 1.2em; }
+    width: 0;
+    display: none;
+}
+
+.dish_ordered{
+
+    height: 6vh;
+    border-bottom: 0.1em solid black;
+}
+
+.dish_ordered:first-child{
+
+    border-top: 0.1em solid black;
+}
+
+.price{
+
+    background-color: #0052AB;
+}
+
+.dish_cancel{
+
+    color: red;
+    font-weight: bold;
+    font-size: larger;
+}
+
+.checkout{
+
+    height: 5vh;
+
+    background-color: #0052AB;
+
+    border: none;
+}
+
+.logout{
+
+    height: 1vh;
 }
