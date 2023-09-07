@@ -8,7 +8,6 @@ import { Component, OnInit } from '@angular/core';
 export class UserHoursComponent {
 
   horas: string[] = this.generateHours();
-  titulo: string = 'Elige la hora de recogida';
 
   generateHours(): string[]{
 

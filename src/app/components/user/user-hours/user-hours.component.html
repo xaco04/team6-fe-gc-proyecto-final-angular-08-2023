@@ -1,16 +1,23 @@
 <div class="modal fade" id="choose_hour" tabindex="-1" role="dialog" aria-labelledby="choose_hourLabel" aria-hidden="true" data-bs-backdrop="static" data-keyboard="false">
-    <div class="modal-dialog modal-lg modal-dialog-centered" role="document">
+    <div class="modal-dialog modal-dialog-scrollable" role="document">
         <div class="modal-content">
             <div class="modal-header">
-                <h2 class="modal-title w-100" [attr.id]="'choose_hour'"> Elige tu hora </h2>
+                <h2 class="modal-title" [attr.id]="'choose_hour'"> Elige la hora de recogida </h2>
                 <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
             </div>
             <div class="modal-body">
-                <div class="row h-50">
-                    <div *ngFor="let hora of horas" class="col-md-3 col-sm-6 d-flex justify-content-center align-items-center">
-                        <div class="mb-5 d-flex justify-content-center align-items-center">
-                            <button class="btn btn-lg border-0 hour_button">
-                                <h4 class="m-0 pt-3 pb-3 ps-5 pe-5"> {{hora}} </h4>
+                <div class="row">
+                    <div *ngFor="let hora of horas" class="col-6 d-flex justify-content-center align-items-center">
+                        <div class="mb-3 d-flex justify-content-center align-items-center">
+                            <button class="btn border-0 hour_button">
+                                <h4 class="m-0 pt-2 pb-2 ps-5 pe-5"> {{hora}} </h4>
+                            </button>
+                        </div>
+                    </div>
+                    <div class="col-12">
+                        <div class="mb-3 d-flex justify-content-center align-items-center">
+                            <button class="btn border-0 hour_button">
+                                <h4 class="m-0 pt-2 pb-2 ps-5 pe-5"> {{this.horas[this.horas.length-1]}} </h4>
                             </button>
                         </div>
                     </div>
@@ -18,7 +25,6 @@
             </div>
             <div class="modal-footer d-flex justify-content-center align-items-center">
                 <button type="button" class="btn btn-primary">Aceptar</button>
-                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
             </div>
         </div>
     </div>
