@@ -7,8 +7,6 @@ import { Component, OnInit } from '@angular/core';
 })
 export class SidebarUserComponent implements OnInit {
 
-  total: number = 0;
-
   order = [
     {
       dish: 'Ensalada César',
@@ -34,6 +32,16 @@ export class SidebarUserComponent implements OnInit {
       dish: 'Patatas bravas',
       quantity: 1,
       price: 3.8
+    },
+    {
+      dish: 'Patatas bravas',
+      quantity: 1,
+      price: 3.8
+    },
+    {
+      dish: 'Patatas bravas',
+      quantity: 1,
+      price: 3.8
     }
   ];
 
@@ -42,13 +50,15 @@ export class SidebarUserComponent implements OnInit {
     this.getTotal();
   }
 
-  getTotal(): number{
+  getTotal(): number {
 
-    for(let i = 0; i < this.order.length; i++)
-    {
-      this.total += this.order[i].price*this.order[i].quantity;
+    let total = 0;
+    
+    for (let item of this.order) {
+
+      total += item.price * item.quantity;
     }
-
-    return this.total
+    return (total*100)/100;
   }
+  
 }

@@ -1,11 +1,11 @@
 .logo_gc{
 
-    height: 10vh;
+    height: 12vh;
 }
 
 .sidebar_menu_options{
 
-    height: 20vh;
+    height: 25vh;
 }
 
 .menu_option{
@@ -13,9 +13,16 @@
     color: #0052AB;
 }
 
+.menu_option:hover{
+
+    color: white;
+    background-color: #0052AB;
+}
+
 .cart{
 
-    height: 40vh;
+    height: 36vh;
+
     overflow-y: auto;
 }
 
@@ -32,7 +39,7 @@
 
 .dish_ordered{
 
-    height: 6vh;
+    min-height: 7vh;
     border-bottom: 0.1em solid black;
 }
 
@@ -48,9 +55,8 @@
 
 .dish_cancel{
 
-    color: red;
-    font-weight: bold;
     font-size: larger;
+    cursor: pointer;
 }
 
 .checkout{
@@ -59,10 +65,22 @@
 
     background-color: #0052AB;
 
+    color: white;
+
     border: none;
 }
 
-.logout{
+.checkout_icon{
 
-    height: 1vh;
+    font-size: 1.5em;
+}
+
+.logout_container{
+
+    height: 3vh;
+}
+
+.logout_text{
+
+    color: red;
 }
