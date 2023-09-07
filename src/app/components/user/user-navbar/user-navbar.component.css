@@ -1,0 +1,27 @@
+/* Preguntar qué les parece mejor, que haya marco, o no (mirar app.component, clase user_navbar */
+/* .row_user_navbar{
+
+    background-color: #0052AB;
+} */
+
+.logo_gc{
+
+    max-height: 8em;
+}
+
+.icon{
+
+    color: white;
+}
+
+.menu_option{
+
+    color: #0052AB;
+
+    background-color: white;
+}
+
+.navbar_option{
+
+    height: 6vh;
+}

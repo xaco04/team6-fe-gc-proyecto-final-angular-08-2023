@@ -54,6 +54,11 @@ h2, h5{
     border-bottom: 3.5em solid #0052AB;
 }
 
+.logout_icon{
+
+    color: white;
+}
+
 .user_photo{
 
     max-height: 8vh;

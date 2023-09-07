@@ -15,18 +15,30 @@
         </div>
     </div>
 </div>
-<div *ngIf="!logged_in" class="container-fluid">
+<!-- <div *ngIf="!logged_in" class="container-fluid">
     <div class="row">
-        <div class="col-2 sidebar">
+        <div class="col-2"> -->
             <!-- Sidebar Usuario -->
             <!-- <app-user-sidebar></app-user-sidebar> -->
-            <!-- <app-sidebar-user></app-sidebar-user> -->
             <!-- Sidebar Admin -->
-            <app-sidebar-admin></app-sidebar-admin>
-            <!-- Sidebar Admin -->
+            <!-- <app-sidebar-admin></app-sidebar-admin> -->
+            <!-- Sidebar Cocinero -->
             <!-- <app-sidebar-cook></app-sidebar-cook> -->
-        </div>
+        <!-- </div>
         <div class="col-10 content">
+            <router-outlet></router-outlet>
+        </div>
+    </div>
+</div> -->
+<div *ngIf="!logged_in" class="container-fluid">
+    <div class="row">
+        <div class="col-2 d-none d-xxl-block user_sidebar">
+            <app-sidebar-user></app-sidebar-user>
+        </div>
+        <div class="col-12 d-xxl-none user_navbar">
+            <app-user-navbar></app-user-navbar>
+        </div>
+        <div class="col-xxl-10 col-xl-12 mt-1 user_content">
             <router-outlet></router-outlet>
         </div>
     </div>
