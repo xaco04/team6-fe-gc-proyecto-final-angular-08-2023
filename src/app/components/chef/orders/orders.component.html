@@ -1,21 +1,36 @@
 <div class="container-fluid order vh-100">
   <div *ngFor="let order of orders" class="row">
-    <div class="col-xxl-12 col-xl-12 col-lg-6 h-100 d-flex justify-content-start align-items-center">
-      <h2 class="m-0 d-flex justify-content-start align-items-center">Pedido nº{{ order.n_pedido }} / Hora de recogida: {{order.hora_recogida}}</h2>
+    <div *ngIf="!order.finished" class="col-xxl-12 col-xl-12 col-lg-6 h-100 d-flex justify-content-start align-items-center">
+      <h2 class="m-0 d-flex justify-content-start align-items-center">
+        Pedido nº{{ order.n_pedido }} / Hora de recogida: {{ order.hora_recogida }}
+      </h2>
     </div>
-    <div class="col-xxl-12 d-flex justify-content-between align-items-center dishes">
+    <div *ngIf="!order.finished" class="col-xxl-12 d-flex justify-content-between align-items-center dishes">
       <div class="row h-100 w-100">
         <div *ngFor="let dish of dishes" class="col-2 d-flex justify-content-center align-items-center">
-          <button class="h-100 w-100 d-flex justify-content-center align-items-center home_dish"  style="background-image: url({{dish.image}});">
-            <h2 class="m-0 d-flex justify-content-center align-items-center dish-name"> {{dish.nombre}} </h2>
+          <button class="h-100 w-100 d-flex justify-content-center align-items-center home_dish">
+            <h2 class="m-0 d-flex justify-content-center align-items-center dish-name">{{ dish.nombre }}</h2>
           </button>
         </div>
         <div class="col-2 d-flex justify-content-center align-items-center">
-          <button class="button_finished">
+          <button class="button_finished custom_button" [class.button_finished]="order.finished" (click)="toggleOrderFinished(order)">
             <img src="../../assets/listo.png" class="img-fluid finished">
           </button>
         </div>
       </div>
     </div>
   </div>
-</div>
+
+  <!-- Botón para mostrar/ocultar órdenes terminadas -->
+  <button class="button_finished" (click)="toggleShowFinishedOrders()">
+    {{ showFinishedOrders ? 'Ocultar órdenes terminadas' : 'Mostrar órdenes terminadas' }}
+  </button>
+  
+  <!-- Sección para mostrar órdenes finalizadas (solo si showFinishedOrders es true) -->
+  <div *ngIf="showFinishedOrders" class="row">
+    <div *ngFor="let order of getFinishedOrders()">
+      <div class="col-12">
+        <p>Pedido nº{{ order.n_pedido }} / Hora de recogida: {{ order.hora_recogida }}</p>
+      </div>
+    </div>
+  </div>
