@@ -4,24 +4,44 @@
     background-color: #0052AB;
 } */
 
+.row_user_navbar{
+
+    border-bottom: 0.2em solid white;
+
+    background-color: #0052AB;
+}
+
 .logo_gc{
 
     max-height: 8em;
 }
 
+.navbar_options{
+
+    position: absolute;
+
+    z-index: 1;
+}
+
 .icon{
 
+    font-size: 3.5em;
     color: white;
 }
 
 .menu_option{
 
-    color: #0052AB;
+    color: white;
 
-    background-color: white;
+    background-color: #0052AB;
 }
 
 .navbar_option{
 
     height: 6vh;
+}
+
+.navbar_logout{
+
+    color: white;
 }

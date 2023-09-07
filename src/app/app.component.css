@@ -4,10 +4,6 @@
 }
 
 /* Preguntar qué les parece mejor, que haya marco, o no (mirar user-navbar, clase row_user_navbar */
-.user_navbar{
-
-    background-color: #0052AB;
-}
 
 .user_navbar:hover{
 

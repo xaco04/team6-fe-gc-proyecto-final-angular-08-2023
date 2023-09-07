@@ -7,6 +7,7 @@ import { Component } from '@angular/core';
 })
 export class UserNavbarComponent {
 
+
   menu_hidden: boolean = false;
 
   showMenu(){
@@ -18,5 +19,5 @@ export class UserNavbarComponent {
 
       this.menu_hidden = true;
     }
-  }
+  }  
 }
