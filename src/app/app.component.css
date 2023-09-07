@@ -1,0 +1,16 @@
+.sidebar{
+
+    height: 100vh;
+}
+
+.content{
+
+    height: 100vh;
+    overflow-y: auto;
+}
+
+.content::-webkit-scrollbar{
+
+    width: 0;
+    display: none;
+}
