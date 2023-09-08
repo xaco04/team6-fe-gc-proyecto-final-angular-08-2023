@@ -1,5 +1,5 @@
 import { Component, OnInit, Input } from '@angular/core';
-import { AllergensService, Allergen } from '../../../services/shared/allergens.service';
+import { AllergensService } from '../../../services/shared/allergens.service';
 import { RewardsService, Reward } from '../../../services/shared/rewards.service';
 
 @Component({
@@ -9,7 +9,7 @@ import { RewardsService, Reward } from '../../../services/shared/rewards.service
 })
 export class UserProfileComponent implements OnInit {
 
-  @Input() allergens: Allergen[] = [];
+  allergens: any;
   rewards: any;
   
   constructor(private allergensService: AllergensService,
@@ -17,11 +17,14 @@ export class UserProfileComponent implements OnInit {
 
   ngOnInit() {
 
-    this.allergens = this.allergensService.getAllergens();
     this.rewards = this.rewardsService.getRewards();
+    this.allergensService.getAllAllergens().subscribe(result => {
+
+      this.allergens = result;
+    });
   }
 
-  activateAllergen(allergen: Allergen){
+  activateAllergen(allergen: any){
 
     if(allergen.isActive == true){
 
@@ -32,5 +35,4 @@ export class UserProfileComponent implements OnInit {
       allergen.isActive = true;
     }
   }
-
 }
