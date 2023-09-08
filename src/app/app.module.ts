@@ -46,6 +46,7 @@ import { UserDishInfoComponent } from './components/user/user-dish-info/user-dis
 import { DishSelectorComponent } from './components/user/dish-selector/dish-selector.component';
 import { UserCreateMenuComponent } from './components/user/user-create-menu/user-create-menu.component';
 import { UserNavbarComponent } from './components/user/user-navbar/user-navbar.component';
+import { DishInfoComponent } from './components/chef/dish-info/dish-info.component';
 
 @NgModule({
   declarations: [
@@ -74,7 +75,8 @@ import { UserNavbarComponent } from './components/user/user-navbar/user-navbar.c
     DishSelectorComponent,
     UserCreateMenuComponent,
     UserDishInfoComponent,
-    UserNavbarComponent
+    UserNavbarComponent,
+    DishInfoComponent
   ],
   
   imports: [
