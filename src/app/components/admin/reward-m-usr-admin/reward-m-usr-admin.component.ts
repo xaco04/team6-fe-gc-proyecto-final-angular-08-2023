@@ -19,7 +19,7 @@ export class RewardMUsrAdminComponent implements OnInit{
   constructor(private userService: UserService, private rewardsService: RewardsService ) {}
 
   ngOnInit(): void {
-      this.users = this.userService.getUsers();
+      // this.users = this.userService.getUsers();
       this.rewards = this.rewardsService.getRewards();
   }
 }
