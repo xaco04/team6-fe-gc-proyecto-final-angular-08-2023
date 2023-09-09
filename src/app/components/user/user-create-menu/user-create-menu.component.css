@@ -15,7 +15,17 @@
 
 .adding_dish{
 
+    height: 70vh;
+
     border-radius: 0.5em;
+
+    overflow-y: auto;
+}
+
+.adding_dish::-webkit-scrollbar{
+
+    width: 0;
+    display: 0;
 }
 
 .add_dish:hover .add_icon{
