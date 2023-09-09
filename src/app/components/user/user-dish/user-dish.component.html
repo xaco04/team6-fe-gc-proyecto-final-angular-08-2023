@@ -17,7 +17,7 @@
         </div>
     </div>
 </div>
-<div *ngIf="(!isHome) && (dish.category == 1|| dish.category == 2)" class="container-fluid mb-3">
+<div *ngIf="(!isHome) && (category == 1)" class="container-fluid mb-3">
     <div class="row h-100 d-flex justify-content-center align-items-center">
         <div class="col-10 dish" [style.background-image]="'url(' + dish.image + ')'">
             <div class="row h-100 d-flex justify-content-between align-items-center dish_gradient">  
@@ -36,7 +36,7 @@
         </div>
     </div>
 </div>
-<div *ngIf="(!isHome) && (dish.category == 3 || dish.category == 4 || dish.category == 5)" class="container-fluid mb-3">
+<div *ngIf="(!isHome) && (category == 3 || category == 4 || category == 5)" class="container-fluid mb-3">
     <div class="row h-100 d-flex justify-content-center align-items-center">
         <div class="col-12 small_dish" [style.background-image]="'url(' + dish.image + ')'">
             <div class="row h-100 d-flex justify-content-between align-items-center dish_gradient">  
