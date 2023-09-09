@@ -1,58 +1,34 @@
 import { Injectable } from '@angular/core';
+import { HttpClient } from '@angular/common/http';
+import { Observable } from 'rxjs';
+
+const API_URL = 'http://localhost:8080/';
+
 
 @Injectable({
   providedIn: 'root'
 })
 export class UserService {
-  private users: any[] = [
-    { id: 1, 
-      isActive: 'Active', 
-      name: 'Administrador', 
-      surname: 'Administrador', 
-      username: 'admin',
-      password: 'admin',
-      image: '../../../../assets/avatar.png',
-      points: 50,
-      role: 'admin',
-},
+  constructor(private http: HttpClient) {}
 
-{ id: 1, 
-  isActive: 'Active', 
-  name: 'Xavier Jordi', 
-  surname: 'Vico', 
-  username: 'xavi04',
-  password: '1234',
-  image: '../../../../assets/avatar.png' ,
-  points: 50,
-  role: 'user',
-},
-
-{ id: 1, 
-  isActive: 'Active', 
-  name: 'Roberto', 
-  surname: 'Carrera', 
-  username: 'RCarrera',
-  password: '1234',
-  image: '../../../../assets/avatar.png',
-  points: 50,
-  role: 'user',
-},
-
-{ id: 1, 
-  isActive: 'Active', 
-  name: 'Joan', 
-  surname: 'de la Huerta Planas', 
-  username: 'xavi04',
-  password: '1234',
-  image: '../../../../assets/avatar.png',
-  points: 50,
-  role: 'user',
-},
-
-
-  ];
-
-  getUsers(): any[] {
-    return this.users;
+  getPublicContent(): Observable<any> {
+    return this.http.get(API_URL + 'all', { responseType: 'text' });
   }
+
+  getUserBoard(): Observable<any> {
+    return this.http.get(API_URL + 'Usuario', { responseType: 'text' });
+  }
+
+  getEncargadoBoard(): Observable<any> {
+    return this.http.get(API_URL + 'Encargado', { responseType: 'text' });
+  }
+
+  getCocineroBoard(): Observable<any> {
+    return this.http.get(API_URL + 'Cocinero', { responseType: 'text' });
+  }
+
+  getAdminBoard(): Observable<any> {
+    return this.http.get(API_URL + 'Administrador', { responseType: 'text' });
+  }
+
 }
