@@ -81,6 +81,7 @@ import { HourSelectionComponent } from './components/user/hour-selection/hour-se
   
   imports: [
     BrowserModule,
+    FormsModule,
     AppRoutingModule,
     MdbAccordionModule,
     MdbCarouselModule,
@@ -98,7 +99,6 @@ import { HourSelectionComponent } from './components/user/hour-selection/hour-se
     MdbTooltipModule,
     MdbValidationModule,
     BrowserAnimationsModule,
-    FormsModule,
     HttpClientModule
   ],
   providers: [],

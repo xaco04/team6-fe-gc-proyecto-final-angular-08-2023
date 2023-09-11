@@ -23,16 +23,21 @@ export class TokenStorageServiceService {
     return window.sessionStorage.getItem(TOKEN_KEY);
   }
 
-  public saveUser(user: any): void {
+  public saveUser(users: any): void {
     window.sessionStorage.removeItem(USER_KEY);
-    window.sessionStorage.setItem(USER_KEY, JSON.stringify(user));
+    window.sessionStorage.setItem(USER_KEY, JSON.stringify(users));
   }
 
-  public getUser(): any {
-    const user = window.sessionStorage.getItem(USER_KEY);
-    if (user) {
-      return JSON.parse(user);
+  public getUsers(): any {
+    let saludo: string = "no";
+    const users = window.sessionStorage.getItem(USER_KEY);
+    if (users) {
+      console.log("Se han encontrado datos");
+      return JSON.parse(users);
+    } else {
+      console.log("No se encontraron datos de usuario en la sesión de almacenamiento.");
+      return null; // Otra opción es devolver null si no se encuentran datos en sessionStorage
     }
-    return{};
   }
+
 }
