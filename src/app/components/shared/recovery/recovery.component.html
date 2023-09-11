@@ -5,12 +5,16 @@
                 <div class="imagen_gc">
                     <img class="m-3" src="../../assets/logo_gc.svg" alt="">
                 </div>
-                <div>
-                    <p class="mb-1">Introduce tu correo de empresa:</p>
-                    <input class="text-center mb-3 login_input" type="email" placeholder="E-mail"/>
-                </div>
-                <button class="mb-2 btn btn-primary login_button">Enviar</button>
-                <a routerLink="/login" class="text-dark" href="#">Cancelar</a>
+                <form *ngIf="!isSuccessful" name="form" (ngSubmit)="f.form.valid && onSubmit()" #f="ngForm" novalidate>
+                    <div class="form-group">
+                        <div>
+                            <p class="mb-1">Introduce tu correo de empresa:</p>
+                            <input class="text-center mb-3 login_input" type="email" placeholder="E-mail"/>
+                        </div>
+                        <button class="mb-2 btn btn-primary login_button">Enviar</button>
+                        <a routerLink="/login" class="text-dark" href="#">Cancelar</a>
+                    </div>
+                </form>
             </div>
         </div>
     </div>
