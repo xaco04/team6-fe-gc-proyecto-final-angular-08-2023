@@ -2,7 +2,6 @@ import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { FormsModule } from '@angular/forms';
 
-
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { SidebarAdminComponent } from './utils/admin/sidebar-admin/sidebar-admin.component';
@@ -45,8 +44,10 @@ import { UserDishComponent } from './components/user/user-dish/user-dish.compone
 import { UserDishInfoComponent } from './components/user/user-dish-info/user-dish-info.component';
 import { DishSelectorComponent } from './components/user/dish-selector/dish-selector.component';
 import { UserCreateMenuComponent } from './components/user/user-create-menu/user-create-menu.component';
-import { UserNavbarComponent } from './components/user/user-navbar/user-navbar.component';
+import { UserNavbarComponent } from './utils/user/user-navbar/user-navbar.component';
 import { DishInfoComponent } from './components/chef/dish-info/dish-info.component';
+import { HttpClientModule } from '@angular/common/http';
+import { HourSelectionComponent } from './components/user/hour-selection/hour-selection.component';
 
 @NgModule({
   declarations: [
@@ -76,7 +77,8 @@ import { DishInfoComponent } from './components/chef/dish-info/dish-info.compone
     UserCreateMenuComponent,
     UserDishInfoComponent,
     UserNavbarComponent,
-    DishInfoComponent
+    DishInfoComponent,
+    HourSelectionComponent
   ],
   
   imports: [
@@ -99,6 +101,7 @@ import { DishInfoComponent } from './components/chef/dish-info/dish-info.compone
     MdbValidationModule,
     BrowserAnimationsModule,
     FormsModule,
+    HttpClientModule
   ],
   providers: [],
   bootstrap: [AppComponent]

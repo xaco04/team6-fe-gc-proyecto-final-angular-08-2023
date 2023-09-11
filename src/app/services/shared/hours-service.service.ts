@@ -4,14 +4,14 @@ import { HttpClient } from '@angular/common/http'
 @Injectable({
   providedIn: 'root'
 })
-export class AllergensService {
+export class HoursServiceService {
 
-  api_allergens: string = 'http://localhost:8080/allergens';
+  api_hours: string = 'http://localhost:8080/hours';
 
   constructor(private http: HttpClient) { }
 
-  getAllAllergens(){
+  getAllHours(){
     
-    return this.http.get(this.api_allergens);
+    return this.http.get(this.api_hours);
   }
 }

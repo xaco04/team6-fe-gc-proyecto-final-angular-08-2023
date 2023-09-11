@@ -12,6 +12,6 @@ export class UsrManagementListAdminComponent implements OnInit {
   constructor(private userService: UserService) {}
 
   ngOnInit(): void {
-      this.users = this.userService.getUsers();
+      // this.users = this.userService.getUsers();
   }
 }
