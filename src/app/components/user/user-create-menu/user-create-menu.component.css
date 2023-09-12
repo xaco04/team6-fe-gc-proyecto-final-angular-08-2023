@@ -72,8 +72,24 @@
 }
 
 @media (max-width: 1400px) {
-    .h-xxl-50 {
+    
+    .h-xxl-container {
 
-        height: 50% !important;
+        height: 90% !important;
+    }
+
+    .h-xxl-small_dish{
+
+        height: 25vh;
+    }
+
+    .h-xxl-small_category{
+
+        height: 5vh;
+    }
+
+    .h-xxl-small_dishes{
+
+        height: 19vh;
     }
 }

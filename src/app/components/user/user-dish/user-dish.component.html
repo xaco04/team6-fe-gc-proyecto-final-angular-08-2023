@@ -38,7 +38,7 @@
 </div>
 <div *ngIf="(!isHome) && (dish.category.id == 3 || dish.category.id == 4 || dish.category.id == 5)" class="container-fluid mb-3">
     <div class="row h-100 d-flex justify-content-center align-items-center">
-        <div [ngClass]="{'small_dish': !responsiveness, 'responsiveness': responsiveness}" class="col-12 small_dish" [style.background-image]="'url(' + dish.image + ')'">
+        <div [ngClass]="{'small_dish': !responsiveness, 'responsiveness': responsiveness}" class="col-12" [style.background-image]="'url(' + dish.image + ')'">
             <div class="row h-100 d-flex justify-content-between align-items-center dish_gradient">  
                 <div class="col-8 h-100 p-2">
                     <h4 class="h-100 d-flex flex-column justify-content-between align-items-start dish_name">   

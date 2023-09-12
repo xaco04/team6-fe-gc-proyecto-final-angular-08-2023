@@ -22,3 +22,16 @@
     width: 0;
     display: none;
 }
+
+@media (max-width: 1400px) {
+
+    .h-xxl-navbar {
+
+        height: 10vh !important;
+    }
+
+    .h-xxl-content {
+
+        height: 90vh !important;
+    }
+}
