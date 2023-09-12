@@ -16,14 +16,7 @@ export class HourSelectionComponent implements OnInit{
       
     this.hoursService.getAllHours().subscribe(result => {
 
-      if (Array.isArray(result)) {
-        this.hours = result.map((hour: any) => {
-          return {
-            ...hour,
-            hour: hour.hour.substring(0, 5)
-          }
-        });
-      }
+      this.hours = result;
     });
   }
 }
