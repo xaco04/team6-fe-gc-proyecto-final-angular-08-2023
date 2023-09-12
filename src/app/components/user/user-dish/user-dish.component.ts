@@ -14,4 +14,5 @@ export class UserDishComponent {
   @Input() dish: any;
   @Input() index: number = 0;
   @Input() index_seconds: number = 0;
+  @Input() responsiveness: boolean = false;
 }

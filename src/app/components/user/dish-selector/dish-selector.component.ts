@@ -11,6 +11,9 @@ export class DishSelectorComponent {
   @Input() category: number = 0;
   @Input() isHome: boolean = false;
   @Input() small_dish: boolean = false;
+  @Input() responsiveness: boolean = false;
+
+  @Input() responsive_dish: any;
 
   firsts: any;
   seconds: any;

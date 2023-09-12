@@ -45,6 +45,13 @@
     color: black;
 }
 
+.responsiveness{
+
+    height: 25vh;
+    background-size: cover;
+    background-position: center;
+}
+
 @media (max-width: 1400px){
 
     .dish_name{
