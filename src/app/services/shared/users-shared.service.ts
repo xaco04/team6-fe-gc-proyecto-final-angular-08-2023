@@ -5,10 +5,13 @@ import { Observable } from 'rxjs';
 const API_URL = 'http://localhost:8080/';
 
 
+
 @Injectable({
   providedIn: 'root'
 })
 export class UserService {
+  apiUrl: string = 'http://localhost:8080/users'; // Reemplaza con la URL de tu API de usuarios
+
   constructor(private http: HttpClient) {}
 
   getPublicContent(): Observable<any> {
@@ -30,5 +33,10 @@ export class UserService {
   getAdminBoard(): Observable<any> {
     return this.http.get(API_URL + 'Administrador', { responseType: 'text' });
   }
+
+  getAllUsers() {
+    return this.http.get(this.apiUrl);
+  }
+
 
 }
