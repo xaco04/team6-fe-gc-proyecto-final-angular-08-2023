@@ -34,4 +34,19 @@ export class DishesService {
     
     return this.http.get(this.api_dishes+'?category=5');
   }
+
+  getDishById(newId: number){
+
+    return this.http.get(this.api_dishes+'/'+newId);
+  }
+
+  getIngredientsByDish(newId: number){
+
+    return this.http.get(this.api_dishes+'/'+newId+'/ingredients');
+  }
+
+  getAllergensByDish(newId: number){
+
+    return this.http.get(this.api_dishes+'/'+newId+'/allergens');
+  }
 }
