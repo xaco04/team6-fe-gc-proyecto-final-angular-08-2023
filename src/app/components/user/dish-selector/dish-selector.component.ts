@@ -15,11 +15,11 @@ export class DishSelectorComponent {
 
   @Input() responsive_dish: any;
 
-  firsts: any;
-  seconds: any;
-  starters: any;
-  desserts: any;
-  drinks: any;
+  firsts: any = [];
+  seconds: any = [];
+  starters: any = [];
+  desserts: any = [];
+  drinks: any = [];
 
   constructor(private dishesService: DishesService){}
 

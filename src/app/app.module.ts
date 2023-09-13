@@ -31,6 +31,7 @@ import { ProfileAdminComponent } from './components/admin/profile-admin/profile-
 import { AnalysisListAdminComponent } from './components/admin/analysis-list-admin/analysis-list-admin.component';
 import { RewardMUsrAdminComponent } from './components/admin/reward-m-usr-admin/reward-m-usr-admin.component';
 import { PriceSharedComponent } from './components/shared/price-shared/price-shared.component';
+import { RecipeComponent } from './components/chef/recipe/recipe.component';
 import { LoginComponent } from './components/shared/login/login.component';
 import { UserHomeComponent } from './components/user/user-home/user-home.component';
 import { UserProfileComponent } from './components/user/user-profile/user-profile.component';
@@ -44,10 +45,12 @@ import { UserDishComponent } from './components/user/user-dish/user-dish.compone
 import { UserDishInfoComponent } from './components/user/user-dish-info/user-dish-info.component';
 import { DishSelectorComponent } from './components/user/dish-selector/dish-selector.component';
 import { UserCreateMenuComponent } from './components/user/user-create-menu/user-create-menu.component';
+import { DishListComponent } from './components/chef/dish-list/dish-list.component';
 import { UserNavbarComponent } from './utils/user/user-navbar/user-navbar.component';
 import { DishInfoComponent } from './components/chef/dish-info/dish-info.component';
 import { HttpClientModule } from '@angular/common/http';
 import { HourSelectionComponent } from './components/user/hour-selection/hour-selection.component';
+import { UserHoursComponent } from './components/user/user-hours/user-hours.component';
 
 @NgModule({
   declarations: [
@@ -63,6 +66,7 @@ import { HourSelectionComponent } from './components/user/hour-selection/hour-se
     AnalysisListAdminComponent,
     RewardMUsrAdminComponent,
     PriceSharedComponent,
+    RecipeComponent,
     LoginComponent,
     UserHomeComponent,
     UserProfileComponent,
@@ -78,7 +82,10 @@ import { HourSelectionComponent } from './components/user/hour-selection/hour-se
     UserDishInfoComponent,
     UserNavbarComponent,
     DishInfoComponent,
-    HourSelectionComponent
+    HourSelectionComponent,
+    DishListComponent,
+    HourSelectionComponent,
+    UserHoursComponent
   ],
   
   imports: [

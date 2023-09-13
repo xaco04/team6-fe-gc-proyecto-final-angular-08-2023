@@ -11,6 +11,10 @@ export class UserDishInfoComponent implements OnInit{
   @Input() id?: any;
   @Input() dish: any;
   @Input() index: number = 0;
+  @Input() dish_id: number = 0;
+
+  ingredients: any;
+  allergens: any;
 
   constructor(private dishesService: DishesService){}
 
@@ -20,5 +24,22 @@ export class UserDishInfoComponent implements OnInit{
 
       this.dish = result;
     });
+  }
+}
+      
+    this.dishesService.getDishById(this.dish_id).subscribe(result => {
+
+      this.dish = result;
+    })
+
+    this.dishesService.getIngredientsByDish(this.dish_id).subscribe(result => {
+
+      this.ingredients = result;
+    })
+
+    this.dishesService.getAllergensByDish(this.dish_id).subscribe(result => {
+
+      this.allergens = result;
+    })
   }
 }
