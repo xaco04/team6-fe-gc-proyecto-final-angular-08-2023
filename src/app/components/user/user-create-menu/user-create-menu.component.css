@@ -57,15 +57,22 @@
     transition: transform 0.5s;
 }
 
-@media (min-width: 1520px) {
+@media (max-width: 1700px) {
     .w-xxl-75 {
 
         width: 75% !important;
     }
 }
 
-@media (max-width: 1520px) {
+@media (max-width: 1540px) {
     .w-xxl-100 {
+
+        width: 100% !important;
+    }
+}
+
+@media (max-width: 1300px) {
+    .w-xl-100 {
 
         width: 100% !important;
     }
@@ -75,7 +82,7 @@
     
     .h-xxl-container {
 
-        height: 90% !important;
+        height: 95% !important;
     }
 
     .h-xxl-small_dish{
