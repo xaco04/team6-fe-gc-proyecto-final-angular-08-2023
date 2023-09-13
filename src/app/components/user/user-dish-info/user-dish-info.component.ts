@@ -8,6 +8,7 @@ import { DishesService } from 'src/app/services/shared/dishes.service';
 })
 export class UserDishInfoComponent implements OnInit{
 
+  @Input() id?: any;
   @Input() dish: any;
   @Input() index: number = 0;
   @Input() dish_id: number = 0;
@@ -18,6 +19,13 @@ export class UserDishInfoComponent implements OnInit{
   constructor(private dishesService: DishesService){}
 
   ngOnInit(): void {
+    
+    this.dishesService.getDishById(this.id).subscribe(result => {
+
+      this.dish = result;
+    });
+  }
+}
       
     this.dishesService.getDishById(this.dish_id).subscribe(result => {
 

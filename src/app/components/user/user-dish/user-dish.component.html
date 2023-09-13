@@ -17,7 +17,26 @@
         </div>
     </div>
 </div> -->
-<div *ngIf="(!isHome) && (dish.category.id == 1|| dish.category.id == 2)" class="container-fluid mb-3">
+<div *ngIf="(!isHome)" class="container-fluid mb-3">
+    <div class="row h-100 d-flex justify-content-center align-items-center">
+        <div class="col-10 dish" [style.background-image]="'url(' + dish.image + ')'">
+            <div class="row h-100 d-flex justify-content-between align-items-center dish_gradient">  
+                <div class="col-7 h-100 p-2">
+                    <h4 class="h-100 d-flex flex-column justify-content-between align-items-start dish_name">   
+                        <i class="fs-2 bi bi-info-circle-fill" data-bs-toggle="modal" [attr.data-bs-target]="'#dish_info_'+index">
+                            <app-user-dish-info [id] = "dish.id" [index] = "index"></app-user-dish-info>
+                        </i>
+                        {{dish.name}}
+                    </h4>
+                </div>
+                <div class="col-3 h-100 d-flex justify-content-center align-items-center dish_add">
+                    <i class="fs-1 bi bi-plus-circle-fill"></i>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- <div *ngIf="(!isHome) && (dish.category.id == 2)" class="container-fluid mb-3">
     <div class="row h-100 d-flex justify-content-center align-items-center">
         <div [ngClass]="{'dish': !responsiveness, 'responsiveness': responsiveness}" class="col-12 dish" [style.background-image]="'url(' + dish.image + ')'">
             <div class="row h-100 d-flex justify-content-between align-items-center dish_gradient">  
@@ -36,7 +55,7 @@
         </div>
     </div>
 </div>
-<div *ngIf="(!isHome) && (dish.category.id == 3 || dish.category.id == 4 || dish.category.id == 5)" class="container-fluid mb-3">
+<div *ngIf="(!isHome) && (dish.category.id == 3)" class="container-fluid mb-3">
     <div class="row h-100 d-flex justify-content-center align-items-center">
         <div [ngClass]="{'small_dish': !responsiveness, 'responsiveness': responsiveness}" class="col-12" [style.background-image]="'url(' + dish.image + ')'">
             <div class="row h-100 d-flex justify-content-between align-items-center dish_gradient">  
@@ -55,3 +74,41 @@
         </div>
     </div>
 </div>
+<div *ngIf="(!isHome) && (dish.category.id == 4)" class="container-fluid mb-3">
+    <div class="row h-100 d-flex justify-content-center align-items-center">
+        <div class="col-12 small_dish" [style.background-image]="'url(' + dish.image + ')'">
+            <div class="row h-100 d-flex justify-content-between align-items-center dish_gradient">  
+                <div class="col-8 h-100 p-2">
+                    <h4 class="h-100 d-flex flex-column justify-content-between align-items-start dish_name">   
+                        <i class="fs-2 bi bi-info-circle-fill" data-bs-toggle="modal" [attr.data-bs-target]="'#dish_info_'+index">
+                            <app-user-dish-info [dish] = "dish" [index] = "index"></app-user-dish-info>
+                        </i>
+                        {{dish.name}}
+                    </h4>
+                </div>
+                <div class="col-4 d-flex justify-content-center align-items-center dish_add">
+                    <i class="fs-1 bi bi-plus-circle-fill"></i>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<div *ngIf="(!isHome) && (dish.category.id == 5)" class="container-fluid mb-3">
+    <div class="row h-100 d-flex justify-content-center align-items-center">
+        <div class="col-12 small_dish" [style.background-image]="'url(' + dish.image + ')'">
+            <div class="row h-100 d-flex justify-content-between align-items-center dish_gradient">  
+                <div class="col-8 h-100 p-2">
+                    <h4 class="h-100 d-flex flex-column justify-content-between align-items-start dish_name">   
+                        <i class="fs-2 bi bi-info-circle-fill" data-bs-toggle="modal" [attr.data-bs-target]="'#dish_info_'+index">
+                            <app-user-dish-info [dish] = "dish" [index] = "index"></app-user-dish-info>
+                        </i>
+                        {{dish.name}}
+                    </h4>
+                </div>
+                <div class="col-4 d-flex justify-content-center align-items-center dish_add">
+                    <i class="fs-1 bi bi-plus-circle-fill"></i>
+                </div>
+            </div>
+        </div>
+    </div>
+</div> -->

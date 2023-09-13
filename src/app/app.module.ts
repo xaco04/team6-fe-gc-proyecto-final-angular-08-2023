@@ -47,6 +47,7 @@ import { DishSelectorComponent } from './components/user/dish-selector/dish-sele
 import { UserCreateMenuComponent } from './components/user/user-create-menu/user-create-menu.component';
 import { DishListComponent } from './components/chef/dish-list/dish-list.component';
 import { UserNavbarComponent } from './utils/user/user-navbar/user-navbar.component';
+import { DishInfoComponent } from './components/chef/dish-info/dish-info.component';
 import { HttpClientModule } from '@angular/common/http';
 import { HourSelectionComponent } from './components/user/hour-selection/hour-selection.component';
 import { UserHoursComponent } from './components/user/user-hours/user-hours.component';
@@ -80,6 +81,8 @@ import { UserHoursComponent } from './components/user/user-hours/user-hours.comp
     UserCreateMenuComponent,
     UserDishInfoComponent,
     UserNavbarComponent,
+    DishInfoComponent,
+    HourSelectionComponent,
     DishListComponent,
     HourSelectionComponent,
     UserHoursComponent
