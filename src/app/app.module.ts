@@ -2,7 +2,6 @@ import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { FormsModule } from '@angular/forms';
 
-
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { SidebarAdminComponent } from './utils/admin/sidebar-admin/sidebar-admin.component';
@@ -32,6 +31,8 @@ import { ProfileAdminComponent } from './components/admin/profile-admin/profile-
 import { AnalysisListAdminComponent } from './components/admin/analysis-list-admin/analysis-list-admin.component';
 import { RewardMUsrAdminComponent } from './components/admin/reward-m-usr-admin/reward-m-usr-admin.component';
 import { PriceSharedComponent } from './components/shared/price-shared/price-shared.component';
+import { UserSidebarComponent } from './user/user-sidebar/user-sidebar.component';
+import { RecipeComponent } from './components/chef/recipe/recipe.component';
 import { LoginComponent } from './components/shared/login/login.component';
 import { UserHomeComponent } from './components/user/user-home/user-home.component';
 import { UserProfileComponent } from './components/user/user-profile/user-profile.component';
@@ -47,6 +48,9 @@ import { DishSelectorComponent } from './components/user/dish-selector/dish-sele
 import { UserCreateMenuComponent } from './components/user/user-create-menu/user-create-menu.component';
 import { UserNavbarComponent } from './components/user/user-navbar/user-navbar.component';
 import { DishListComponent } from './components/chef/dish-list/dish-list.component';
+import { UserNavbarComponent } from './utils/user/user-navbar/user-navbar.component';
+import { HttpClientModule } from '@angular/common/http';
+import { HourSelectionComponent } from './components/user/hour-selection/hour-selection.component';
 
 @NgModule({
   declarations: [
@@ -62,6 +66,9 @@ import { DishListComponent } from './components/chef/dish-list/dish-list.compone
     AnalysisListAdminComponent,
     RewardMUsrAdminComponent,
     PriceSharedComponent,
+    recipe-chef,
+    UserSidebarComponent,
+    RecipeComponent,
     LoginComponent,
     UserHomeComponent,
     UserProfileComponent,
@@ -77,10 +84,12 @@ import { DishListComponent } from './components/chef/dish-list/dish-list.compone
     UserDishInfoComponent,
     UserNavbarComponent,
     DishListComponent
+    HourSelectionComponent
   ],
   
   imports: [
     BrowserModule,
+    FormsModule,
     AppRoutingModule,
     MdbAccordionModule,
     MdbCarouselModule,
@@ -98,7 +107,7 @@ import { DishListComponent } from './components/chef/dish-list/dish-list.compone
     MdbTooltipModule,
     MdbValidationModule,
     BrowserAnimationsModule,
-    FormsModule,
+    HttpClientModule
   ],
   providers: [],
   bootstrap: [AppComponent]

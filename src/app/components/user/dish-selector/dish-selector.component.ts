@@ -1,5 +1,5 @@
 import { Component, Input } from '@angular/core';
-import { DishesService, Dish } from '../../../services/shared/dishes.service';
+import { DishesService} from '../../../services/shared/dishes.service';
 
 @Component({
   selector: 'app-dish-selector',
@@ -9,37 +9,45 @@ import { DishesService, Dish } from '../../../services/shared/dishes.service';
 export class DishSelectorComponent {
 
   @Input() category: number = 0;
-
-  @Input() small_dish: boolean = false;
   @Input() isHome: boolean = false;
-  @Input() recommended: boolean = false;
-  @Input() suggested: boolean = false;
-  @Input() highlighted: boolean = false;
-  
-  @Input() dishes: Dish[] = [];
-  @Input() recommended_dishes: Dish[] = [];
-  @Input() suggested_dishes: Dish[] = [];
-  @Input() highlighted_dishes: Dish[] = [];
+  @Input() small_dish: boolean = false;
+  @Input() responsiveness: boolean = false;
+
+  @Input() responsive_dish: any;
+
+  firsts: any = [];
+  seconds: any = [];
+  starters: any = [];
+  desserts: any = [];
+  drinks: any = [];
 
   constructor(private dishesService: DishesService){}
 
   ngOnInit() {
 
-    this.dishes = this.dishesService.filterDishes(this.category)
+    this.dishesService.getAllFirsts().subscribe(result => {
 
-    if(this.recommended){
+      this.firsts = result;
+    });
 
-      this.recommended_dishes = this.dishesService.filterRecommended();
-    }else{
-      if(this.suggested){
+    this.dishesService.getAllSeconds().subscribe(result => {
 
-        this.suggested_dishes = this.dishesService.filterSuggested();
-      }else{
-        if(this.highlighted){
+      this.seconds = result;
+    });
 
-          this.highlighted_dishes = this.dishesService.filterHighlighted();
-        }
-      }
-    }
+    this.dishesService.getAllStarters().subscribe(result => {
+
+      this.starters = result;
+    });
+
+    this.dishesService.getAllDesserts().subscribe(result => {
+
+      this.desserts = result;
+    });
+
+    this.dishesService.getAllDrinks().subscribe(result => {
+
+      this.drinks = result;
+    });
   }
 }

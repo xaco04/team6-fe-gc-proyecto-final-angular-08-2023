@@ -53,3 +53,11 @@
     width: 0;
     background: transparent;
 }
+
+.responsiveness{
+
+    height: 55vh;   
+
+    overflow: auto;
+    scroll-snap-type: y mandatory;
+}

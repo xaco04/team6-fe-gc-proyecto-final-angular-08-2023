@@ -11,7 +11,13 @@ export class UserDishComponent {
 
   @Input() isHome: boolean = false;
 
-  @Input() dish: any;
+  @Input() dish: any
   @Input() index: number = 0;
   @Input() index_seconds: number = 0;
+  @Input() responsiveness: boolean = false;
+
+  showID(){
+
+    console.log("Has pulsado en la ID "+this.dish.id);
+  }
 }

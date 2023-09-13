@@ -1,6 +1,6 @@
 .dish_menu, .dish{
 
-    height: 15vh;
+    height: 23vh;
 
     background-size: cover;
     background-position: center;
@@ -43,6 +43,13 @@
 .dish_add:hover i{
 
     color: black;
+}
+
+.responsiveness{
+
+    height: 25vh;
+    background-size: cover;
+    background-position: center;
 }
 
 @media (max-width: 1400px){
