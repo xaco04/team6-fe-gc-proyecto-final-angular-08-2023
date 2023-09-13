@@ -11,6 +11,7 @@ import { CustomerSupportAnswerSharedComponent } from './components/admin/support
 import { ProfileAdminComponent } from './components/admin/profile-admin/profile-admin.component';
 import { AnalysisListAdminComponent } from './components/admin/analysis-list-admin/analysis-list-admin.component';
 import { RewardMUsrAdminComponent } from './components/admin/reward-m-usr-admin/reward-m-usr-admin.component';
+import { RecipeComponent } from './components/chef/recipe/recipe.component';
 import { LoginComponent } from './components/shared/login/login.component';
 import { UserHomeComponent } from './components/user/user-home/user-home.component';
 import { UserProfileComponent } from './components/user/user-profile/user-profile.component';
@@ -19,7 +20,6 @@ import { OrdersComponent } from './components/chef/orders/orders.component';
 import { RewardMAdmAdminComponent } from './components/admin/reward-m-adm-admin/reward-m-adm-admin.component';
 import { EditPriceSharedComponent } from './components/shared/edit-price-shared/edit-price-shared.component';
 import { UserCreateMenuComponent } from './components/user/user-create-menu/user-create-menu.component';
-
 
 const routes: Routes = [
   {
@@ -83,6 +83,9 @@ const routes: Routes = [
     component: AnalysisListAdminComponent
   },
   {
+    path: 'recipe',
+    component: RecipeComponent
+  },
     path: 'orders',
     component: OrdersComponent
   },

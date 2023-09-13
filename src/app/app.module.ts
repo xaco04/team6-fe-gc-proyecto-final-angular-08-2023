@@ -31,6 +31,8 @@ import { ProfileAdminComponent } from './components/admin/profile-admin/profile-
 import { AnalysisListAdminComponent } from './components/admin/analysis-list-admin/analysis-list-admin.component';
 import { RewardMUsrAdminComponent } from './components/admin/reward-m-usr-admin/reward-m-usr-admin.component';
 import { PriceSharedComponent } from './components/shared/price-shared/price-shared.component';
+import { UserSidebarComponent } from './user/user-sidebar/user-sidebar.component';
+import { RecipeComponent } from './components/chef/recipe/recipe.component';
 import { LoginComponent } from './components/shared/login/login.component';
 import { UserHomeComponent } from './components/user/user-home/user-home.component';
 import { UserProfileComponent } from './components/user/user-profile/user-profile.component';
@@ -62,6 +64,9 @@ import { HourSelectionComponent } from './components/user/hour-selection/hour-se
     AnalysisListAdminComponent,
     RewardMUsrAdminComponent,
     PriceSharedComponent,
+    recipe-chef,
+    UserSidebarComponent,
+    RecipeComponent,
     LoginComponent,
     UserHomeComponent,
     UserProfileComponent,
