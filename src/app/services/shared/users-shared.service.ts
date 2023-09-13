@@ -1,6 +1,7 @@
-import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
+import { Injectable } from '@angular/core';
 import { Observable } from 'rxjs';
+import { Users } from 'src/app/models/Users';
 
 const API_URL = 'http://localhost:8080/';
 
@@ -10,33 +11,58 @@ const API_URL = 'http://localhost:8080/';
   providedIn: 'root'
 })
 export class UserService {
-  apiUrl: string = 'http://localhost:8080/users'; // Reemplaza con la URL de tu API de usuarios
 
   constructor(private http: HttpClient) {}
 
-  getPublicContent(): Observable<any> {
-    return this.http.get(API_URL + 'all', { responseType: 'text' });
+  endpoint: string = 'http://localhost:8080/';
+  
+  getAll(): Observable<Users[]> {
+    
+    return this.http.get<Users[]>(`${this.endpoint}users`);
   }
 
-  getUserBoard(): Observable<any> {
-    return this.http.get(API_URL + 'Usuario', { responseType: 'text' });
+  // Devuelve todos los usuarios ordenados por rol
+  getAllOrderByRole(): Observable<Users[]> {
+
+    return this.http.get<Users[]>(`${this.endpoint}users/role`);
   }
 
-  getEncargadoBoard(): Observable<any> {
-    return this.http.get(API_URL + 'Encargado', { responseType: 'text' });
+  // Devuelve todos los usuarios con un rol que empiezan por X letras
+  getAllByRoleStartingWith(rolename: string, letters: string): Observable<Users[]> {
+
+    return this.http.get<Users[]>(`${this.endpoint}users/role/${rolename}/search/${letters}`);
   }
 
-  getCocineroBoard(): Observable<any> {
-    return this.http.get(API_URL + 'Cocinero', { responseType: 'text' });
+  // Devuelve un solo usuario por id
+  getOneById(id: number): Observable<Users>{
+
+    return this.http.get<Users>(`${this.endpoint}users/${id}`);
+  }
+  
+  // Devuelve un solo usuario por email
+  getOneByEmail(email: string) {
+  
+    return this.http.get<Users>(`${this.endpoint}users/email/${email}`);
   }
 
-  getAdminBoard(): Observable<any> {
-    return this.http.get(API_URL + 'Administrador', { responseType: 'text' });
+  // === Post ===
+  //Crea un nuevo usuario
+  create(user : Users): Observable<Users>{
+
+    return this.http.post<Users>(`${this.endpoint}users`, user);
   }
 
-  getAllUsers() {
-    return this.http.get(this.apiUrl);
+  // === Put ===
+  // Edita un usuario
+  update(id: number, user: Users): Observable<Users> {
+
+    return this.http.put<Users>(`${this.endpoint}users/${id}`, user);
   }
 
-
+  // === Delete ===
+  // Borra usuario
+  delete(id: number): Observable<Users> {
+    
+    return this.http.delete<Users>(`${this.endpoint}users/${id}`);
+  }
 }
