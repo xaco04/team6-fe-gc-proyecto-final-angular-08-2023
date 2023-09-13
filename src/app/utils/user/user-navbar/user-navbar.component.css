@@ -1,0 +1,56 @@
+/* Preguntar qué les parece mejor, que haya marco, o no (mirar app.component, clase user_navbar */
+/* .row_user_navbar{
+
+    background-color: #0052AB;
+} */
+
+.row_user_navbar{
+
+    border-bottom: 0.2em solid white;
+
+    background-color: #0052AB;
+}
+
+.logo_gc{
+
+    height: 100%;
+}
+
+.navbar_options{
+
+    position: absolute;
+
+    z-index: 1;
+}
+
+.icon{
+
+    font-size: 2em;
+    color: white;
+}
+
+.menu_option{
+
+    color: white;
+
+    background-color: #0052AB;
+}
+
+.navbar_option{
+
+    height: 6vh;
+}
+
+.navbar_logout{
+
+    color: white;
+}
+
+
+@media (max-width: 1400px) {
+
+    .icon_smartphone{
+
+        font-size: 3em;
+    }
+}

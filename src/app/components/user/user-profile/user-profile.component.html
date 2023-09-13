@@ -1,0 +1,123 @@
+<div class="container-fluid user_profile">
+    <div class="row banner">
+        <div class="col-5 banner_left d-flex justify-content-center align-items-end">
+            <div class="mountains row d-flex justify-content-between align-items-end">
+                <div class="col-4">
+                    <div class="left_mountain"></div>
+                </div>
+                <div class="col-5">
+                    <div class="center_mountain"></div>
+                </div>
+                <div class="col-3">
+                    <div class="right_mountain"></div>
+                </div>
+            </div>
+        </div>
+        <div class="col-2 banner_center h-75 align-self-end d-flex flex-column justify-content-around align-items-center">
+            <div class="user_photo">
+                <img class="img-fluid h-100" src="" />
+            </div>
+            <div class="user_name">
+                <!-- <h2 class="name"> {{user.nombre}} </h2> -->
+                <h2 class="name"> Roberto </h2>
+            </div>
+            <div class="user_level d-flex justify-content-between align-items-center">
+                <h3>Nivel</h3>
+                <h3>2</h3>
+            </div>
+        </div>
+        <div class="col-5 banner_right d-flex justify-content-center align-items-end">
+            <div class="row h-100 d-flex justify-content-around align-items-end d-xxl-none">
+                <div class="col-5">
+                    <div class="left_mountain"></div>
+                </div>
+                <div class="col-3">
+                    <div class="center_mountain"></div>
+                </div>
+                <div class="col-4">
+                    <div class="right_mountain"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col">
+            <h2>Premios</h2>
+            <hr>
+        </div>
+    </div>
+    <div class="row main">
+        <div class="prices col-xxl-9 col-lg-12">
+            <div class="row">
+                <div *ngFor="let reward of rewards" class="col-xxl-4 col-lg-4 col-sm-12 pb-4">
+                    <app-reward [reward] = 'reward'></app-reward>
+                </div>
+            </div>
+        </div>
+        <div class="points_level col-xxl-3 col-lg-6 col-md-6 order-md-1 order-lg-1 d-flex flex-column justify-content-around align-items-center">
+            <div class="row w-100">
+                <div class="col-10">
+                    <h2>Puntos</h2>
+                </div>
+            </div>
+            <div class="row w-100">
+                <div class="col-9">
+                    <h5 class="mb-3 fw-light">Puntos totales</h5>
+                    <h5 class="fw-light">Próxima recompensa</h5>
+                </div>
+                <div class="col-3">
+                    <h5 class="text-end mb-3 fw-light">68</h5>
+                    <h5 class="text-end fw-light">122</h5>
+                </div>
+            </div>
+            <div class="row w-100">
+                <div class="col-10">
+                    <h2>Nivel</h2>
+                </div>
+            </div>
+            <div class="row w-100">
+                <div class="col-7">
+                    <h5 class="mb-3 fw-light">Nivel actual</h5>
+                    <h5 class="fw-light">Próximo nivel</h5>
+                </div>
+                <div class="col-5">
+                    <h5 class="text-end mb-3 fw-light">3</h5>
+                    <h5 class="text-end fw-light">22 puntos</h5>
+                </div>
+            </div>
+            <div class="row bar_level w-100">
+                <div class="col-12 actual_exp h-100" style="width: 4vw;"></div>
+            </div>
+        </div>
+        <div class="allergens col-xxl-8 col-lg-12 order-xxl-2 order-lg-3 col-md-12 col-sm-12 order-md-3 mt-3 mt-lg-3 mt-xxl-0 d-flex flex-column justify-content-center align-items-start">
+            <div class="row w-100">
+                <div class="title d-flex justify-content-between align-items-center">
+                    <h2>Alérgenos</h2><i class="bi bi-info-circle-fill fs-4"></i>
+                </div>
+                <hr class="w-75">
+            </div>
+            <div class="row w-100 d-flex justify-content-center align-items-center">
+                <div *ngFor="let allergen of allergens" class="col-lg-4 col-md-6 col-sm-6 p-2 d-flex justify-content-around align-items-center">
+                    <a (click)="activateAllergen(allergen)" href="javascript:void(0)" class="ms-2 fs-4 fw-light allergen" [class.allergen_active] = "allergen.is_active"><img src="{{allergen.image}}" alt="" class="me-3">{{allergen.name}}</a>
+                </div>
+            </div>
+        </div>      
+        <div class="change_password col-xxl-3 offset-xxl-1 col-lg-5 order-xxl-3 offset-md-1 col-md-5 order-md-2 order-lg-2 mt-3 mt-md-0">
+            <div class="row text-center">
+                <h2>Contraseña</h2>
+                <hr>
+            </div>
+            <div class="row h-100">
+                <div class="col-12 d-flex justify-content-center align-items-end">
+                    <label class="text-center" for="">Contraseña antigua</label>
+                </div>
+                <div class="col-12 d-flex justify-content-center align-items-center">
+                    <input type="password">
+                </div>
+                <div class="col-12 d-flex justify-content-center align-items-start">
+                    <button class="btn btn-primary">Cambiar</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

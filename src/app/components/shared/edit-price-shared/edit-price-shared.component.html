@@ -1,0 +1,56 @@
+<div class="container-fluid price_container d-flex flex-column justify-content-around align-items-center" [style.background-image]="'url(' + reward.image + ')'" *ngIf="!editing">
+    <div class="row  w-100">
+        <div class="col price d-flex flex-column justify-content-around align-items-center">
+            <div class="row h-25">
+                <div class="col d-flex justify-content-center align-items-end">
+                    <h2 class="m-0 fs-2">{{ reward.name }}</h2>
+                </div>
+            </div>
+            <div class="row h-50 w-75">
+                <div class="col d-flex justify-content-center align-items-center">
+                    <p class="m-0">{{ reward.description }}</p>
+                </div>
+            </div>
+            <div class="row h-25 w-75">
+                <div class="col d-flex justify-content-center align-items-center">
+                    <button class="price_button w-100 fs-4 btn btn-primary" (click)="editarPrecio()">Editar</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Formulario de edición (fuera del div principal) -->
+<div class="container-fluid price_container d-flex flex-column justify-content-around align-items-center" [style.background-image]="'url(' + reward.imagen + ')'"  *ngIf="editing">
+    <div class="row w-100">
+        <div class="col price d-flex flex-column justify-content-around align-items-center">
+            <br>
+            <div class="row h-25">
+                <div class="col d-flex justify-content-center align-items-center">
+                    <h4 class="m-0 "><input type="text" class="nombre_editable" style="border-radius: 5px;" [(ngModel)]="editedNombre" placeholder="Nuevo nombre">
+                    </h4>
+                </div>
+            </div>
+            <br>
+            <div class="row h-50 w-75">
+                <div class="col d-flex justify-content-center align-items-center">
+                    <p class="m-0"><textarea cols="40" rows="3" type="text" class="descripcion_editable" style="border-radius: 5px;" [(ngModel)]="editedDescripcion" placeholder="Nueva Descripción"></textarea></p>
+                </div>
+            </div>
+            <div class="row h-50 w-75">
+                <div class="col d-flex justify-content-center align-items-center">
+                    <p class="m-0"><input type="text" class="imagen_editable" style="border-radius: 5px;" [(ngModel)]="editedImagen" placeholder="Nueva URL de la imagen"></p>
+                </div>
+            </div>
+            <br>
+            <div class="row h-25 w-75">
+                <div class="col d-flex justify-content-center align-items-center">
+                    <button class="w-100 fs-4 btn btn-primary guardar" (click)="guardarCambios()">Guardar</button>
+                </div>
+            </div>
+            <br>
+        </div>
+    </div>
+</div>
+
+

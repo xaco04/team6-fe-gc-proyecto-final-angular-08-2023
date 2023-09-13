@@ -1,0 +1,62 @@
+<div class="custom-cont">
+    <nav class="navbar navbar-dark bg-dark ">
+        <div class="title">
+            <h1 class="h1" style="color: #c7d5e0;">Gestión de premios</h1>
+        </div>
+    </nav>
+    <div class=" user_profile">
+        <div class="row banner">
+            <div class="col-5 banner_left d-flex justify-content-center align-items-end">
+                <div class="mountains row d-flex justify-content-between align-items-end">
+                    <div class="col-4">
+                        <div class="left_mountain"></div>
+                    </div>
+                    <div class="col-5">
+                        <div class="center_mountain"></div>
+                    </div>
+                    <div class="col-3">
+                        <div class="right_mountain"></div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-2 banner_center h-75 align-self-end d-flex flex-column justify-content-around align-items-center">
+                <div class="user_name">
+                    <h2 class="name"> {{users[0]?.name}} </h2>
+                </div>
+            </div>
+            <div class="col-5 banner_right d-flex justify-content-center align-items-end">
+                <div class="row d-flex justify-content-center align-items-end">
+                    <div class="col-5">
+                        <div class="left_mountain"></div>
+                    </div>
+                    <div class="col-3">
+                        <div class="center_mountain"></div>
+                    </div>
+                    <div class="col-4">
+                        <div class="right_mountain"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="contenedor-titulos mt-4">
+            <div class="row justify-content-between">
+                <div class="col-md-6">
+                    <h2>Premios</h2>
+                </div>
+                <div class="col-md-6 d-flex justify-content-end">
+                    <a routerLink="/rewarmanagement-musr-admin" class="enlace btn btn-primary">Modo Usuario</a>
+                </div>
+            </div>
+        </div>
+        <hr>
+        <div class="row main">
+            <div class="prices col-xxl-12 col-lg-12">
+                <div class="row">
+                    <div *ngFor="let reward of rewards" class="col-xxl-4 col-lg-4 col-sm-12 pb-4">
+                        <app-edit-price-shared [reward] = 'reward' ></app-edit-price-shared>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,63 @@
+.dish_selection{
+    
+    height: 20h;
+
+    border-radius: 0.5em;
+
+    overflow: auto;
+    
+    scroll-snap-type: y mandatory;
+}
+
+.dish_selection_small{
+
+    height: 20vh;
+
+    overflow: auto;
+    
+    scroll-snap-type: y mandatory;
+}
+
+.dish_selection::-webkit-scrollbar {
+    
+    width: 0;
+    background: transparent;
+}
+
+.small_dish::-webkit-scrollbar{
+
+    width: 0;
+    background: transparent;
+}
+
+.dish_menu{
+
+    height: 25vh;
+
+    border-radius: 0.5em;
+}
+
+.menus{
+
+    scroll-snap-align: center;
+}
+
+.small_dish{
+
+    height: 25vh;
+}
+
+
+.dish_selection_small::-webkit-scrollbar {
+    
+    width: 0;
+    background: transparent;
+}
+
+.responsiveness{
+
+    height: 55vh;   
+
+    overflow: auto;
+    scroll-snap-type: y mandatory;
+}

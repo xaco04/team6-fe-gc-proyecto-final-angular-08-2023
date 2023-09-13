@@ -14,7 +14,6 @@
 
     border-radius: 10px;
     height: 100%;
-
 }
 
 
@@ -25,6 +24,7 @@ h2, h5{
 
 .user_profile{
     overflow-y: auto;
+    padding: 13px;
 }
 
 .user_profile::-webkit-scrollbar {

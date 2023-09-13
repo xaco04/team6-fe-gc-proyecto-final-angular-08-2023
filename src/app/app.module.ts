@@ -1,6 +1,6 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
-
+import { FormsModule } from '@angular/forms';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -33,6 +33,22 @@ import { RewardMUsrAdminComponent } from './components/admin/reward-m-usr-admin/
 import { PriceSharedComponent } from './components/shared/price-shared/price-shared.component';
 import { UserSidebarComponent } from './user/user-sidebar/user-sidebar.component';
 import { RecipeComponent } from './components/chef/recipe/recipe.component';
+import { LoginComponent } from './components/shared/login/login.component';
+import { UserHomeComponent } from './components/user/user-home/user-home.component';
+import { UserProfileComponent } from './components/user/user-profile/user-profile.component';
+import { RecoveryComponent } from './components/shared/recovery/recovery.component';
+import { OrdersComponent } from './components/chef/orders/orders.component';
+import { RewardComponent } from './components/shared/reward/reward.component';
+import { RewardMAdmAdminComponent } from './components/admin/reward-m-adm-admin/reward-m-adm-admin.component';
+import { EditPriceSharedComponent } from './components/shared/edit-price-shared/edit-price-shared.component';
+import { SidebarUserComponent } from './utils/user/sidebar-user/sidebar-user.component';
+import { UserDishComponent } from './components/user/user-dish/user-dish.component';
+import { UserDishInfoComponent } from './components/user/user-dish-info/user-dish-info.component';
+import { DishSelectorComponent } from './components/user/dish-selector/dish-selector.component';
+import { UserCreateMenuComponent } from './components/user/user-create-menu/user-create-menu.component';
+import { UserNavbarComponent } from './utils/user/user-navbar/user-navbar.component';
+import { HttpClientModule } from '@angular/common/http';
+import { HourSelectionComponent } from './components/user/hour-selection/hour-selection.component';
 
 @NgModule({
   declarations: [
@@ -48,11 +64,29 @@ import { RecipeComponent } from './components/chef/recipe/recipe.component';
     AnalysisListAdminComponent,
     RewardMUsrAdminComponent,
     PriceSharedComponent,
+    recipe-chef,
     UserSidebarComponent,
-    RecipeComponent
+    RecipeComponent,
+    LoginComponent,
+    UserHomeComponent,
+    UserProfileComponent,
+    RecoveryComponent,
+    OrdersComponent,
+    RewardComponent,
+    RewardMAdmAdminComponent,
+    EditPriceSharedComponent,
+    SidebarUserComponent,
+    UserDishComponent,
+    DishSelectorComponent,
+    UserCreateMenuComponent,
+    UserDishInfoComponent,
+    UserNavbarComponent,
+    HourSelectionComponent
   ],
+  
   imports: [
     BrowserModule,
+    FormsModule,
     AppRoutingModule,
     MdbAccordionModule,
     MdbCarouselModule,
@@ -70,6 +104,7 @@ import { RecipeComponent } from './components/chef/recipe/recipe.component';
     MdbTooltipModule,
     MdbValidationModule,
     BrowserAnimationsModule,
+    HttpClientModule
   ],
   providers: [],
   bootstrap: [AppComponent]

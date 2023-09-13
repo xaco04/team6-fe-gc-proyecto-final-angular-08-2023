@@ -1,0 +1,86 @@
+.logo_gc{
+
+    height: 12vh;
+}
+
+.sidebar_menu_options{
+
+    height: 25vh;
+}
+
+.menu_option{
+
+    color: #0052AB;
+}
+
+.menu_option:hover{
+
+    color: white;
+    background-color: #0052AB;
+}
+
+.cart{
+
+    height: 36vh;
+
+    overflow-y: auto;
+}
+
+.total{
+
+    height: 10vh;
+}
+
+.cart::-webkit-scrollbar{
+    
+    width: 0;
+    display: none;
+}
+
+.dish_ordered{
+
+    min-height: 7vh;
+    border-bottom: 0.1em solid black;
+}
+
+.dish_ordered:first-child{
+
+    border-top: 0.1em solid black;
+}
+
+.price{
+
+    background-color: #0052AB;
+}
+
+.dish_cancel{
+
+    font-size: larger;
+    cursor: pointer;
+}
+
+.checkout{
+
+    height: 5vh;
+
+    background-color: #0052AB;
+
+    color: white;
+
+    border: none;
+}
+
+.checkout_icon{
+
+    font-size: 1.5em;
+}
+
+.logout_container{
+
+    height: 3vh;
+}
+
+.logout_text{
+
+    color: red;
+}

@@ -1,4 +1,4 @@
-import { NgModule } from '@angular/core';
+import { Component, NgModule } from '@angular/core';
 import { FormsModule } from '@angular/forms';
 import { RouterModule, Routes } from '@angular/router';
 
@@ -12,8 +12,39 @@ import { ProfileAdminComponent } from './components/admin/profile-admin/profile-
 import { AnalysisListAdminComponent } from './components/admin/analysis-list-admin/analysis-list-admin.component';
 import { RewardMUsrAdminComponent } from './components/admin/reward-m-usr-admin/reward-m-usr-admin.component';
 import { RecipeComponent } from './components/chef/recipe/recipe.component';
+import { LoginComponent } from './components/shared/login/login.component';
+import { UserHomeComponent } from './components/user/user-home/user-home.component';
+import { UserProfileComponent } from './components/user/user-profile/user-profile.component';
+import { RecoveryComponent } from './components/shared/recovery/recovery.component';
+import { OrdersComponent } from './components/chef/orders/orders.component';
+import { RewardMAdmAdminComponent } from './components/admin/reward-m-adm-admin/reward-m-adm-admin.component';
+import { EditPriceSharedComponent } from './components/shared/edit-price-shared/edit-price-shared.component';
+import { UserCreateMenuComponent } from './components/user/user-create-menu/user-create-menu.component';
 
 const routes: Routes = [
+  {
+    path: '', pathMatch: 'full', redirectTo: '/login'
+  },
+  {
+    path: 'login',
+    component: LoginComponent
+  },
+  {
+    path: 'recovery',
+    component: RecoveryComponent
+  },
+  {
+    path: 'inicio',
+    component: UserHomeComponent
+  },
+  {
+    path: 'crear_menu',
+    component: UserCreateMenuComponent
+  },
+  {
+    path: 'perfil',
+    component: UserProfileComponent
+  },
   {
     path: 'dashboard-admin',
     component: DashboardAdminComponent
@@ -31,7 +62,7 @@ const routes: Routes = [
     component: UsrManagementAddAdminComponent
   },
   {
-    path: 'usrManagement-modify-admin',
+    path: 'usrManagement-modify-admin/:id/:isActive/:name/:surname/:username/:password',
     component: UsrManagementModifyAdminComponent
   },
   {
@@ -54,8 +85,23 @@ const routes: Routes = [
   {
     path: 'recipe',
     component: RecipeComponent
+  },
+    path: 'orders',
+    component: OrdersComponent
+  },
+  {
+    path: 'rewarmanagement-madm-admin',
+    component: RewardMAdmAdminComponent
+  },
+  {
+    path: 'edit-price-shared',
+    component: EditPriceSharedComponent
+  },  
+  //Debe ir siempre la última
+  {
+    path: '**',
+    component: LoginComponent
   }
-
 ];
 
 @NgModule({
