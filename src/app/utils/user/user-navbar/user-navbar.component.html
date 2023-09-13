@@ -1,14 +1,14 @@
-<div class="container-fluid">
-    <div class="row row_user_navbar">
-        <div class="col-4 d-flex justify-content-center align-items-center">
-            <i class="bi bi-list icon" (click)="showMenu()"></i>
+<div class="container-fluid h-100">
+    <div class="row h-100 row_user_navbar">
+        <div class="col-md-4 col-2 d-flex justify-content-center align-items-center">
+            <i class="bi bi-list icon icon_smartphone" (click)="showMenu()"></i>
         </div>
-        <div class="col-4 d-flex justify-content-center align-items-center">
+        <div class="col-md-4 col-5 d-flex justify-content-center align-items-center">
             <img src="../../../../assets/logo_gc_navbar.svg" alt="" class="img-fluid m-2 logo_gc">
         </div>
-        <div class="col-4 d-flex justify-content-around align-items-center">    
-            <i class="bi bi-journal-text icon"></i>
-            <i class="bi bi-cart-check-fill checkout_icon" data-bs-toggle="modal" [attr.data-bs-target]="'#select_hour'">
+        <div class="col-md-4 col-5 d-flex justify-content-around align-items-center">    
+            <i class="bi bi-journal-text icon icon_smartphone"></i>
+            <i class="bi bi-cart-check-fill checkout_icon icon icon_smartphone" data-bs-toggle="modal" [attr.data-bs-target]="'#select_hour'">
                 <app-hour-selection></app-hour-selection>
             </i>
         </div>

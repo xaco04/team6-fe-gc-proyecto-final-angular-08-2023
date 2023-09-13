@@ -1,60 +1,118 @@
-<div class="container-fluid vh-100">
+<div class="container-fluid h-100 d-none d-lg-block d-flex justify-content-center align-items-center">
     <div class="row h-100 d-flex justify-content-around align-items-center">
-        <div *ngIf="!adding_first" class="col-xl-4 col-lg-6 h-50 d-flex flex-column justify-content-around align-items-center">
-            <h2 class="h-25 m-0 d-flex justify-content-center align-items-start">Añade un primero</h2>
-            <div class="w-75 w-xxl-100 d-flex justify-content-center align-items-center add_dish" (click)="this.adding_first = true">
+        <div *ngIf="!adding_first" class="col-xl-4 col-lg-6 d-flex flex-column justify-content-between align-items-center big_container_create_menu h-xxl-container">
+            <h2 class="w-100 m-0 d-flex justify-content-center align-items-start create_menu_category">Añade un primero</h2>
+            <div class="w-75 d-flex flex-column justify-content-center align-items-center add_dish" (click)="this.adding_first = true">
                 <i class="fs-1 bi bi-plus-circle-fill add_icon"></i>
             </div>
         </div>
-        <div *ngIf="adding_first" class="col-xl-4 col-lg-6 d-flex flex-column justify-content-around align-items-center">
-            <h2 class="m-0">Añade un primero</h2>
-            <div class="w-100 w-xxl-100 adding_dish">
-                <app-dish-selector [category] = "1"></app-dish-selector>
+        <div *ngIf="adding_first" class="col-xl-4 col-lg-6 d-flex flex-column justify-content-between align-items-center big_container_create_menu h-xxl-container">
+            <h2 class="w-100 m-0 d-flex justify-content-center align-items-start create_menu_category">Añade un primero</h2>
+            <div class="w-75 d-flex flex-column justify-content-start align-items-center adding_dish">
+                <app-dish-selector [category] = "1" [responsiveness]="false" [ngClass]="{'responsiveness': responsiveness, 'dish_selection': !responsiveness}"></app-dish-selector>
             </div>
         </div>
-        <div *ngIf="!adding_second" class="col-xl-4 col-lg-6 h-50 d-flex flex-column justify-content-around align-items-center">
-            <h2 class="h-25 m-0">Añade un segundo</h2>
-            <div class="w-75 w-xxl-100 d-flex justify-content-center align-items-center add_dish"(click)="this.adding_second = true">
+        <div *ngIf="!adding_second" class="col-xl-4 col-lg-6 d-flex flex-column justify-content-between align-items-center big_container_create_menu h-xxl-container">
+            <h2 class="m-0 d-flex justify-content-start align-items-start create_menu_category">Añade un segundo</h2>
+            <div class="w-75 d-flex justify-content-center align-items-center add_dish"(click)="this.adding_second = true">
                 <i class="fs-1 bi bi-plus-circle-fill add_icon"></i>
             </div>
         </div>
-        <div *ngIf="adding_second" class="col-xl-4 col-lg-6 d-flex flex-column justify-content-around align-items-center">
-            <h2 class="m-0">Añade un segundo</h2>
-            <div class="w-100 w-xxl-100 adding_dish">
-                <app-dish-selector [category] = "2"></app-dish-selector>
+        <div *ngIf="adding_second" class="col-xl-4 col-lg-6 d-flex flex-column justify-content-between align-items-center big_container_create_menu h-xxl-container">
+            <h2 class="m-0 d-flex justify-content-start align-items-start create_menu_category">Añade un segundo</h2>
+            <div class="w-75 adding_dish">
+                <app-dish-selector [category] = "2" [responsiveness]="false" [ngClass]="{'responsiveness': responsiveness, 'dish_selection': !responsiveness}"></app-dish-selector>
             </div>
         </div>
-        <div class="col-xl-4 col-lg-12 h-100 pt-5 d-flex justify-content-center align-items-center">
-            <div class="row h-100 w-100 w-xxl-75 d-flex justify-content-between align-items-center">
-                <div *ngIf="!adding_starter" class="h-25 h-xl-50 w-100 col-4">
-                    <h2 class="m-0 w-100 pb-2 d-flex justify-content-center align-items-center">Añade un entrante</h2>
-                    <div class="h-75 d-flex justify-content-center align-items-center add_dish" (click)="this.adding_starter = true">
+        <div class="col-xl-4 col-lg-12 d-flex flex-column justify-content-around align-items-center h-xxl-container">
+            <div class="row w-75 w-xxl-100 d-flex flex-column justify-content-around align-items-center big_container_create_menu">
+                <div *ngIf="!adding_starter" class="col-12 d-flex flex-column justify-content-between align-items-center small_container_create_menu h-xxl-small_dish">
+                    <h2 class="m-0 w-100 d-flex justify-content-center align-items-start small_category h-xxl-small_category">Añade un entrante</h2>
+                    <div class="w-100 d-flex justify-content-center align-items-center add_dish h-xxl-small_dishes" (click)="this.adding_starter = true">
                         <i class="fs-1 bi bi-plus-circle-fill add_icon"></i>
                     </div>
                 </div>
-                <div *ngIf="adding_starter" class="h-25 h-xl-50 w-100 col-4">
-                    <h2 class="text-center">Añade un entrante</h2>
-                    <app-dish-selector [category] = "3" [small_dish] = "true"></app-dish-selector>
+                <div *ngIf="adding_starter" class="col-12 d-flex flex-column justify-content-between align-items-center small_container_create_menu h-xxl-small_dish">
+                    <h2 class="w-100 m-0 d-flex flex-column justify-content-between align-items-center small_category h-xxl-small_category">Añade un entrante</h2>
+                    <app-dish-selector [category] = "3" [small_dish] = "true" [ngClass]="{'responsiveness': responsiveness, 'dish_selection_small': !responsiveness}"></app-dish-selector>
                 </div>
-                <div *ngIf="!adding_dessert" class="h-25 h-xl-50 w-100 col-4">
-                    <h2 class="m-0 pb-2 d-flex justify-content-center align-items-center">Añade un postre</h2>
-                    <div class="h-75 d-flex justify-content-center align-items-center add_dish" (click)="this.adding_dessert = true">
+                <div *ngIf="!adding_dessert" class="col-12 d-flex flex-column justify-content-between align-items-center small_container_create_menu h-xxl-small_dish">
+                    <h2 class="w-100 m-0 d-flex justify-content-center align-items-center small_category h-xxl-small_category">Añade un postre</h2>
+                    <div class="w-100 d-flex justify-content-center align-items-center add_dish h-xxl-small_dishes" (click)="this.adding_dessert = true">
                         <i class="fs-1 bi bi-plus-circle-fill add_icon"></i>
                     </div>
                 </div>
-                <div *ngIf="adding_dessert" class="h-25 h-xl-50 w-100 col-4">
-                    <h2 class="text-center">Añade un postre</h2>
-                    <app-dish-selector [category]= "4" [small_dish] = "true"></app-dish-selector>
+                <div *ngIf="adding_dessert" class="col-12 d-flex flex-column justify-content-between align-items-center small_container_create_menu h-xxl-small_dish">
+                    <h2 class="w-100 m-0 d-flex justify-content-center align-items-center small_category h-xxl-small_category">Añade un postre</h2>
+                    <app-dish-selector [category]= "4" [small_dish] = "true" [responsiveness]="false" [ngClass]="{'responsiveness': responsiveness, 'dish_selection_small': !responsiveness}"></app-dish-selector>
                 </div>
-                <div *ngIf="!adding_drink" class="h-25 h-xl-50 w-100 col-4">
-                    <h2 class="m-0 pb-2 d-flex justify-content-center align-items-center">Añade una bebida</h2>
-                    <div class="h-75 d-flex justify-content-center align-items-center add_dish" (click)="this.adding_drink = true">
+                <div *ngIf="!adding_drink" class="col-12 d-flex flex-column justify-content-between align-items-center small_container_create_menu h-xxl-small_dish">
+                    <h2 class="w-100 m-0 d-flex justify-content-center align-items-center small_category h-xxl-small_category">Añade una bebida</h2>
+                    <div class="w-100 d-flex justify-content-center align-items-center add_dish h-xxl-small_dishes" (click)="this.adding_drink = true">
                         <i class="fs-1 bi bi-plus-circle-fill add_icon"></i>
                     </div>
                 </div>
-                <div *ngIf="adding_drink" class="h-25 h-xl-50 w-100 col-4">
-                    <h2 class="text-center">Añade una bebida</h2>
-                    <app-dish-selector [category]= "5" [small_dish] = "true"></app-dish-selector>
+                <div *ngIf="adding_drink" class="col-12 d-flex flex-column justify-content-between align-items-center small_container_create_menu h-xxl-small_dish">
+                    <h2 class="w-100 m-0 d-flex justify-content-center align-items-center small_category h-xxl-small_category">Añade una bebida</h2>                
+                    <app-dish-selector [category]= "5" [small_dish] = "true" [responsiveness]="false" [ngClass]="{'responsiveness': responsiveness, 'dish_selection_small': !responsiveness}"></app-dish-selector>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="container-fluid p-0 d-block d-lg-none">
+    <div class="row">
+        <div class="col-12 p-0">
+            <div class="accordion accordion-flush" id="accordionFlushExample">
+                <div class="accordion-item">
+                    <h2 class="accordion-header">
+                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseOne" aria-expanded="false" aria-controls="flush-collapseOne">
+                            PRIMEROS
+                        </button>
+                    </h2>
+                    <div id="flush-collapseOne" class="accordion-collapse collapse" data-bs-parent="#accordionFlushExample">
+                        <app-dish-selector [category] = "1" [responsiveness] = "true" ></app-dish-selector>                    
+                    </div>
+                </div>
+                <div class="accordion-item">
+                    <h2 class="accordion-header">
+                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseTwo" aria-expanded="false" aria-controls="flush-collapseTwo">
+                            SEGUNDOS
+                        </button>
+                    </h2>
+                    <div id="flush-collapseTwo" class="accordion-collapse collapse" data-bs-parent="#accordionFlushExample">
+                        <app-dish-selector [category] = "2" [responsiveness] = "true" ></app-dish-selector>
+                    </div>
+                </div>
+                <div class="accordion-item">
+                    <h2 class="accordion-header">
+                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseThree" aria-expanded="false" aria-controls="flush-collapseThree">
+                            STARTERS
+                        </button>
+                    </h2>
+                    <div id="flush-collapseThree" class="accordion-collapse collapse" data-bs-parent="#accordionFlushExample">
+                        <app-dish-selector [category] = "3" [responsiveness] = "true" ></app-dish-selector>
+                    </div>
+                </div>
+                <div class="accordion-item">
+                    <h2 class="accordion-header">
+                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseFour" aria-expanded="false" aria-controls="flush-collapseFour">
+                            DESSERTS
+                        </button>
+                    </h2>
+                    <div id="flush-collapseFour" class="accordion-collapse collapse" data-bs-parent="#accordionFlushExample">
+                        <app-dish-selector [category] = "4" [responsiveness] = "true" ></app-dish-selector>
+                    </div>
+                </div>
+                <div class="accordion-item">
+                    <h2 class="accordion-header">
+                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseFive" aria-expanded="false" aria-controls="flush-collapseFive">
+                            DRINKS
+                        </button>
+                    </h2>
+                    <div id="flush-collapseFive" class="accordion-collapse collapse" data-bs-parent="#accordionFlushExample">
+                        <app-dish-selector [category] = "5" [responsiveness] = "true" ></app-dish-selector>
+                    </div>
                 </div>
             </div>
         </div>

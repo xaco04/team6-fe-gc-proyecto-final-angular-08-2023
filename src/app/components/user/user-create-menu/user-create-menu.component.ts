@@ -12,4 +12,5 @@ export class UserCreateMenuComponent {
   adding_starter: boolean = false;
   adding_dessert: boolean = false;
   adding_drink: boolean = false;
+  responsiveness: boolean = false;
 }
