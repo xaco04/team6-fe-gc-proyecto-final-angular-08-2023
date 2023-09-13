@@ -1,18 +1,25 @@
-import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
+import { Injectable } from '@angular/core';
 
 @Injectable({
   providedIn: 'root'
 })
 export class DishesService {
 
-  api_dishes: string = 'http://localhost:8080/dishes';
+  private dishes: any;
 
-  constructor(private http: HttpClient){}
+  private api_dishes: string = 'http://localhost:8080/dishes';
+  private firsts: string = '?category=1';
+  private seconds: string = '?category=2';
+  private starters: string = '?category=3';
+  private desserts: string = '?category=4';
+  private drinks: string = '?category=5';
+
+  constructor(private http: HttpClient) { }
 
   getAllFirsts(){
     
-    return this.http.get(this.api_dishes+'?category=1');
+    return this.http.get(this.api_dishes+this.firsts);
   }
 
   getAllSeconds(){

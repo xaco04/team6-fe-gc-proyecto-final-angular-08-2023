@@ -1,4 +1,4 @@
-import { Component, Input } from '@angular/core';
+import { Component, Input, OnInit } from '@angular/core';
 import { DishesService} from '../../../services/shared/dishes.service';
 
 @Component({
@@ -6,7 +6,7 @@ import { DishesService} from '../../../services/shared/dishes.service';
   templateUrl: './dish-selector.component.html',
   styleUrls: ['./dish-selector.component.css']
 })
-export class DishSelectorComponent {
+export class DishSelectorComponent implements OnInit{
 
   @Input() category: number = 0;
   @Input() isHome: boolean = false;
