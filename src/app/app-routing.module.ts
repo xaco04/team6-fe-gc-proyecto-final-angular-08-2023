@@ -17,6 +17,7 @@ import { UserHomeComponent } from './components/user/user-home/user-home.compone
 import { UserProfileComponent } from './components/user/user-profile/user-profile.component';
 import { RecoveryComponent } from './components/shared/recovery/recovery.component';
 import { OrdersComponent } from './components/chef/orders/orders.component';
+import { DishListComponent } from './components/chef/dish-list/dish-list.component';
 import { RewardMAdmAdminComponent } from './components/admin/reward-m-adm-admin/reward-m-adm-admin.component';
 import { EditPriceSharedComponent } from './components/shared/edit-price-shared/edit-price-shared.component';
 import { UserCreateMenuComponent } from './components/user/user-create-menu/user-create-menu.component';
@@ -97,6 +98,10 @@ const routes: Routes = [
     path: 'edit-price-shared',
     component: EditPriceSharedComponent
   },  
+  {
+    path: 'list',
+    component: EditPriceSharedComponent
+  },
   //Debe ir siempre la última
   {
     path: '**',
