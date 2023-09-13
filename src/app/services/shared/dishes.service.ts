@@ -19,7 +19,7 @@ export class DishesService {
 
   getAllFirsts(){
     
-    return this.http.get(this.api_dishes+this.firsts);
+    return this.http.get(this.api_dishes+'?category=1');
   }
 
   getAllSeconds(){
