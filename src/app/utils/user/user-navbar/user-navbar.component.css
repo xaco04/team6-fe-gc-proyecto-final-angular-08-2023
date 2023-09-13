@@ -13,7 +13,7 @@
 
 .logo_gc{
 
-    max-height: 4em;
+    height: 100%;
 }
 
 .navbar_options{
@@ -44,4 +44,13 @@
 .navbar_logout{
 
     color: white;
+}
+
+
+@media (max-width: 1400px) {
+
+    .icon_smartphone{
+
+        font-size: 3em;
+    }
 }
