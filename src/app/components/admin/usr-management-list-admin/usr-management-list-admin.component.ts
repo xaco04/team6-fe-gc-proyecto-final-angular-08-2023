@@ -7,11 +7,13 @@ import { UserService } from 'src/app/services/shared/users-shared.service';
   styleUrls: ['./usr-management-list-admin.component.css']
 })
 export class UsrManagementListAdminComponent implements OnInit {
-  users: any[] = []
+  users: any[] = [];
 
-  constructor(private userService: UserService) {}
+  constructor(private userService: UserService) { }
 
   ngOnInit(): void {
-      // this.users = this.userService.getUsers();
+    this.userService.getAllUsers().subscribe((data: any) => {
+      this.users = data; // Almacena la lista de usuarios en la propiedad "users"
+    });
   }
 }

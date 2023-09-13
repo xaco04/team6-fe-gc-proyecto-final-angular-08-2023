@@ -62,14 +62,17 @@ export class LoginComponent implements OnInit {
   
     this.authService.login(userName, password).subscribe({
       next: (data) => {
-        this.tokenStorage.saveToken(data.accessToken);
+        this.tokenStorage.saveToken(data.token);
         this.tokenStorage.saveUser(data);
     
         this.isLoginFailed = false;
         this.isLoggedIn = true;
         this.roles = this.tokenStorage.getUsers().roleName;
         this.userId = this.tokenStorage.getUsers().userId;
+        console.log(data);
 
+    
+        // Redirigir aquí o realizar otras operaciones después de almacenar el token
         this.reloadPage();
       },
       error: (err) => {
@@ -81,6 +84,7 @@ export class LoginComponent implements OnInit {
         this.isLoginFailed = true;
       },
     });
+    
   }
 
   reloadPage(): void {

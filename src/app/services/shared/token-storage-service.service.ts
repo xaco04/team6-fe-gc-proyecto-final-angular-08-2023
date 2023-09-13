@@ -1,5 +1,7 @@
 import { Injectable } from '@angular/core';
 
+
+
 const TOKEN_KEY = 'auth-token';
 const USER_KEY = 'auth-user';
 
@@ -17,11 +19,31 @@ export class TokenStorageServiceService {
   public saveToken(token: string): void {
     window.sessionStorage.removeItem(TOKEN_KEY);
     window.sessionStorage.setItem(TOKEN_KEY, token);
-  }
 
-  public getToken(): string | null {
-    return window.sessionStorage.getItem(TOKEN_KEY);
+    // if (token) {
+
+    //   try {
+    //     const decodedToken = this.jwtHelperService.decodeToken(token);
+
+    //     window.sessionStorage.removeItem(this.USER_KEY);
+    //     window.sessionStorage.setItem(this.USER_ID, decodedToken.user_id);
+
+    //     window.sessionStorage.removeItem(this.ROLE);
+    //     window.sessionStorage.setItem(this.ROLE, decodedToken.role.name);
+
+    //   } catch (error) {
+        
+    //     console.log(error);
+    //   }
+    // }
+
   }
+  
+  public getToken(): string | null {
+    const token = window.sessionStorage.getItem(TOKEN_KEY);
+    console.log('Recuperando token:', token);
+    return token;
+}
 
   public saveUser(users: any): void {
     window.sessionStorage.removeItem(USER_KEY);
@@ -29,7 +51,6 @@ export class TokenStorageServiceService {
   }
 
   public getUsers(): any {
-    let saludo: string = "no";
     const users = window.sessionStorage.getItem(USER_KEY);
     if (users) {
       console.log("Se han encontrado datos");
