@@ -19,6 +19,7 @@ export class LoginComponent implements OnInit {
   isLoginFailed = false;
   errorMessage = 'El usuario o la contraseña son incorrectos';
   roles: string = '';
+  userId: number = 0;
 
   constructor(private authService: AuthServiceService, private tokenStorage: TokenStorageServiceService, private router: Router) { }
 
@@ -26,12 +27,14 @@ export class LoginComponent implements OnInit {
       if (this.tokenStorage.getToken()) {
         this.isLoggedIn = true;
         this.roles = this.tokenStorage.getUsers().roleName;
+        this.userId = this.tokenStorage.getUsers().userId;
+        console.log(this.userId);
         // console.log(this.roles); para comprobar que muestra
       }
 
       if (this.roles === 'Administrador') {
         setTimeout(() => {
-          this.router.navigate(['/dashboard-admin']);
+          this.router.navigate(['/board-admin']);
         }, 5000);
       } else if (this.roles === 'Usuario') {
         setTimeout(() => {
@@ -65,7 +68,7 @@ export class LoginComponent implements OnInit {
         this.isLoginFailed = false;
         this.isLoggedIn = true;
         this.roles = this.tokenStorage.getUsers().roleName;
-        console.log(this.roles);
+        this.userId = this.tokenStorage.getUsers().userId;
 
         this.reloadPage();
       },

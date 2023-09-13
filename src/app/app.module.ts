@@ -47,6 +47,7 @@ import { UserCreateMenuComponent } from './components/user/user-create-menu/user
 import { UserNavbarComponent } from './utils/user/user-navbar/user-navbar.component';
 import { HttpClientModule } from '@angular/common/http';
 import { HourSelectionComponent } from './components/user/hour-selection/hour-selection.component';
+import { BoardAdminComponent } from './components/admin/board-admin/board-admin.component';
 
 @NgModule({
   declarations: [
@@ -76,7 +77,8 @@ import { HourSelectionComponent } from './components/user/hour-selection/hour-se
     UserCreateMenuComponent,
     UserDishInfoComponent,
     UserNavbarComponent,
-    HourSelectionComponent
+    HourSelectionComponent,
+    BoardAdminComponent
   ],
   
   imports: [
