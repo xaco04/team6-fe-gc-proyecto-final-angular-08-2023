@@ -19,13 +19,6 @@ export class UserDishInfoComponent implements OnInit{
   constructor(private dishesService: DishesService){}
 
   ngOnInit(): void {
-    
-    this.dishesService.getDishById(this.id).subscribe(result => {
-
-      this.dish = result;
-    });
-  }
-}
       
     this.dishesService.getDishById(this.dish_id).subscribe(result => {
 

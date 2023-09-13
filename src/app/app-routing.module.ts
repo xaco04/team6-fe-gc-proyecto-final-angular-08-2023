@@ -87,6 +87,7 @@ const routes: Routes = [
     path: 'recipe',
     component: RecipeComponent
   },
+  {
     path: 'orders',
     component: OrdersComponent
   },
