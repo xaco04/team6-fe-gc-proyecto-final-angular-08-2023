@@ -1,72 +1,82 @@
-<div class="custom-cont">
-    <nav class="navbar navbar-dark bg-dark ">
-        <div class="title">
-            <h1 class="h1" style="color: #c7d5e0;">Mi perfil</h1>
-        </div>
-    </nav>
-    <div class="container rounded bg-white mt-5 mb-5">
-        <div class="row">
-            <div class="col-md-3 border-right">
-                <div class="d-flex flex-column align-items-center text-center p-3 py-5">
-                    <img class="rounded-circle mt-5" width="150px" src="../../../../assets/avatar.png">
-                    <span class="font-weight-bold">Admin</span>
-                    <span class="text-black-50">admin@grupocastilla.cat</span>
-                </div>
-            </div>
-            <div class="col-md-9 border-right">
-                <div class="p-3 py-5">
-                    <div class="d-flex justify-content-between align-items-center mb-3">
-                        <h4 class="text-right">Mi Perfil</h4>
-                    </div>
-                    <hr>
 
-                    <table class="table table-striped">
-                        <tbody>
-                            <tr>
-                                <td>Nombre</td>
-                                <td>Admin</td>
-                                <td><button class="btn btn-link edit-button" data-field="nombre">Editar</button></td>
-                            </tr>
-                            <tr>
-                                <td>Apellidos</td>
-                                <td>Apellido</td>
-                                <td><button class="btn btn-link edit-button" data-field="apellidos">Editar</button></td>
-                            </tr>
-                            <tr>
-                                <td>Nombre de Usuario</td>
-                                <td>admin_user</td>
-                                <td><button class="btn btn-link edit-button" data-field="username">Editar</button></td>
-                            </tr>
-                            <tr>
-                                <td>Correo eléctronico</td>
-                                <td>admin@grupocastilla.cat</td>
-                                <td><button class="btn btn-link edit-button" data-field="correo">Editar</button></td>
-                            </tr>
-                            <tr>
-                                <td>Contraseña</td>
-                                <td>********</td>
-                                <td><button class="btn btn-link edit-button" data-field="contraseña">Editar</button></td>
-                            </tr>
-                            <tr>
-                                <td>Rol</td>
-                                <td>Administrador</td>
-                                <td><button class="btn btn-link edit-button" data-field="rol">Editar</button></td>
-                            </tr>
-                        </tbody>
-                    </table>
-                    <br>
-                    <div class="d-flex justify-content-between align-items-center mb-3">
-                        <h4 class="text-right">Descripción</h4>
+<div class="container-fluid">
+    <div class="row">
+        <div class="col-2">
+            <app-sidebar-admin></app-sidebar-admin>
+        </div>
+        <div class="col-10 content">
+            <div class="custom-cont">
+                <nav class="navbar navbar-dark bg-dark ">
+                    <div class="title">
+                        <h1 class="h1" style="color: #c7d5e0;">Mi perfil</h1>
                     </div>
-                    <hr>
-                    <div class="row mt-2">
-                        <div class="col-md-12">
-                            <p>El administrador puede gestionar usuarios y premios. además, puede ver la lista de pedidos y sus detalles, responder a las sugerencias de los usuarios en el servicio de atención al cliente, modificar su perfil y gestionar los platos. todo desde la vista "home".</p>
+                </nav>
+                <div class="container rounded bg-white mt-5 mb-5">
+                    <div class="row">
+                        <div class="col-md-3 border-right">
+                            <div class="d-flex flex-column align-items-center text-center p-3 py-5">
+                                <img class="rounded-circle mt-5" width="150px" src="../../../../assets/avatar.png">
+                                <span class="font-weight-bold">Admin</span>
+                                <span class="text-black-50">admin@grupocastilla.cat</span>
+                            </div>
                         </div>
-                    </div>
-                    <br>
-                    <div class="mt-5 text-center">
-                        <button class="btn btn-primary profile-button" type="button">Guardar Perfil</button>
+                        <div class="col-md-9 border-right">
+                            <div class="p-3 py-5">
+                                <div class="d-flex justify-content-between align-items-center mb-3">
+                                    <h4 class="text-right">Mi Perfil</h4>
+                                </div>
+                                <hr>
+
+                                <table class="table table-striped">
+                                    <tbody>
+                                        <tr>
+                                            <td>Nombre</td>
+                                            <td>Admin</td>
+                                            <td><button class="btn btn-link edit-button" data-field="nombre">Editar</button></td>
+                                        </tr>
+                                        <tr>
+                                            <td>Apellidos</td>
+                                            <td>Apellido</td>
+                                            <td><button class="btn btn-link edit-button" data-field="apellidos">Editar</button></td>
+                                        </tr>
+                                        <tr>
+                                            <td>Nombre de Usuario</td>
+                                            <td>admin_user</td>
+                                            <td><button class="btn btn-link edit-button" data-field="username">Editar</button></td>
+                                        </tr>
+                                        <tr>
+                                            <td>Correo eléctronico</td>
+                                            <td>admin@grupocastilla.cat</td>
+                                            <td><button class="btn btn-link edit-button" data-field="correo">Editar</button></td>
+                                        </tr>
+                                        <tr>
+                                            <td>Contraseña</td>
+                                            <td>********</td>
+                                            <td><button class="btn btn-link edit-button" data-field="contraseña">Editar</button></td>
+                                        </tr>
+                                        <tr>
+                                            <td>Rol</td>
+                                            <td>Administrador</td>
+                                            <td><button class="btn btn-link edit-button" data-field="rol">Editar</button></td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                                <br>
+                                <div class="d-flex justify-content-between align-items-center mb-3">
+                                    <h4 class="text-right">Descripción</h4>
+                                </div>
+                                <hr>
+                                <div class="row mt-2">
+                                    <div class="col-md-12">
+                                        <p>El administrador puede gestionar usuarios y premios. además, puede ver la lista de pedidos y sus detalles, responder a las sugerencias de los usuarios en el servicio de atención al cliente, modificar su perfil y gestionar los platos. todo desde la vista "home".</p>
+                                    </div>
+                                </div>
+                                <br>
+                                <div class="mt-5 text-center">
+                                    <button class="btn btn-primary profile-button" type="button">Guardar Perfil</button>
+                                </div>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>

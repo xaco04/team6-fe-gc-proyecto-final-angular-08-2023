@@ -1,6 +1,7 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
-import { FormsModule } from '@angular/forms';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -51,6 +52,11 @@ import { DishInfoComponent } from './components/chef/dish-info/dish-info.compone
 import { HttpClientModule } from '@angular/common/http';
 import { HourSelectionComponent } from './components/user/hour-selection/hour-selection.component';
 import { UserHoursComponent } from './components/user/user-hours/user-hours.component';
+import { BoardAdminComponent } from './components/admin/board-admin/board-admin.component';
+import { TokenStorageServiceService } from './services/shared/token-storage-service.service';
+import { JwtModule } from '@auth0/angular-jwt';
+
+
 
 @NgModule({
   declarations: [
@@ -85,7 +91,9 @@ import { UserHoursComponent } from './components/user/user-hours/user-hours.comp
     HourSelectionComponent,
     DishListComponent,
     HourSelectionComponent,
-    UserHoursComponent
+    UserHoursComponent,
+    HourSelectionComponent,
+    BoardAdminComponent
   ],
   
   imports: [
@@ -108,9 +116,19 @@ import { UserHoursComponent } from './components/user/user-hours/user-hours.comp
     MdbTooltipModule,
     MdbValidationModule,
     BrowserAnimationsModule,
-    HttpClientModule
+    HttpClientModule,
+    ReactiveFormsModule,
+    JwtModule.forRoot({
+      config: {
+        tokenGetter: () => {
+          return sessionStorage.getItem('TOKEN_KEY');
+        },
+        allowedDomains: ['http://localhost:4200'],
+        disallowedRoutes: ['http://localhost:4200/login', 'http://localhost:4200/register']
+      }
+    })
   ],
-  providers: [],
+  providers: [ TokenStorageServiceService ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

@@ -21,6 +21,7 @@ import { DishListComponent } from './components/chef/dish-list/dish-list.compone
 import { RewardMAdmAdminComponent } from './components/admin/reward-m-adm-admin/reward-m-adm-admin.component';
 import { EditPriceSharedComponent } from './components/shared/edit-price-shared/edit-price-shared.component';
 import { UserCreateMenuComponent } from './components/user/user-create-menu/user-create-menu.component';
+import { BoardAdminComponent } from './components/admin/board-admin/board-admin.component';
 
 const routes: Routes = [
   {
@@ -49,6 +50,7 @@ const routes: Routes = [
   {
     path: 'dashboard-admin',
     component: DashboardAdminComponent
+    
   },
   {
     path: 'usrManagement-list-admin',
@@ -96,12 +98,13 @@ const routes: Routes = [
     component: RewardMAdmAdminComponent
   },
   {
-    path: 'edit-price-shared',
-    component: EditPriceSharedComponent
-  },  
-  {
     path: 'list',
     component: EditPriceSharedComponent
+  },
+  {
+    path: 'board-admin',
+    component: BoardAdminComponent
+
   },
   //Debe ir siempre la última
   {

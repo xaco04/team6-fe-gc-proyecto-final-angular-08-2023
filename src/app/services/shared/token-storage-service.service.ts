@@ -1,43 +1,61 @@
 import { Injectable } from '@angular/core';
+import { JwtHelperService } from '@auth0/angular-jwt';
+import { Users } from 'src/app/models/Users';
 
-const TOKEN_KEY = 'auth-token';
-const USER_KEY = 'auth-user';
 
 @Injectable({
   providedIn: 'root'
 })
 export class TokenStorageServiceService {
+  TOKEN_KEY:string = 'auth-token';
+  USER_KEY:string = 'auth-user';
+  ROLE: string = 'auth-role';
 
-  constructor() { }
+  constructor(private jwtHelperService: JwtHelperService) { }
 
   signOut(): void {
     window.sessionStorage.clear();
   }
 
   public saveToken(token: string): void {
-    window.sessionStorage.removeItem(TOKEN_KEY);
-    window.sessionStorage.setItem(TOKEN_KEY, token);
-  }
+    window.sessionStorage.removeItem(this.TOKEN_KEY);
+    window.sessionStorage.setItem(this.TOKEN_KEY, token);
 
-  public getToken(): string | null {
-    return window.sessionStorage.getItem(TOKEN_KEY);
+    if (token) {
+
+      try {
+        const decodedToken = this.jwtHelperService.decodeToken(token);
+
+        window.sessionStorage.removeItem(this.USER_KEY);
+        window.sessionStorage.setItem(this.USER_KEY, decodedToken.user_id);
+
+        window.sessionStorage.removeItem(this.ROLE);
+        window.sessionStorage.setItem(this.ROLE, decodedToken.role.name);
+
+      } catch (error) {
+        
+        console.log(error);
+      }
+    }
+
   }
+  
+  public getToken(): string | null {
+    return window.sessionStorage.getItem(this.TOKEN_KEY);
+
+}
 
   public saveUser(users: any): void {
-    window.sessionStorage.removeItem(USER_KEY);
-    window.sessionStorage.setItem(USER_KEY, JSON.stringify(users));
+    window.sessionStorage.removeItem(this.USER_KEY);
+    window.sessionStorage.setItem(this.USER_KEY, JSON.stringify(users));
   }
 
-  public getUsers(): any {
-    let saludo: string = "no";
-    const users = window.sessionStorage.getItem(USER_KEY);
-    if (users) {
-      console.log("Se han encontrado datos");
-      return JSON.parse(users);
-    } else {
-      console.log("No se encontraron datos de usuario en la sesión de almacenamiento.");
-      return null; // Otra opción es devolver null si no se encuentran datos en sessionStorage
-    }
+  public getUser(): any {
+    return window.sessionStorage.getItem(this.USER_KEY);
+  }
+
+  public getRole(): any {
+    return window.sessionStorage.getItem(this.ROLE);
   }
 
 }
