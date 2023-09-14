@@ -49,6 +49,7 @@ const routes: Routes = [
   {
     path: 'dashboard-admin',
     component: DashboardAdminComponent
+    
   },
   {
     path: 'usrManagement-list-admin',

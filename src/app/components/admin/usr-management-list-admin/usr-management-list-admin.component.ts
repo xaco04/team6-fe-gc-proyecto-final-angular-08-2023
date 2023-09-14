@@ -1,5 +1,7 @@
+
 import { Component, OnInit } from '@angular/core';
 import { UserService } from 'src/app/services/shared/users-shared.service';
+import { Users } from 'src/app/models/Users';
 
 @Component({
   selector: 'app-usr-management-list-admin',
@@ -12,8 +14,9 @@ export class UsrManagementListAdminComponent implements OnInit {
   constructor(private userService: UserService) { }
 
   ngOnInit(): void {
-    // this.userService.getAllUsers().subscribe((data: any) => {
-    //   this.users = data; // Almacena la lista de usuarios en la propiedad "users"
-    // });
+    // Obtén la lista de usuarios al inicializar el componente
+    this.userService.getAll().subscribe(users => {
+      this.users = users;
+    });
   }
 }

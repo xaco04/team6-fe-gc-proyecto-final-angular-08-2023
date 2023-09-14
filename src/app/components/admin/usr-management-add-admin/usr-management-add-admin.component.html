@@ -1,69 +1,81 @@
-<div class="custom-cont">
-    <nav class="navbar navbar-dark bg-dark ">
-        <div class="title">
-            <h1 class="h1" style="color: #c7d5e0;">Gestión de Usuarios</h1>
-        </div>
-    </nav>
-    <div class="container mt-3 full-height d-flex align-items-center">
-        <div class="cont-form col-xl-7 col-lg-11 col-md-11 col-xs-2">
-            <h1>Añadir Nuevo Usuario</h1>
-            <br><br>
-            <form >
-                <div class="form-group row">
-                    <label for="inputNombreUsuario" class="col-sm-2 col-form-label">Id</label>
-                    <div class="parametros col-sm-8">
-                        <input type="text" class="form-control" id="inputNombreUsuario" >
-                    </div>
-                </div>
-                <div class="form-group row">
-                    <label for="inputEmail" class="col-sm-2 col-form-label">Status</label>
-                    <div class="parametros col-sm-8">
-                        <input type="email" class="form-control" id="inputEmail" >
-                    </div>
-                </div>
-                <div class="form-group row">
-                    <label for="inputNombre" class="col-sm-2 col-form-label">Nombre</label>
-                    <div class="parametros col-sm-8">
-                        <input type="text" class="form-control" id="inputNombre" >
-                    </div>
-                </div>
-                <div class="form-group row">
-                    <label for="inputApellidos" class="col-sm-2 col-form-label">Apellidos</label>
-                    <div class="parametros col-sm-8">
-                        <input type="text" class="form-control" id="inputApellidos" >
-                    </div>
-                </div>
-                <div class="form-group row">
-                    <label for="inputApellidos" class="col-sm-2 col-form-label">Username</label>
-                    <div class="parametros col-sm-8">
-                        <input type="text" class="form-control" id="inputApellidos" >
-                    </div>
-                </div>
-                <div class="form-group row">
-                    <label for="inputPassword" class="col-sm-2 col-form-label">Contraseña</label>
-                    <div class="parametros col-sm-8">
-                        <input type="password" class="form-control" id="inputPassword" >
-                    </div>
-                </div>
-                <div class="form-group row">
-                    <legend class="col-form-label col-sm-2 ">Rol</legend>
-                    <div class="parametros col-sm-3">
-                        <select class="form-select" aria-label="Default select example">
-                            <option selected>Seleccionar</option>
-                            <option value="1">Administrador</option>
-                            <option value="2">Responsable</option>
-                            <option value="3">Cocinero</option>
-                            <option value="4">Cliente</option>
 
-                        </select>
+
+
+<div class="container-fluid">
+    <div class="row">
+        <div class="col-2">
+            <app-sidebar-admin></app-sidebar-admin>
+        </div>
+        <div class="col-10 content">
+            <div class="custom-cont">
+                <nav class="navbar navbar-dark bg-dark ">
+                    <div class="title">
+                        <h1 class="h1" style="color: #c7d5e0;">Gestión de Usuarios</h1>
+                    </div>
+                </nav>
+                <div class="container mt-3 full-height d-flex align-items-center">
+                    <div class="cont-form col-xl-7 col-lg-11 col-md-11 col-xs-2">
+                        <h1>Añadir Nuevo Usuario</h1>
+                        <br><br>
+                        <form >
+                            <div class="form-group row">
+                                <label for="inputNombreUsuario" class="col-sm-2 col-form-label">Id</label>
+                                <div class="parametros col-sm-8">
+                                    <input type="text" class="form-control" id="inputNombreUsuario" >
+                                </div>
+                            </div>
+                            <div class="form-group row">
+                                <label for="inputEmail" class="col-sm-2 col-form-label">Status</label>
+                                <div class="parametros col-sm-8">
+                                    <input type="email" class="form-control" id="inputEmail" >
+                                </div>
+                            </div>
+                            <div class="form-group row">
+                                <label for="inputNombre" class="col-sm-2 col-form-label">Nombre</label>
+                                <div class="parametros col-sm-8">
+                                    <input type="text" class="form-control" id="inputNombre" >
+                                </div>
+                            </div>
+                            <div class="form-group row">
+                                <label for="inputApellidos" class="col-sm-2 col-form-label">Apellidos</label>
+                                <div class="parametros col-sm-8">
+                                    <input type="text" class="form-control" id="inputApellidos" >
+                                </div>
+                            </div>
+                            <div class="form-group row">
+                                <label for="inputApellidos" class="col-sm-2 col-form-label">Username</label>
+                                <div class="parametros col-sm-8">
+                                    <input type="text" class="form-control" id="inputApellidos" >
+                                </div>
+                            </div>
+                            <div class="form-group row">
+                                <label for="inputPassword" class="col-sm-2 col-form-label">Contraseña</label>
+                                <div class="parametros col-sm-8">
+                                    <input type="password" class="form-control" id="inputPassword" >
+                                </div>
+                            </div>
+                            <div class="form-group row">
+                                <legend class="col-form-label col-sm-2 ">Rol</legend>
+                                <div class="parametros col-sm-3">
+                                    <select class="form-select" aria-label="Default select example">
+                                        <option selected>Seleccionar</option>
+                                        <option value="1">Administrador</option>
+                                        <option value="2">Responsable</option>
+                                        <option value="3">Cocinero</option>
+                                        <option value="4">Cliente</option>
+
+                                    </select>
+                                </div>
+                            </div>
+                            <div class="form-group row">
+                                <div class="col-sm-10">
+                                    <button type="submit" class="btn btn-primary">Añadir Nuevo Usuario</button>
+                                </div>
+                            </div>
+                        </form>
                     </div>
                 </div>
-                <div class="form-group row">
-                    <div class="col-sm-10">
-                        <button type="submit" class="btn btn-primary">Añadir Nuevo Usuario</button>
-                    </div>
-                </div>
-            </form>
+            </div>
         </div>
     </div>
 </div>
