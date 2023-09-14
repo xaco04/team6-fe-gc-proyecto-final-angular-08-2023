@@ -56,7 +56,7 @@ export class LoginComponent {
           if (userRole === 'Administrador') {
             this.router.navigate(['/board-admin']);
           } else if (userRole === 'Usuario') {
-            this.router.navigate(['/board-admin']);
+            this.router.navigate(['/board-user']);
           } else if (userRole === 'Encargado') {
             this.router.navigate(['/board-admin']);
           } else {

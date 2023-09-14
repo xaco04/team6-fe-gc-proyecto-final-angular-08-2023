@@ -129,3 +129,47 @@ h2, h5{
         height: 32vh;
     }
 }
+
+
+
+
+
+
+
+.user_sidebar{
+
+    height: 100vh;
+}
+
+/* Preguntar qué les parece mejor, que haya marco, o no (mirar user-navbar, clase row_user_navbar */
+
+.user_navbar:hover{
+
+    overflow: hidden;
+}
+
+.user_content{
+
+    height: 100vh;
+
+    overflow-y: auto;
+}
+
+.user_content::-webkit-scrollbar{
+
+    width: 0;
+    display: none;
+}
+
+@media (max-width: 1400px) {
+
+    .h-xxl-navbar {
+
+        height: 20vh !important;
+    }
+
+    .h-xxl-content {
+
+        height: 80vh !important;
+    }
+}

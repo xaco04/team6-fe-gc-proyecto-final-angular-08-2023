@@ -55,6 +55,7 @@ import { UserHoursComponent } from './components/user/user-hours/user-hours.comp
 import { BoardAdminComponent } from './components/admin/board-admin/board-admin.component';
 import { TokenStorageServiceService } from './services/shared/token-storage-service.service';
 import { JwtModule } from '@auth0/angular-jwt';
+import { BoardUserComponent } from './components/user/board-user/board-user.component';
 
 
 
@@ -93,7 +94,8 @@ import { JwtModule } from '@auth0/angular-jwt';
     HourSelectionComponent,
     UserHoursComponent,
     HourSelectionComponent,
-    BoardAdminComponent
+    BoardAdminComponent,
+    BoardUserComponent
   ],
   
   imports: [

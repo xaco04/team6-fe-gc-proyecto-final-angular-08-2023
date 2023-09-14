@@ -22,6 +22,7 @@ import { RewardMAdmAdminComponent } from './components/admin/reward-m-adm-admin/
 import { EditPriceSharedComponent } from './components/shared/edit-price-shared/edit-price-shared.component';
 import { UserCreateMenuComponent } from './components/user/user-create-menu/user-create-menu.component';
 import { BoardAdminComponent } from './components/admin/board-admin/board-admin.component';
+import { BoardUserComponent } from './components/user/board-user/board-user.component';
 
 const routes: Routes = [
   {
@@ -105,6 +106,11 @@ const routes: Routes = [
     path: 'board-admin',
     component: BoardAdminComponent
 
+  },
+  {
+    path: 'board-user',
+    component: BoardUserComponent
+    
   },
   //Debe ir siempre la última
   {
