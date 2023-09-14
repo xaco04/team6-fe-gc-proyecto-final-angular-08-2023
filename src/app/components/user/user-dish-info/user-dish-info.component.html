@@ -1,37 +1,17 @@
-<div class="modal fade" [attr.id]="'dish_info_'+dish?.id" tabindex="-1" [attr.aria-labelledby]="'dish_info_' + dish?.id" aria-hidden="true">
-    <div class="modal-dialog moda-xl modal-dialog-centered">
+<div class="modal fade" id="miModal" tabindex="-1" aria-labelledby="miModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered modal-lg">
         <div class="modal-content">
-            <div class="modal-header">
-                <h2 class="modal-title" [attr.id]="'dish_info_'+dish.id"> {{dish.name}} </h2>
-                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-            </div>
-            <div class=" modal-body">
-                <div class="row">
-                    <div class="col-12">
-                        <img class="img-fluid" src="{{dish.image}}" alt="">
-                    </div>
-                    <div class="col-12 h-75">
-                        <div class="row">
-                            <div class="col-12">
-                                <h3 class="text-start">Ingredientes</h3>
-                            </div>
-                            <div *ngFor="let ingredient of ingredients" class="col-6 d-flex justify-content-start align-items-center">
-                                <h4 class="text-start m-0">{{ingredient.name}}</h4>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-12 d-flex justify-content-around align-items-center">
-                        <div *ngFor="let allergen of allergens">
-                            <img src="{{allergen.image}}" alt=""> 
-                            <h4>{{allergen.name}}</h4>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="modal-footer d-flex justify-content-center align-items-center">
-                <button type="button" class="btn btn-primary">Añadir</button>
-                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
-            </div>
+        <div class="modal-header">
+            <!-- <h5 class="modal-title" id="miModalLabel"> {{dish.name}} </h5> -->
+            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Cerrar"></button>
+        </div>
+        <div class="modal-body">
+            <!-- <img src="{{dish.image}}" alt=""> -->
+        </div>
+        <div class="modal-footer">
+            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
+            <button type="button" class="btn btn-primary">Guardar cambios</button>
+        </div>
         </div>
     </div>
 </div>

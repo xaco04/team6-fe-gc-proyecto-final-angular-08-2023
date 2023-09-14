@@ -24,30 +24,49 @@ export class DishSelectorComponent implements OnInit{
   constructor(private dishesService: DishesService){}
 
   ngOnInit() {
+    
+    switch(this.category)
+    {
+      case 1:
 
-    this.dishesService.getAllFirsts().subscribe(result => {
+        this.dishesService.getAllFirsts().subscribe(result => {
+          console.log("Cargando los primeros");
+    
+          this.firsts = result;
+        });
+        break;
+      case 2:
 
-      this.firsts = result;
-    });
+        this.dishesService.getAllSeconds().subscribe(result => {
+          console.log("Cargando los segundos");
+    
+          this.seconds = result;
+        });
+        break;
+      case 3:
 
-    this.dishesService.getAllSeconds().subscribe(result => {
+        this.dishesService.getAllStarters().subscribe(result => {
+          console.log("Cargando los entrantes");
+    
+          this.starters = result;
+          });
+        break;
+      case 4:
 
-      this.seconds = result;
-    });
+        this.dishesService.getAllDesserts().subscribe(result => {
+          console.log("Cargando los postres");
+    
+          this.desserts = result;
+        });
+        break;
+      case 5:
 
-    this.dishesService.getAllStarters().subscribe(result => {
-
-      this.starters = result;
-    });
-
-    this.dishesService.getAllDesserts().subscribe(result => {
-
-      this.desserts = result;
-    });
-
-    this.dishesService.getAllDrinks().subscribe(result => {
-
-      this.drinks = result;
-    });
+        this.dishesService.getAllDrinks().subscribe(result => {
+          console.log("Cargando las bebidas");
+    
+          this.drinks = result;
+        });
+        break;
+    }
   }
 }

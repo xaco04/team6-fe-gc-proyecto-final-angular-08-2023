@@ -6,7 +6,7 @@ import { DishesService } from 'src/app/services/shared/dishes.service';
   templateUrl: './user-dish.component.html',
   styleUrls: ['./user-dish.component.css']
 })
-export class UserDishComponent{
+export class UserDishComponent implements OnInit{
 
   @Input() category: number =  0;
 
@@ -16,9 +16,17 @@ export class UserDishComponent{
   @Input() index: number = 0;
   @Input() index_seconds: number = 0;
   @Input() responsiveness: boolean = false;
+  ingredients: any;
 
-  showID(){
+  constructor(private dishesService: DishesService){}
 
-    console.log("Has pulsado en la ID "+this.dish.id);
+  ngOnInit(): void {
+      
+    console.log(this.dish);
+
+    this.dishesService.getIngredientsByDish(this.dish.id).subscribe(result => {
+
+      this.ingredients = result;
+    })
   }
 }

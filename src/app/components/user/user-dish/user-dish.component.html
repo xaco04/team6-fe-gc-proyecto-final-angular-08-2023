@@ -22,17 +22,42 @@
         <div class="col-12 dish" [style.background-image]="'url(' + dish.image + ')'">
             <div class="row h-100 d-flex justify-content-between align-items-center dish_gradient">  
                 <div class="col-7 h-100 p-2">
-                    <h4 class="h-100 d-flex flex-column justify-content-between align-items-start dish_name">   
-                        <i class="fs-2 bi bi-info-circle-fill" data-bs-toggle="modal" [attr.data-bs-target]="'#dish_info_'+this.dish.id">
-                            <!-- <app-user-dish-info [id] = "dish.id" [index] = "index"></app-user-dish-info> -->
-                        </i>
+                    <h4 class="h-100 d-flex flex-column justify-content-between align-items-start dish_name no-select">   
+                        <i class="fs-2 bi bi-info-circle-fill no-select" data-bs-toggle="modal" [attr.data-bs-target]="'#miModal_'+ dish.id"></i>
                         {{dish.name}}
                     </h4>
                 </div>
                 <div class="col-3 h-100 d-flex justify-content-center align-items-center dish_add">
-                    <i class="fs-1 bi bi-plus-circle-fill"></i>
+                    <i class="fs-1 bi bi-plus-circle-fill no-select"></i>
                 </div>
             </div>
+        </div>
+    </div>
+</div>
+
+<div class="modal fade" [attr.id] = "'miModal_'+dish.id" tabindex="-1" aria-labelledby="miModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered modal-lg">
+        <div class="modal-content">
+        <div class="modal-header">
+            <h4 class="modal-title" id="miModalLabel"> {{dish.name}} </h4>
+            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Cerrar"></button>
+        </div>
+        <div class="modal-body">
+            <div class="container-fluid">
+                <div class="row">
+                    <div class="col-12">
+                        <img src="{{dish.image}}" class="img-fluid" alt="">
+                    </div>
+                </div>
+                <div class="row">
+                    <div *ngFor="let ingredient of ingredients" class="col-6">{{ingredient.name}}</div>
+                </div>
+            </div>
+        </div>
+        <div class="modal-footer">
+            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
+            <button type="button" class="btn btn-primary">Guardar cambios</button>
+        </div>
         </div>
     </div>
 </div>

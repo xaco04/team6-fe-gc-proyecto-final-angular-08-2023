@@ -44,7 +44,9 @@
 
 .small_dish{
 
-    height: 25vh;
+    height: 12vh;
+    
+    scroll-snap-align: center;
 }
 
 
