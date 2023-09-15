@@ -127,8 +127,8 @@ import { BoardChefComponent } from './components/chef/board-chef/board-chef.comp
         tokenGetter: () => {
           return sessionStorage.getItem('TOKEN_KEY');
         },
-        allowedDomains: ['http://localhost:5719'],
-        disallowedRoutes: ['http://localhost:5719/login', 'http://localhost:5719/register']
+        allowedDomains: ['http://localhost:4200'],
+        disallowedRoutes: ['http://localhost:5719/4200', 'http://localhost:4200/register']
       }
     })
   ],
