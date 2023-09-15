@@ -6,7 +6,7 @@ import { HttpClient } from '@angular/common/http'
 })
 export class AllergensService {
 
-  api_allergens: string = 'http://localhost:5719/allergens';
+  api_allergens: string = 'http://localhost:8080/allergens';
 
   constructor(private http: HttpClient) { }
 
