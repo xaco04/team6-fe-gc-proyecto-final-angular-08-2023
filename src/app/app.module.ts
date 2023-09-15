@@ -127,8 +127,8 @@ import { BoardChefComponent } from './components/chef/board-chef/board-chef.comp
         tokenGetter: () => {
           return sessionStorage.getItem('TOKEN_KEY');
         },
-        allowedDomains: ['http://localhost:4200'],
-        disallowedRoutes: ['http://localhost:5719/4200', 'http://localhost:4200/register']
+        allowedDomains: ['team6-fe-gc-proyecto-final-api-production.up.railway.app'],
+        disallowedRoutes: ['team6-fe-gc-proyecto-final-api-production.up.railway.app/login', 'team6-fe-gc-proyecto-final-api-production.up.railway.app/register']
       }
     })
   ],
