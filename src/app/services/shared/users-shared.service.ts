@@ -3,7 +3,7 @@ import { Injectable } from '@angular/core';
 import { Observable } from 'rxjs';
 import { Users } from 'src/app/models/Users';
 
-const API_URL = 'http://localhost:8080/';
+const API_URL = 'http://localhost:5719/';
 
 
 
@@ -14,7 +14,7 @@ export class UserService {
 
   constructor(private http: HttpClient) {}
 
-  endpoint: string = 'http://localhost:8080/';
+  endpoint: string = 'http://localhost:5719/';
   
   getAll(): Observable<Users[]> {
     

@@ -6,7 +6,7 @@ import { HttpClient } from '@angular/common/http'
 })
 export class HoursServiceService {
 
-  api_hours: string = 'http://localhost:8080/hours';
+  api_hours: string = 'http://localhost:5719/hours';
 
   constructor(private http: HttpClient) { }
 
