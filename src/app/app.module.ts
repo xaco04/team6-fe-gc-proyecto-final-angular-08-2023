@@ -54,7 +54,7 @@ import { HourSelectionComponent } from './components/user/hour-selection/hour-se
 import { UserHoursComponent } from './components/user/user-hours/user-hours.component';
 import { BoardAdminComponent } from './components/admin/board-admin/board-admin.component';
 import { TokenStorageServiceService } from './services/shared/token-storage-service.service';
-import { JwtModule } from '../../node_modules/@auth0/angular-jwt';
+import { JwtModule } from '@auth0/angular-jwt';
 import { BoardUserComponent } from './components/user/board-user/board-user.component';
 import { BoardChefComponent } from './components/chef/board-chef/board-chef.component';
 
