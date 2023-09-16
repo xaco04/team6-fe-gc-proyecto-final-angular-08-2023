@@ -3,10 +3,6 @@ import { Injectable } from '@angular/core';
 import { Observable } from 'rxjs';
 import { Users } from 'src/app/models/Users';
 
-const API_URL = 'https://team6-fe-gc-proyecto-final-api-production.up.railway.app/';
-
-
-
 @Injectable({
   providedIn: 'root'
 })
