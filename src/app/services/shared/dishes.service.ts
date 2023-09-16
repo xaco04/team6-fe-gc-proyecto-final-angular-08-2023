@@ -17,6 +17,11 @@ export class DishesService {
 
   constructor(private http: HttpClient) { }
 
+  getAll(){
+    
+    return this.http.get(this.api_dishes);
+  }
+
   getAllFirsts(){
     
     return this.http.get(this.api_dishes+'?category=1');

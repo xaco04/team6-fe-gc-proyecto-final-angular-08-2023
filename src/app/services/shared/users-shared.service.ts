@@ -3,7 +3,6 @@ import { Injectable } from '@angular/core';
 import { Observable } from 'rxjs';
 import { Users } from 'src/app/models/Users';
 
-const API_URL = 'http://localhost:8080/';
 
 
 
@@ -21,10 +20,10 @@ export class UserService {
     return this.http.get<Users[]>(`${this.endpoint}users`);
   }
 
-  // Devuelve todos los usuarios ordenados por rol
-  getAllOrderByRole(): Observable<Users[]> {
+  // Devuelve todos los usuarios con un rol, ordenados alfabeticamente de forma Ascendente
+  getAllByRoleNameAsc(rolename: string): Observable<Users[]> {
 
-    return this.http.get<Users[]>(`${this.endpoint}users/role`);
+    return this.http.get<Users[]>(`${this.endpoint}users/role/${rolename}/name-asc`);
   }
 
   // Devuelve todos los usuarios con un rol que empiezan por X letras
