@@ -25,6 +25,12 @@ import { BoardAdminComponent } from './components/admin/board-admin/board-admin.
 import { BoardUserComponent } from './components/user/board-user/board-user.component';
 import { BoardChefComponent } from './components/chef/board-chef/board-chef.component';
 
+//Guards
+import { authGuard } from './guards/auth.guard';
+import { adminGuard } from './guards/admin.guard';
+import { chefGuard } from './guards/chef.guard';
+import { userGuard } from './guards/user.guard';
+
 const routes: Routes = [
   {
     path: '', pathMatch: 'full', redirectTo: '/login'
@@ -39,83 +45,118 @@ const routes: Routes = [
   },
   {
     path: 'inicio',
-    component: UserHomeComponent
+    component: UserHomeComponent,
+    canActivate: [ authGuard, userGuard ]
   },
   {
     path: 'crear_menu',
-    component: UserCreateMenuComponent
+    component: UserCreateMenuComponent,
+    canActivate: [ authGuard, userGuard ]
+
   },
   {
     path: 'perfil',
-    component: UserProfileComponent
+    component: UserProfileComponent,
+    canActivate: [ authGuard, userGuard ]
+
   },
   {
     path: 'dashboard-admin',
-    component: DashboardAdminComponent
+    component: DashboardAdminComponent,
+    canActivate: [ authGuard, adminGuard ]
+
     
   },
   {
     path: 'usrManagement-list-admin',
-    component: UsrManagementListAdminComponent
+    component: UsrManagementListAdminComponent,
+    canActivate: [ authGuard, adminGuard ]
+
   },
   {
     path: 'customerSupport-list-shared',
-    component: CustomerSupportListSharedComponent
+    component: CustomerSupportListSharedComponent,
+    canActivate: [ authGuard, adminGuard ]
+
   },
   {
     path: 'usrManagement-add-admin',
-    component: UsrManagementAddAdminComponent
+    component: UsrManagementAddAdminComponent,
+    canActivate: [ authGuard, adminGuard ]
+
   },
   {
     path: 'usrManagement-modify-admin/:id/:isActive/:name/:surname/:username/:password',
-    component: UsrManagementModifyAdminComponent
+    component: UsrManagementModifyAdminComponent,
+    canActivate: [ authGuard, adminGuard ]
+
   },
   {
     path: 'rewarmanagement-musr-admin',
-    component: RewardMUsrAdminComponent
+    component: RewardMUsrAdminComponent,
+    canActivate: [ authGuard, adminGuard ]
+
   }
   ,
   {
     path: 'customerSupport-answer-shared',
-    component: CustomerSupportAnswerSharedComponent
+    component: CustomerSupportAnswerSharedComponent,
+    canActivate: [ authGuard, adminGuard ]
+
   },
   {
     path: 'profile-admin',
-    component: ProfileAdminComponent
+    component: ProfileAdminComponent,
+    canActivate: [ authGuard, adminGuard ]
+
   },
   {
     path: 'analysis-list-admin',
-    component: AnalysisListAdminComponent
+    component: AnalysisListAdminComponent,
+    canActivate: [ authGuard, adminGuard ]
   },
   {
     path: 'recipe',
-    component: RecipeComponent
+    component: RecipeComponent,
+    canActivate: [ authGuard, chefGuard ]
+
   },
   {
     path: 'orders',
-    component: OrdersComponent
+    component: OrdersComponent,
+    canActivate: [ authGuard, chefGuard ]
+
   },
   {
     path: 'rewarmanagement-madm-admin',
-    component: RewardMAdmAdminComponent
+    component: RewardMAdmAdminComponent,
+    canActivate: [ authGuard, adminGuard ]
+
   },
   {
     path: 'list',
-    component: EditPriceSharedComponent
+    component: EditPriceSharedComponent,
+    canActivate: [ authGuard ]
+
+
   },
   {
     path: 'board-admin',
-    component: BoardAdminComponent
+    component: BoardAdminComponent,
+    canActivate: [ authGuard, adminGuard ]
 
   },
   {
     path: 'board-user',
-    component: BoardUserComponent
-    
+    component: BoardUserComponent,
+    canActivate: [ authGuard, userGuard ]
+
   },
   {
     path: 'board-chef',
-    component: BoardChefComponent 
+    component: BoardChefComponent,
+    canActivate: [ authGuard, chefGuard ]
+
   },
   //Debe ir siempre la última
   {
