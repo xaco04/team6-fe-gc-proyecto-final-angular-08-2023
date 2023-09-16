@@ -6,7 +6,7 @@ import { HttpClient } from '@angular/common/http'
 })
 export class HoursServiceService {
 
-  api_hours: string = 'team6-fe-gc-proyecto-final-api-production.up.railway.app/hours';
+  api_hours: string = 'https://team6-fe-gc-proyecto-final-api-production.up.railway.app/hours';
 
   constructor(private http: HttpClient) { }
 

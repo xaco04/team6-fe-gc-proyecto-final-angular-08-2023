@@ -3,7 +3,7 @@ import { Injectable } from '@angular/core';
 import { Observable } from 'rxjs';
 import { Users } from 'src/app/models/Users';
 
-const API_URL = 'team6-fe-gc-proyecto-final-api-production.up.railway.app/';
+const API_URL = 'https://team6-fe-gc-proyecto-final-api-production.up.railway.app/';
 
 
 
@@ -14,7 +14,7 @@ export class UserService {
 
   constructor(private http: HttpClient) {}
 
-  endpoint: string = 'team6-fe-gc-proyecto-final-api-production.up.railway.app/';
+  endpoint: string = 'https://team6-fe-gc-proyecto-final-api-production.up.railway.app/';
   
   getAll(): Observable<Users[]> {
     

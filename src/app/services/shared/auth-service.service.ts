@@ -2,7 +2,7 @@ import { Injectable } from '@angular/core';
 import { HttpClient, HttpHeaders } from '@angular/common/http';
 import { Observable } from 'rxjs';
 
-const AUTH_API = 'team6-fe-gc-proyecto-final-api-production.up.railway.app/login';
+const AUTH_API = 'https://team6-fe-gc-proyecto-final-api-production.up.railway.app/login';
 
 const httpOptions = {
   headers: new HttpHeaders({ 'Content-Type': 'application/json' })
