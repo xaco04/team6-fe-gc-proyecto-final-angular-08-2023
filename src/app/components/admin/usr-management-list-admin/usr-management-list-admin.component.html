@@ -27,6 +27,8 @@
                                             placeholder="Search"
                                             aria-label="Search"
                                             aria-describedby="search-addon"
+                                            [(ngModel)]="searchTerm"
+                                            (input)="searchUsers()"
                                         />
                                         <span class="input-group-text border-0" id="search-addon">
                                         <i class="bi bi-search"></i>
@@ -70,8 +72,8 @@
                                     <button [routerLink]="['/usrManagement-modify-admin', user.id, user.active, user.name, user.surname, user.email, user.password]" type="button" class="btn btn-success">
                                       <i class="bi bi-pencil-square"></i>
                                     </button>
-                                    <button type="button" class="btn btn-danger">
-                                      <i class="bi bi-trash-fill"></i>
+                                    <button type="button" class="btn btn-danger" (click)="deleteUser(user.id)">
+                                        <i class="bi bi-trash-fill"></i>
                                     </button>
                                   </div>
                                 </td>
