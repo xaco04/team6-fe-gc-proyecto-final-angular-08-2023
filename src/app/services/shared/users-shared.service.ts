@@ -13,7 +13,7 @@ export class UserService {
 
   constructor(private http: HttpClient) {}
 
-  endpoint: string = 'https://team6-fe-gc-proyecto-final-api-production.up.railway.app/';
+  endpoint: string = 'http://localhost:8080/';
   
   getAll(): Observable<Users[]> {
     
