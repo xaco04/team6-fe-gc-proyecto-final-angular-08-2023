@@ -3,6 +3,9 @@ import { Injectable } from '@angular/core';
 import { Observable } from 'rxjs';
 import { Users } from 'src/app/models/Users';
 
+
+
+
 @Injectable({
   providedIn: 'root'
 })
@@ -17,18 +20,11 @@ export class UserService {
     return this.http.get<Users[]>(`${this.endpoint}users`);
   }
 
-  // Devuelve todos los usuarios ordenados por rol
-  getAllOrderByRole(): Observable<Users[]> {
+  // Devuelve todos los usuarios con un rol
+  getAllByRoleName(rolename: string): Observable<Users[]> {
 
-    return this.http.get<Users[]>(`${this.endpoint}users/role`);
+    return this.http.get<Users[]>(`${this.endpoint}users/role/${rolename}`);
   }
-
-  // Devuelve todos los usuarios con un rol que empiezan por X letras
-  getAllByRoleStartingWith(rolename: string, letters: string): Observable<Users[]> {
-
-    return this.http.get<Users[]>(`${this.endpoint}users/role/${rolename}/search/${letters}`);
-  }
-
   // Devuelve un solo usuario por id
   getOneById(id: number): Observable<Users>{
 
@@ -39,6 +35,18 @@ export class UserService {
   getOneByEmail(email: string) {
   
     return this.http.get<Users>(`${this.endpoint}users/email/${email}`);
+  }
+
+  // Devuelve un solo usuario por nombre
+  getOneByName(name: string) {
+
+    return this.http.get<Users>(`${this.endpoint}users/name/${name}`);
+  }
+
+  // Devuelve un solo usuario por nombre
+  getOneBySurname(surname: string) {
+
+    return this.http.get<Users>(`${this.endpoint}users/surname/${surname}`);
   }
 
   // === Post ===
@@ -59,6 +67,6 @@ export class UserService {
   // Borra usuario
   delete(id: number): Observable<Users> {
     
-    return this.http.delete<Users>(`${this.endpoint}users/${id}`);
+    return this.http.delete<Users>(`${this.endpoint}users/id/${id}`);
   }
 }
