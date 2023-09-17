@@ -23,7 +23,7 @@
 
 .create_menu_category{
 
-    height: 6vh;
+    height: 8vh;
 }
 
 .small_category{
@@ -92,7 +92,7 @@
 
     .h-xxl-small_category{
 
-        height: 5vh;
+        height: 8vh;
     }
 
     .h-xxl-small_dishes{
@@ -100,13 +100,6 @@
         height: 19vh;
     }
 }
-
-
-
-
-
-
-
 
 .user_sidebar{
 
