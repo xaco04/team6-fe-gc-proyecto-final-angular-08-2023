@@ -86,7 +86,7 @@ const routes: Routes = [
 
   },
   {
-    path: 'usrManagement-modify-admin/:id/:isActive/:name/:surname/:username/:password',
+    path: 'usrManagement-modify-admin/:id/:active/:name/:surname/:email/:points',
     component: UsrManagementModifyAdminComponent,
     canActivate: [ authGuard, adminGuard ]
 
