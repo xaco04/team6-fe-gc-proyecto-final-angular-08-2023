@@ -4,9 +4,8 @@
             <app-sidebar-admin></app-sidebar-admin>
         </div>
         <div class="col-10 content">
-            
             <div class="custom-cont">
-                <nav class="navbar navbar-dark bg-dark ">
+                <nav class="navbar navbar-dark bg-dark">
                     <div class="title">
                         <h1 class="h1" style="color: #c7d5e0;">Gestión de Usuarios</h1>
                     </div>
@@ -14,64 +13,52 @@
                 <div class="container mt-3 full-height d-flex align-items-center">
                     <div class="cont-form col-xl-7 col-lg-11 col-md-11 col-xs-2">
                         <h1>Modificar Usuario</h1>
-                        <br><br>
-                        <form>
-                            <div class="form-group row">
-                                <label for="inputNombreUsuario" class="col-sm-2 col-form-label">Id</label>
-                                <div class="parametros col-sm-9">
-                                    <input type="text" class="form-control" id="inputNombreUsuario" [disabled]="!editId" [placeholder]="userId">
-                                    <input class="check" type="checkbox" (change)="toggleEditId()">
-                                </div>
-                            </div>
-                            <div class="form-group row">
-                                <label for="inputEmail" class="col-sm-2 col-form-label">Status</label>
-                                <div class="parametros col-sm-9">
-                                    <input type="email" class="form-control" id="inputEmail" [disabled]="!editStatus" [placeholder]="userStatus">
-                                    <input class="check" type="checkbox" (change)="toggleEditStatus()">
-
-                                </div>
-                            </div>
+                        <br /><br />
+                        <form (ngSubmit)="updateUser()">
                             <div class="form-group row">
                                 <label for="inputNombre" class="col-sm-2 col-form-label">Nombre</label>
                                 <div class="parametros col-sm-9">
-                                    <input type="text" class="form-control" id="inputNombre" [disabled]="!editNombre" [placeholder]="userName">
+                                    <input type="text" class="form-control" id="inputNombre" [(ngModel)]="modificarUsuario.name" [disabled]="!editNombre" name="inputNombre">
                                     <input class="check" type="checkbox" (change)="toggleEditNombre()">
-
                                 </div>
                             </div>
                             <div class="form-group row">
                                 <label for="inputApellidos" class="col-sm-2 col-form-label">Apellidos</label>
                                 <div class="parametros col-sm-9">
-                                    <input type="text" class="form-control" id="inputApellidos" [disabled]="!editApellidos" [placeholder]="userSurname">
+                                    <input type="text" class="form-control" id="inputApellidos" [(ngModel)]="modificarUsuario.surname" [disabled]="!editApellidos" name="inputApellidos">
                                     <input class="check" type="checkbox" (change)="toggleEditApellidos()">
-
                                 </div>
                             </div>
                             <div class="form-group row">
-                                <label for="inputUsername" class="col-sm-2 col-form-label">Username</label>
+                                <label for="inputEmail" class="col-sm-2 col-form-label">Email</label>
                                 <div class="parametros col-sm-9">
-                                    <input type="text" class="form-control" id="inputApellidos" [disabled]="!editUsername" [placeholder]="userUsername">
-                                    <input class="check" type="checkbox" (change)="toggleEditUsername()">
-
+                                    <input type="text" class="form-control" id="inputEmail" [(ngModel)]="modificarUsuario.email" [disabled]="!editEmail" name="inputEmail">
+                                    <input class="check" type="checkbox" (change)="toggleEditEmail()">
                                 </div>
                             </div>
                             <div class="form-group row">
-                                <label for="inputPassword" class="col-sm-2 col-form-label">Contraseña</label>
+                                <label for="inputPoints" class="col-sm-2 col-form-label">Puntos</label>
                                 <div class="parametros col-sm-9">
-                                    <input type="password" class="form-control" id="inputPassword" [disabled]="!editContrasena" [placeholder]="userPassword">
-                                    <input class="check" type="checkbox" (change)="toggleEditContrasena()">
+                                    <input type="number" class="form-control" id="inputPoints" [(ngModel)]="modificarUsuario.points" [disabled]="!editPoints" name="inputPoints">
+                                    <input class="check" type="checkbox" (change)="toggleEditPoints()">
                                 </div>
                             </div>
                             <div class="form-group row">
-                                <legend class="col-form-label col-sm-2 ">Rol</legend>
+                                <label for="inputStatus" class="col-sm-2 col-form-label">Status</label>
+                                <div class="parametros col-sm-9">
+                                    <input type="text" class="form-control" id="inputStatus" [(ngModel)]="modificarUsuario.active" [disabled]="!editStatus" name="inputStatus">
+                                    <input class="check" type="checkbox" (change)="toggleEditStatus()">
+                                </div>
+                            </div>
+                            <div class="form-group row">
+                                <label class="col-form-label col-sm-2">Rol</label>
                                 <div class="parametros col-sm-3">
-                                    <select class="form-select" aria-label="Default select example">
-                                        <option selected>Seleccionar</option>
-                                        <option value="1">Administrador</option>
-                                        <option value="2">Responsable</option>
-                                        <option value="3">Cocinero</option>
-                                        <option value="4">Cliente</option>
-                                    </select>
+                                    <select class="form-select" aria-label="Default select example" [(ngModel)]="selectedRoleId" [disabled]="!editRole" name="inputRole">
+                                        <option [ngValue]="1">Administrador</option>
+                                        <option [ngValue]="2">Usuario</option>
+                                        <option [ngValue]="3">Encargado</option>
+                                    </select>                                    
+                                    <input class="check" type="checkbox" (change)="toggleEditRole()">
                                 </div>
                             </div>
                             <div class="form-group row">

@@ -6,7 +6,7 @@ export interface Users {
     name: string;
     surname: string;
     email: string;
-    password: string;
+    password?: string;
     image: string;
     points: number;
     active: boolean;
