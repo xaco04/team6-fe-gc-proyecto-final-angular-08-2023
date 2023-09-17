@@ -13,7 +13,7 @@ export class UserService {
 
   constructor(private http: HttpClient) {}
 
-  endpoint: string = 'https://team6-fe-gc-proyecto-final-api-production.up.railway.app/';
+  endpoint: string = 'http://localhost:8080/';
   
   getAll(): Observable<Users[]> {
     
@@ -28,7 +28,7 @@ export class UserService {
   // Devuelve un solo usuario por id
   getOneById(id: number): Observable<Users>{
 
-    return this.http.get<Users>(`${this.endpoint}users/${id}`);
+    return this.http.get<Users>(`${this.endpoint}users/id/${id}`);
   }
   
   // Devuelve un solo usuario por email

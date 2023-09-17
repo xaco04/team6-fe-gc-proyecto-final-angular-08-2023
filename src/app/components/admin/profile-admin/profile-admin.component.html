@@ -16,8 +16,8 @@
                         <div class="col-md-3 border-right">
                             <div class="d-flex flex-column align-items-center text-center p-3 py-5">
                                 <img class="rounded-circle mt-5" width="150px" src="../../../../assets/avatar.png">
-                                <span class="font-weight-bold">Admin</span>
-                                <span class="text-black-50">admin@grupocastilla.cat</span>
+                                <span class="font-weight-bold">{{ userData.name }}</span>
+                                <span class="text-black-50">{{ userData.email }}</span>
                             </div>
                         </div>
                         <div class="col-md-9 border-right">
@@ -31,32 +31,28 @@
                                     <tbody>
                                         <tr>
                                             <td>Nombre</td>
-                                            <td>Admin</td>
+                                            <td>{{ userData.name }}</td>
                                             <td><button class="btn btn-link edit-button" data-field="nombre">Editar</button></td>
                                         </tr>
                                         <tr>
                                             <td>Apellidos</td>
-                                            <td>Apellido</td>
+                                            <td>{{ userData.surname }}</td>
                                             <td><button class="btn btn-link edit-button" data-field="apellidos">Editar</button></td>
                                         </tr>
                                         <tr>
-                                            <td>Nombre de Usuario</td>
-                                            <td>admin_user</td>
+                                            <td>Correo eléctronico</td>
+                                            <td>{{ userData.email }}</td>
                                             <td><button class="btn btn-link edit-button" data-field="username">Editar</button></td>
                                         </tr>
+
                                         <tr>
-                                            <td>Correo eléctronico</td>
-                                            <td>admin@grupocastilla.cat</td>
-                                            <td><button class="btn btn-link edit-button" data-field="correo">Editar</button></td>
-                                        </tr>
-                                        <tr>
-                                            <td>Contraseña</td>
-                                            <td>********</td>
+                                            <td>Puntos</td>
+                                            <td>{{ userData.points }}</td>
                                             <td><button class="btn btn-link edit-button" data-field="contraseña">Editar</button></td>
                                         </tr>
                                         <tr>
                                             <td>Rol</td>
-                                            <td>Administrador</td>
+                                            <td>{{ userData.role.name }}</td>
                                             <td><button class="btn btn-link edit-button" data-field="rol">Editar</button></td>
                                         </tr>
                                     </tbody>
