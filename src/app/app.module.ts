@@ -57,6 +57,7 @@ import { TokenStorageServiceService } from './services/shared/token-storage-serv
 import { JwtModule } from '@auth0/angular-jwt';
 import { BoardUserComponent } from './components/user/board-user/board-user.component';
 import { BoardChefComponent } from './components/chef/board-chef/board-chef.component';
+import { UserHomeSectionComponent } from './components/user/user-home-section/user-home-section.component';
 
 
 
@@ -97,7 +98,8 @@ import { BoardChefComponent } from './components/chef/board-chef/board-chef.comp
     HourSelectionComponent,
     BoardAdminComponent,
     BoardUserComponent,
-    BoardChefComponent
+    BoardChefComponent,
+    UserHomeSectionComponent
   ],
   
   imports: [

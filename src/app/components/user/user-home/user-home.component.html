@@ -1,36 +1,40 @@
 <div class="container-fluid vh-100">
-    <div class="row h-100 d-flex justify-content-around align-items-center">
-        <div class="col-xxl-4 h-50 pt-2 d-flex flex-column justify-content-around align-items-center border">
+    <div class="row h-100 d-flex justify-content-around align-items-center">            
+        <div class="col-xxl-5 pt-2 d-flex flex-column justify-content-around align-items-center">
             <h2 class="d-flex justify-content-center align-items-center">Para empezar</h2>
-            <a href="" class="h-75 w-100 border">
+            <div href="" class="d-flex flex-column justify-content-around align-items-center">
                 <div class="">
-
+                    <app-user-home-section [dishes] = "section1" ></app-user-home-section>
                 </div>
-            </a>
+                <button class="btn btn-primary carrousel_button w-50 mt-2">Añadir</button>
+            </div>
         </div>
-        <div class="col-xxl-4 offset-xxl-1 h-50 pt-2 d-flex flex-column justify-content-around align-items-center border">
+        <div class="col-xxl-5 pt-2 d-flex flex-column justify-content-around align-items-center">
             <h2 class="text-center">Esto te va a gustar</h2>
-            <a href="" class="h-75 w-100 border">
+            <div href="" class="d-flex flex-column justify-content-around align-items-center">
                 <div class="">
-
+                    <app-user-home-section [dishes] = "section2" ></app-user-home-section>
                 </div>
-            </a>
+                <button class="btn btn-primary carrousel_button w-50 mt-2">Añadir</button>
+            </div>
         </div>
-        <div class="col-xxl-4 h-50 pt-2 d-flex flex-column justify-content-around align-items-center border">
+        <div class="col-xxl-5 h-50 pt-2 d-flex flex-column justify-content-around align-items-center">
             <h2 class="text-center">Nuestros destacados</h2>
-            <a href="" class="h-75 w-100 border">
+            <div href="" class="d-flex flex-column justify-content-around align-items-center">
                 <div class="">
-
+                    <app-user-home-section [dishes] = "section3" ></app-user-home-section>
                 </div>
-            </a>
+                <button class="btn btn-primary carrousel_button w-50 mt-2">Añadir</button>
+            </div>
         </div>
-        <div class="col-xxl-4 offset-xxl-1 h-50 pt-2 d-flex flex-column justify-content-around align-items-center border">
+        <div class="col-xxl-5 pt-2 d-flex flex-column justify-content-around align-items-center">
             <h2 class="text-center">¿Te apetece algo dulce?</h2>
-            <a href="" class="h-75 w-100 border">
+            <div href="" class="d-flex flex-column justify-content-around align-items-center">
                 <div class="">
-
+                    <app-user-home-section [dishes] = "section4" ></app-user-home-section>
                 </div>
-            </a>
+                <button class="btn btn-primary carrousel_button w-50 mt-2">Añadir</button>
+            </div>
         </div>
     </div>
 </div>
