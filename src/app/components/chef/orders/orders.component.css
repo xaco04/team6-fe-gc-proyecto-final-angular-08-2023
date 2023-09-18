@@ -1,36 +1,24 @@
 .home_dish{
-
-    background-image: linear-gradient(to top, rgba(0, 0, 0, 0.3) 15%, rgba(255, 255, 255, 0.1) 90%), url(../../../../assets/croquetas.jpg);
+    background-image: linear-gradient(to top, rgba(0, 0, 0, 0.3) 15%, rgba(255, 255, 255, 0.1) 90%);
     background-size: cover;
     background-repeat: none;
-    
     border-radius: 0.3em;
 }
-
 .dishes{
-
     height: 10vh;
 }
-
 .button_finished{
-
     border-radius: 0.3em;
     border: none;
     background: none;
 }
-
 .finished{
-
     max-height: 80px;
 }
-
 .order{
-
     overflow-y: scroll;
 }
-
 .order::-webkit-scrollbar{
-
     width: 0;
     display: none;
 }
@@ -38,4 +26,8 @@
     font-size: 25px;
     color: white;
     text-shadow: rgb(0, 0, 0) 4px 0 10px;
+}
+.separador{
+    border-color: #0052ab;
+    border-width: 5px;
 }

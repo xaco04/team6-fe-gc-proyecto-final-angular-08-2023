@@ -288,19 +288,23 @@ export class OrdersComponent {
         this.getDishByName("Café"),
         this.getDishByName("Solomillo a la Plancha"),
         this.getDishByName("Crema de Calabaza"),
-        this.getDishByName("Tortilla de Patatas")
+        this.getDishByName("Tortilla de Patatas"),
+        this.getDishByName("Sopa de Tomate"),
+        this.getDishByName("Gazpacho")
       ],
       finished: false
     }
   ];
 
   markAsFinished(order: any) {
+    console.log('Pedido marcado como terminado:', order);
     order.finished = true;
   }
   getDishByName(name: string) {
     return this.dishes.find(dish => dish.name === name);
   }
-  sortDishesByCategory(dishes: any[]): any[] {
+  sortDishesByCategory(dishes: any[]) {
     return dishes.sort((a, b) => a.category - b.category);
   }
+  
 }
