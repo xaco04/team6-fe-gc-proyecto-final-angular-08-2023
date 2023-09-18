@@ -63,15 +63,23 @@ export class UserProfileComponent implements OnInit {
 
       if(this.user.points > this.user_rewards[i].idRewards.cost){
 
-        console.log(this.user_rewards[i]);
-        this.userRewardsService.changeIsAvailable(this.user_rewards[i].id, true).subscribe(result => {
+        console.log(this.user.points);
+        console.log(this.user_rewards[i].idRewards.cost);
+        if(this.user_rewards[i].isAvailable == false){
 
-          console.log("Disponibilidad actualizada correctamente");
-        },
-        error => {
+          console.log("Cambiando availability");
+          this.userRewardsService.changeIsAvailable(this.user_rewards.id, true).subscribe(result => {
 
-          console.error("Error al actualizar la disponibilidad");
-        });
+            console.log("Disponibilidad actualizada correctamente");
+          },
+          error => {
+  
+            console.error("Error al actualizar la disponibilidad");
+          });
+        }else{
+
+          console.log("El reward ya está activo");
+        }
       }
     }
   }
