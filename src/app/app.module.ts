@@ -59,6 +59,11 @@ import { BoardUserComponent } from './components/user/board-user/board-user.comp
 import { BoardChefComponent } from './components/chef/board-chef/board-chef.component';
 import { UserHomeSectionComponent } from './components/user/user-home-section/user-home-section.component';
 import { PerfilUserComponent } from './components/chef/perfil-user/perfil-user.component';
+import { DishesManagementListComponent } from './components/admin/dishes-management-list/dishes-management-list.component';
+import { DishesManagementSegundosComponent } from './components/admin/dishes-management-segundos/dishes-management-segundos.component';
+import { DishesManagementEntrantesComponent } from './components/admin/dishes-management-entrantes/dishes-management-entrantes.component';
+import { DishesManagementPostresComponent } from './components/admin/dishes-management-postres/dishes-management-postres.component';
+import { DishesManagementBebidasComponent } from './components/admin/dishes-management-bebidas/dishes-management-bebidas.component';
 
 
 
@@ -101,7 +106,12 @@ import { PerfilUserComponent } from './components/chef/perfil-user/perfil-user.c
     BoardUserComponent,
     BoardChefComponent,
     UserHomeSectionComponent,
-    PerfilUserComponent
+    PerfilUserComponent,
+    DishesManagementListComponent,
+    DishesManagementSegundosComponent,
+    DishesManagementEntrantesComponent,
+    DishesManagementPostresComponent,
+    DishesManagementBebidasComponent
   ],
   
   imports: [

@@ -25,6 +25,11 @@ import { BoardAdminComponent } from './components/admin/board-admin/board-admin.
 import { BoardUserComponent } from './components/user/board-user/board-user.component';
 import { BoardChefComponent } from './components/chef/board-chef/board-chef.component';
 import { PerfilUserComponent } from './components/chef/perfil-user/perfil-user.component';
+import { DishesManagementListComponent } from './components/admin/dishes-management-list/dishes-management-list.component';
+import { DishesManagementSegundosComponent } from './components/admin/dishes-management-segundos/dishes-management-segundos.component';
+import { DishesManagementEntrantesComponent } from './components/admin/dishes-management-entrantes/dishes-management-entrantes.component';
+import { DishesManagementPostresComponent } from './components/admin/dishes-management-postres/dishes-management-postres.component';
+import { DishesManagementBebidasComponent } from './components/admin/dishes-management-bebidas/dishes-management-bebidas.component';
 
 //Guards
 import { authGuard } from './guards/auth.guard';
@@ -53,6 +58,36 @@ const routes: Routes = [
     path: 'crear_menu',
     component: UserCreateMenuComponent,
     canActivate: [ authGuard, userGuard ]
+
+  },
+  {
+    path: 'dish-management',
+    component: DishesManagementListComponent,
+    canActivate: [ authGuard, adminGuard ]
+
+  },
+  {
+    path: 'dish-management-segundos',
+    component: DishesManagementSegundosComponent,
+    canActivate: [ authGuard, adminGuard ]
+
+  },
+  {
+    path: 'dish-management-entrantes',
+    component: DishesManagementEntrantesComponent,
+    canActivate: [ authGuard, adminGuard ]
+
+  },
+  {
+    path: 'dish-management-postres',
+    component: DishesManagementPostresComponent,
+    canActivate: [ authGuard, adminGuard ]
+
+  },
+  {
+    path: 'dish-management-bebidas',
+    component: DishesManagementBebidasComponent,
+    canActivate: [ authGuard, adminGuard ]
 
   },
   {
