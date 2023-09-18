@@ -1,4 +1,4 @@
-<div class="container-fluid">
+<div *ngIf="user" class="container-fluid">
     <div class="row">
         <div class="col-2 d-none d-xxl-block user_sidebar">
             <app-sidebar-user></app-sidebar-user>
@@ -27,8 +27,8 @@
                             <img class="img-fluid h-100" src="" />
                         </div>
                         <div class="user_name">
-                            <!-- <h2 class="name"> {{user.nombre}} </h2> -->
-                            <h2 class="name"> Roberto </h2>
+                            <h2 class="name"> {{user.name}} </h2>
+                            <!-- <h2 class="name"> Roberto </h2> -->
                         </div>
                         <div class="user_level d-flex justify-content-between align-items-center">
                             <h3>Nivel</h3>
@@ -56,10 +56,13 @@
                     </div>
                 </div>
                 <div class="row main">
-                    <div class="prices col-xxl-9 col-lg-12">
-                        <div class="row">
-                            <div *ngFor="let reward of rewards" class="col-xxl-4 col-lg-4 col-sm-12 pb-4">
-                                <app-reward [reward] = 'reward'></app-reward>
+                    <!-- <div class="prices col-xxl-9 col-lg-12">
+                        <app-reward [users_rewards] = 'user_rewards'></app-reward>
+                    </div> -->
+                    <div class="prices col-xxl-9 col-lg-12 d-flex flex-column justify-content-between align-items-center">
+                        <div class="row h-100 d-flex justify-content-center align-items-center">
+                            <div *ngFor="let reward of user_rewards" class="col-xxl-4">
+                                <app-reward [users_rewards] = 'reward'></app-reward>
                             </div>
                         </div>
                     </div>
@@ -75,7 +78,7 @@
                                 <h5 class="fw-light">Próxima recompensa</h5>
                             </div>
                             <div class="col-3">
-                                <h5 class="text-end mb-3 fw-light">68</h5>
+                                <h5 class="text-end mb-3 fw-light">{{user.points}}</h5>
                                 <h5 class="text-end fw-light">122</h5>
                             </div>
                         </div>
@@ -90,8 +93,8 @@
                                 <h5 class="fw-light">Próximo nivel</h5>
                             </div>
                             <div class="col-5">
-                                <h5 class="text-end mb-3 fw-light">3</h5>
-                                <h5 class="text-end fw-light">22 puntos</h5>
+                                <h5 class="text-end mb-3 fw-light">{{this.user_level}}</h5>
+                                <h5 class="text-end fw-light">{{this.user_next_level}} puntos</h5>
                             </div>
                         </div>
                         <div class="row bar_level w-100">

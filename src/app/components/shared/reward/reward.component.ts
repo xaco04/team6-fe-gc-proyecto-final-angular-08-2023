@@ -1,4 +1,4 @@
-import { Component, Input } from '@angular/core';
+import { Component, Input, OnInit } from '@angular/core';
 
 @Component({
   selector: 'app-reward',
@@ -7,5 +7,10 @@ import { Component, Input } from '@angular/core';
 })
 export class RewardComponent {
 
-  @Input() reward: any;
+  @Input() users_rewards: any;
+
+  ngOnInit(){
+
+    console.log(this.users_rewards);
+  }
 }

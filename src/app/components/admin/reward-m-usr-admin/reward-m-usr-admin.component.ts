@@ -1,7 +1,7 @@
 
 import { Component, Input, OnInit } from '@angular/core';
 import { UserService } from 'src/app/services/shared/users-shared.service';
-import { RewardsService, Reward } from 'src/app/services/shared/rewards.service';
+import { RewardsService } from 'src/app/services/shared/rewards.service';
 
 
 @Component({
@@ -14,13 +14,13 @@ import { RewardsService, Reward } from 'src/app/services/shared/rewards.service'
 export class RewardMUsrAdminComponent implements OnInit{
 
   users: any[] = []
-  rewards: any[] = []
+  rewards: any;
 
   constructor(private userService: UserService, private rewardsService: RewardsService ) {}
 
   ngOnInit(): void {
       // this.users = this.userService.getUsers();
-      this.rewards = this.rewardsService.getRewards();
+      this.rewards = this.rewardsService.getAllRewards();
   }
 }
 

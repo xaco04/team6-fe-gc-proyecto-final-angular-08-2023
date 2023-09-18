@@ -27,7 +27,7 @@ export class TokenStorageServiceService {
         const decodedToken = this.jwtHelperService.decodeToken(token);
 
         window.sessionStorage.removeItem(this.USER_KEY);
-        window.sessionStorage.setItem(this.USER_KEY, decodedToken.user_id);
+        window.sessionStorage.setItem(this.USER_KEY, decodedToken.id);
 
         window.sessionStorage.removeItem(this.ROLE);
         window.sessionStorage.setItem(this.ROLE, decodedToken.role.name);

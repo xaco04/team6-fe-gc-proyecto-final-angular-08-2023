@@ -1,19 +1,19 @@
-<div class="container-fluid reward_container d-flex flex-column justify-content-around align-items-center" style="background-image: url('{{reward.image}}');"> 
-    <div class="row">
-        <div class="col reward d-flex flex-column justify-content-around align-items-center">
-            <div class="row h-25">
-                <div class="col d-flex justify-content-center align-items-end">
-                    <h2 class="m-0 fs-2">{{reward.name}}</h2>
+<div  *ngIf="users_rewards" class="container-fluid w-100 p-0 d-flex flex-column justify-content-around align-items-center reward_container" style="background-image: url('{{users_rewards.idRewards.image}}');" [ngClass]="{'d-none': users_rewards.is_available}"> 
+    <div class="row w-100">
+        <div class="col p-0 d-flex flex-column justify-content-around align-items-center reward">
+            <div class="row">
+                <div class="col-12 d-flex justify-content-center align-items-end">
+                    <h2 class="m-0 fs-2">{{users_rewards.idRewards.name}}</h2>
                 </div>
             </div>
-            <div class="row h-50 w-75">
-                <div class="col d-flex justify-content-center align-items-center">
-                    <p class="m-0">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+            <div class="row">
+                <div class="col-12 d-flex justify-content-center align-items-center">
+                    <p class="m-0 p-1 d-flex justify-content-center align-items-center">{{users_rewards.idRewards.description}}</p>
                 </div>
             </div>
-            <div class="row h-25 w-75">
-                <div class="col d-flex justify-content-center align-items-center">
-                    <button class="reward_button w-100 fs-4 btn btn-primary">Canjear</button>
+            <div class="row w-100">
+                <div class="col-12 d-flex justify-content-center align-items-center">
+                    <button class="reward_button w-75 fs-4 btn btn-primary">Canjear</button>
                 </div>
             </div>
         </div>
