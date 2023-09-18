@@ -300,4 +300,7 @@ export class OrdersComponent {
   getDishByName(name: string) {
     return this.dishes.find(dish => dish.name === name);
   }
+  sortDishesByCategory(dishes: any[]): any[] {
+    return dishes.sort((a, b) => a.category - b.category);
+  }
 }
