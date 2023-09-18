@@ -16,41 +16,47 @@
                         <br /><br />
                         <form (ngSubmit)="updateUser()">
                             <div class="form-group row">
-                                <label for="inputNombre" class="col-sm-2 col-form-label">Nombre</label>
-                                <div class="parametros col-sm-9">
-                                    <input type="text" class="form-control" id="inputNombre" [(ngModel)]="modificarUsuario.name" [disabled]="!editNombre" name="inputNombre">
-                                    <input class="check" type="checkbox" (change)="toggleEditNombre()">
-                                </div>
+                              <label for="inputNombre" class="col-sm-2 col-form-label">Nombre</label>
+                              <div class="parametros col-sm-9">
+                                <input type="text" class="form-control" id="inputNombre" [(ngModel)]="modificarUsuario.name" [disabled]="!editNombre" name="inputNombre">
+                                <input class="check" type="checkbox" (change)="toggleEditNombre()">
+                              </div>
                             </div>
+
                             <div class="form-group row">
-                                <label for="inputApellidos" class="col-sm-2 col-form-label">Apellidos</label>
+                                <label for="inputSurname" class="col-sm-2 col-form-label">Apellido</label>
                                 <div class="parametros col-sm-9">
-                                    <input type="text" class="form-control" id="inputApellidos" [(ngModel)]="modificarUsuario.surname" [disabled]="!editApellidos" name="inputApellidos">
-                                    <input class="check" type="checkbox" (change)="toggleEditApellidos()">
+                                  <input type="text" class="form-control" id="inputApellidos" [(ngModel)]="modificarUsuario.surname" [disabled]="!editApellidos" name="inputSurname">
+                                  <input class="check" type="checkbox" (change)="toggleEditApellidos()">
                                 </div>
-                            </div>
-                            <div class="form-group row">
+                              </div>
+
+                              <div class="form-group row">
                                 <label for="inputEmail" class="col-sm-2 col-form-label">Email</label>
                                 <div class="parametros col-sm-9">
-                                    <input type="text" class="form-control" id="inputEmail" [(ngModel)]="modificarUsuario.email" [disabled]="!editEmail" name="inputEmail">
-                                    <input class="check" type="checkbox" (change)="toggleEditEmail()">
+                                  <input type="text" class="form-control" id="inputEmail" [(ngModel)]="modificarUsuario.email" [disabled]="!editEmail" name="inputEmail">
+                                  <input class="check" type="checkbox" (change)="toggleEditEmail()">
                                 </div>
-                            </div>
-                            <div class="form-group row">
-                                <label for="inputPoints" class="col-sm-2 col-form-label">Puntos</label>
+                              </div>
+
+                              <div class="form-group row">
+                                <label for="inputImage" class="col-sm-2 col-form-label">Imagen</label>
                                 <div class="parametros col-sm-9">
-                                    <input type="number" class="form-control" id="inputPoints" [(ngModel)]="modificarUsuario.points" [disabled]="!editPoints" name="inputPoints">
-                                    <input class="check" type="checkbox" (change)="toggleEditPoints()">
+                                  <input type="text" class="form-control" id="inputImage" [(ngModel)]="modificarUsuario.image" [disabled]="!editImage" name="inputImage">
+                                  <input class="check" type="checkbox" (change)="toggleEditImage()">
                                 </div>
-                            </div>
-                            <div class="form-group row">
-                                <label for="inputStatus" class="col-sm-2 col-form-label">Status</label>
+                              </div>
+
+
+                              <div class="form-group row">
+                                <label for="inputPoints" class="col-sm-2 col-form-label">Points</label>
                                 <div class="parametros col-sm-9">
-                                    <input type="text" class="form-control" id="inputStatus" [(ngModel)]="modificarUsuario.active" [disabled]="!editStatus" name="inputStatus">
-                                    <input class="check" type="checkbox" (change)="toggleEditStatus()">
+                                  <input type="text" class="form-control" id="inputPoints" [(ngModel)]="modificarUsuario.points" [disabled]="!editPoints" name="inputPoints">
+                                  <input class="check" type="checkbox" (change)="toggleEditPoints()">
                                 </div>
-                            </div>
-                            <div class="form-group row">
+                              </div>
+
+                              <div class="form-group row">
                                 <label class="col-form-label col-sm-2">Rol</label>
                                 <div class="parametros col-sm-3">
                                     <select class="form-select" aria-label="Default select example" [(ngModel)]="selectedRoleId" [disabled]="!editRole" name="inputRole">
@@ -61,12 +67,13 @@
                                     <input class="check" type="checkbox" (change)="toggleEditRole()">
                                 </div>
                             </div>
+                          
                             <div class="form-group row">
-                                <div class="col-sm-10">
-                                    <button type="submit" class="btn btn-primary">Modificar Usuario</button>
-                                </div>
+                              <div class="col-sm-10">
+                                <button type="submit" class="btn btn-primary">Modificar Usuario</button>
+                              </div>
                             </div>
-                        </form>
+                          </form>
                     </div>
                 </div>
             </div>

@@ -12,39 +12,39 @@ export class UsrManagementModifyAdminComponent implements OnInit {
   editNombre: boolean = false;
   editApellidos: boolean = false;
   editEmail: boolean = false;
+  editImage: boolean = false;
+
   editPoints: boolean = false;
   editStatus: boolean = false;
   editRole: boolean = false;
 
   modificarUsuario: Users = {
-    id: 0, // O asigna un valor adecuado para id si corresponde
+    id: 0,
     name: '',
     surname: '',
     email: '',
-    password: '$2a$12$ZqQxHBmEgvfvALEvlL00yO/TmkIxlym8eReV3iYi5bNBiaH0w9Wg2', // Si no deseas modificarlo, puedes dejarlo vacío o asignar un valor por defecto
-    image: '',   // Si no deseas modificarlo, puedes dejarlo vacío o asignar un valor por defecto
+    password: '', // Debes proporcionar un valor válido si es necesario
+    image: '',   // Debes proporcionar un valor válido si es necesario
     points: 0,
-    active: true, // Asegúrate de proporcionar un valor booleano para active
-    roleName: '', // Asegúrate de proporcionar un valor para roleName
-    role: { id: 1, name: 'Administrador' } // Ajusta según tu necesidad
+    active: true,
+    roleName: '',
+    role: { id: 1, name: 'Administrador' }
   };
 
   // Propiedad para almacenar el valor numérico del rol seleccionado
-  selectedRoleId: number = 0; // Inicialmente 0 o el valor que prefieras
+  selectedRoleId: number = 0;
 
   constructor(private route: ActivatedRoute, private userService: UserService, private router: Router) { }
 
   ngOnInit(): void {
     this.route.params.subscribe(params => {
-      console.log('Valor de params["id"]: ', params['points']); // Agrega esta línea
+      const userId = +params['id']; // Obtén el ID del usuario desde los parámetros de la URL
 
-      this.modificarUsuario.id = +params['id'];
-      this.modificarUsuario.name = params['name'];
-      this.modificarUsuario.surname = params['surname'];
-      this.modificarUsuario.email = params['email'];
-      this.modificarUsuario.points = +params['points'];
-      this.modificarUsuario.active = params['active'] === 'true'; // Convierte a booleano si es necesario
-      // También puedes obtener el rol del usuario aquí
+      // Llama a tu servicio para cargar los datos del usuario
+      this.userService.getOneById(userId).subscribe(user => {
+        this.modificarUsuario = user;
+        this.selectedRoleId = user.role.id; // Establece el valor del rol seleccionado
+      });
     });
   }
 
@@ -58,6 +58,10 @@ export class UsrManagementModifyAdminComponent implements OnInit {
 
   toggleEditEmail() {
     this.editEmail = !this.editEmail;
+  }
+
+  toggleEditImage() {
+    this.editImage = !this.editImage;
   }
 
   toggleEditPoints() {
@@ -75,7 +79,7 @@ export class UsrManagementModifyAdminComponent implements OnInit {
   updateUser() {
     // Asigna el valor numérico del rol seleccionado
     this.modificarUsuario.role = { id: this.selectedRoleId, name: this.getRoleNameFromId(this.selectedRoleId) };
-  
+
     this.userService.update(this.modificarUsuario.id, this.modificarUsuario).subscribe(
       (user) => {
         console.log('Usuario actualizado con éxito', user);
@@ -88,7 +92,7 @@ export class UsrManagementModifyAdminComponent implements OnInit {
       }
     );
   }
-  
+
   // Función auxiliar para obtener el nombre del rol a partir del ID
   getRoleNameFromId(roleId: number): string {
     switch (roleId) {
@@ -102,6 +106,4 @@ export class UsrManagementModifyAdminComponent implements OnInit {
         return ''; // Puedes definir un valor por defecto o manejar este caso según tus necesidades
     }
   }
-  
-  
 }
