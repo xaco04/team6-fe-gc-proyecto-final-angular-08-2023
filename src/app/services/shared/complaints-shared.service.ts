@@ -1,55 +1,36 @@
+
+import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
+import { Observable } from 'rxjs';
+import { Complaints } from 'src/app/models/Complaints';
 
 @Injectable({
   providedIn: 'root'
 })
 export class ComplaintsSharedService {
-  private complaints: any[] = [
-    {
-      id: 1,
-      username: 'xavi04',
-      image: '../../../../assets/avatar.png',
-      subject: 'Patatas Frias',
-      message: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip consequat.',
-      date_sent: '25/08/2023',
-      sender: ''
-    }
-    ,
-    {
-      id: 2,
-      username: 'xavi04',
-      image: '../../../../assets/avatar.png',
-      subject: 'Patatas Frias',
-      message: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip consequat.',
-      date_sent: '25/08/2023',
-      sender: ''
-    }
-    ,
-    {
-      id: 3,
-      username: 'xavi04',
-      image: '../../../../assets/avatar.png',
-      subject: 'Patatas Frias',
-      message: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip consequat.',
-      date_sent: '25/08/2023',
-      sender: ''
-    }
-    ,
-    {
-      id: 4,
-      username: 'xavi04',
-      image: '../../../../assets/avatar.png',
-      subject: 'Patatas Frias',
-      message: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip consequat.',
-      date_sent: '25/08/2023',
-      sender: ''
-    }
 
+  constructor(private http: HttpClient) {}
 
+  endpoint: string = 'http://localhost:8080/';
 
-  ]
-
-  getComplaints(): any[] {
-    return this.complaints;
+  getAll(): Observable<Complaints[]> {
+    
+    return this.http.get<Complaints[]>(`${this.endpoint}complaints`);
   }
+
+  // Devuelve un solo reward por id
+  getOneById(id: number): Observable<Complaints>{
+
+    return this.http.get<Complaints>(`${this.endpoint}complaints/id/${id}`);
+  }
+
+    // === Put ===
+  // Edita un reward
+  update(id: number, user: Complaints): Observable<Complaints> {
+
+    return this.http.put<Complaints>(`${this.endpoint}complaints/id/${id}`, id);
+  }
+
+
+
 }

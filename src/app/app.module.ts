@@ -58,6 +58,7 @@ import { JwtModule } from '@auth0/angular-jwt';
 import { BoardUserComponent } from './components/user/board-user/board-user.component';
 import { BoardChefComponent } from './components/chef/board-chef/board-chef.component';
 import { UserHomeSectionComponent } from './components/user/user-home-section/user-home-section.component';
+import { PerfilUserComponent } from './components/chef/perfil-user/perfil-user.component';
 
 
 
@@ -99,7 +100,8 @@ import { UserHomeSectionComponent } from './components/user/user-home-section/us
     BoardAdminComponent,
     BoardUserComponent,
     BoardChefComponent,
-    UserHomeSectionComponent
+    UserHomeSectionComponent,
+    PerfilUserComponent
   ],
   
   imports: [
