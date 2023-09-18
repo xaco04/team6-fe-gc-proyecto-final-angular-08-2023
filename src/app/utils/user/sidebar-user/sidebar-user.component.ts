@@ -1,11 +1,15 @@
 import { Component, OnInit } from '@angular/core';
+import { TokenStorageServiceService } from 'src/app/services/shared/token-storage-service.service';
 
 @Component({
   selector: 'app-sidebar-user',
   templateUrl: './sidebar-user.component.html',
   styleUrls: ['./sidebar-user.component.css']
 })
+
 export class SidebarUserComponent implements OnInit {
+
+  user_role: any;
 
   order = [
     {
@@ -44,6 +48,11 @@ export class SidebarUserComponent implements OnInit {
       price: 3.8
     }
   ];
+
+  constructor(private tokeStorage: TokenStorageServiceService){
+
+    this.user_role = this.tokeStorage.getRole();
+  }
 
   ngOnInit(): void {
 

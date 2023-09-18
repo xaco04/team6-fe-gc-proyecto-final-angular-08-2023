@@ -122,6 +122,11 @@ const routes: Routes = [
 
   },
   {
+    path: 'platos',
+    component: DishListComponent,
+    canActivate: [ authGuard, chefGuard ]
+  },
+  {
     path: 'orders',
     component: OrdersComponent,
     canActivate: [ authGuard, chefGuard ]

@@ -13,6 +13,11 @@
     color: #0052AB;
 }
 
+.chef-menu:active{
+
+    background-color: #0052AB;
+}
+
 .menu_option:hover{
 
     color: white;

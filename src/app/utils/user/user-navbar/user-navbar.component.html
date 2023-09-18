@@ -6,7 +6,7 @@
         <div class="col-md-4 col-5 d-flex justify-content-center align-items-center">
             <img src="../../../../assets/logo_gc_navbar.svg" alt="" class="img-fluid m-2 logo_gc">
         </div>
-        <div class="col-md-4 col-5 d-flex justify-content-around align-items-center">    
+        <div *ngIf="user_role == 'Usuario'" class="col-md-4 col-5 d-flex justify-content-around align-items-center">    
             <i class="bi bi-journal-text icon icon_smartphone"></i>
             <i class="bi bi-cart-check-fill checkout_icon icon icon_smartphone" data-bs-toggle="modal" [attr.data-bs-target]="'#select_hour'">
                 <app-hour-selection></app-hour-selection>
@@ -14,17 +14,27 @@
         </div>
     </div>
     <div *ngIf="menu_hidden" class="row w-md-100 w-xxl-50 d-flex flex-column justify-content-around align-items-start navbar_options">
-        <div class="col-12 p-0 mb-1 navbar_option">
+        <div *ngIf="user_role == 'Usuario'" class="col-12 p-0 mb-1 navbar_option">
             <a routerLink="/inicio" class="text-decoration-none">
                 <h2 class="h-100 m-0 d-flex justify-content-between align-items-center pe-3 ps-3 menu_option">INICIO<i class="bi bi-house-fill"></i></h2>
             </a>
         </div>
-        <div class="col-12 p-0 mb-1 navbar_option">
+        <div *ngIf="user_role == 'Encargado'" class="col-12 p-0 mb-1 navbar_option">
+            <a routerLink="/board-chef" class="text-decoration-none">
+                <h2 class="h-100 m-0 d-flex justify-content-between align-items-center pe-3 ps-3 menu_option">PEDIDOS<i class="bi bi-house-fill"></i></h2>
+            </a>
+        </div>
+        <div *ngIf="user_role == 'Usuario'" class="col-12 p-0 mb-1 navbar_option">
             <a routerLink="/crear_menu" class="text-decoration-none">
                 <h2 class="h-100 w-100 m-0 d-flex justify-content-between align-items-center pe-3 ps-3 menu_option">MENÚ<i class="bi bi-book-fill"></i></h2>
             </a>
         </div>
-        <div class="col-12 p-0 mb-1 navbar_option">
+        <div *ngIf="user_role == 'Encargado'" class="col-12 p-0 mb-1 navbar_option">
+            <a routerLink="/platos" class="text-decoration-none">
+                <h2 class="h-100 w-100 m-0 d-flex justify-content-between align-items-center pe-3 ps-3 menu_option">PLATOS<i class="bi bi-book-fill"></i></h2>
+            </a>
+        </div>
+        <div *ngIf="user_role == 'Usuario'" class="col-12 p-0 mb-1 navbar_option">
             <a routerLink="/perfil" class="text-decoration-none">
                 <h2 class="h-100 w-100 m-0 d-flex justify-content-between align-items-center pe-3 ps-3 menu_option">PERFIL<i class="bi bi-tools"></i></h2>
             </a>

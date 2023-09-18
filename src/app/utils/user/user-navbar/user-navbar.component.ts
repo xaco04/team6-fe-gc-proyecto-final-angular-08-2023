@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { TokenStorageServiceService } from 'src/app/services/shared/token-storage-service.service';
 
 @Component({
   selector: 'app-user-navbar',
@@ -7,8 +8,14 @@ import { Component } from '@angular/core';
 })
 export class UserNavbarComponent {
 
+  user_role: any;
 
   menu_hidden: boolean = false;
+
+  constructor(private tokeStorage: TokenStorageServiceService){
+
+    this.user_role = this.tokeStorage.getRole();
+  }
 
   showMenu(){
 
