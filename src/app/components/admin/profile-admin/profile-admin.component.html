@@ -20,59 +20,125 @@
                                 <span class="text-black-50">{{ userData.email }}</span>
                             </div>
                         </div>
+                        
+
+                        <!-- ... Tu código existente ... -->
+
                         <div class="col-md-9 border-right">
                             <div class="p-3 py-5">
-                                <div class="d-flex justify-content-between align-items-center mb-3">
-                                    <h4 class="text-right">Mi Perfil</h4>
-                                </div>
-                                <hr>
-
+                            <div class="d-flex justify-content-between align-items-center mb-3">
+                                <h4 class="text-right">Mi Perfil</h4>
+                                <button class="btn btn-link edit-button" (click)="toggleEditing()">Editar</button>
+                            </div>
+                            <hr>
+                        
+                            <form *ngIf="editing" (ngSubmit)="saveProfile()">
                                 <table class="table table-striped">
-                                    <tbody>
-                                        <tr>
-                                            <td>Nombre</td>
-                                            <td>{{ userData.name }}</td>
-                                            <td><button class="btn btn-link edit-button" data-field="nombre">Editar</button></td>
-                                        </tr>
-                                        <tr>
-                                            <td>Apellidos</td>
-                                            <td>{{ userData.surname }}</td>
-                                            <td><button class="btn btn-link edit-button" data-field="apellidos">Editar</button></td>
-                                        </tr>
-                                        <tr>
-                                            <td>Correo eléctronico</td>
-                                            <td>{{ userData.email }}</td>
-                                            <td><button class="btn btn-link edit-button" data-field="username">Editar</button></td>
-                                        </tr>
-
-                                        <tr>
-                                            <td>Puntos</td>
-                                            <td>{{ userData.points }}</td>
-                                            <td><button class="btn btn-link edit-button" data-field="contraseña">Editar</button></td>
-                                        </tr>
-                                        <tr>
-                                            <td>Rol</td>
-                                            <td>{{ userData.role.name }}</td>
-                                            <td><button class="btn btn-link edit-button" data-field="rol">Editar</button></td>
-                                        </tr>
-                                    </tbody>
+                                <tbody>
+                                    <tr>
+                                        <td>Nombre</td>
+                                        <td><input type="text" [(ngModel)]="userData.name" name="name" class="form-control"></td>
+                                    </tr>
+                                    <tr>
+                                        <td>Apellidos</td>
+                                        <td><input type="text" [(ngModel)]="userData.surname" name="surname" class="form-control"></td>
+                                    </tr>
+                                    <tr>
+                                        <td>Email</td>
+                                        <td><input type="text" [(ngModel)]="userData.email" name="email" class="form-control"></td>
+                                    </tr>
+                                    <tr>
+                                        <td>Imagen</td>
+                                        <td><input type="text" [(ngModel)]="userData.image" name="image" class="form-control"></td>
+                                    </tr>
+                                    <tr>
+                                        <td>Puntos</td>
+                                        <td><input type="text" [(ngModel)]="userData.points" name="points" class="form-control"></td>
+                                    </tr>
+                                    <tr>
+                                        <td>Rol</td>
+                                        <td><input type="text" [(ngModel)]="userData.role.name" name="role" class="form-control"></td>
+                                    </tr>
+                                </tbody>
                                 </table>
                                 <br>
                                 <div class="d-flex justify-content-between align-items-center mb-3">
-                                    <h4 class="text-right">Descripción</h4>
+                                <h4 class="text-right">Descripción</h4>
                                 </div>
                                 <hr>
                                 <div class="row mt-2">
-                                    <div class="col-md-12">
-                                        <p>El administrador puede gestionar usuarios y premios. además, puede ver la lista de pedidos y sus detalles, responder a las sugerencias de los usuarios en el servicio de atención al cliente, modificar su perfil y gestionar los platos. todo desde la vista "home".</p>
-                                    </div>
+                                <div class="col-md-12">
+                                    <p>El administrador puede gestionar usuarios y premios. además, puede ver la lista de pedidos y sus detalles, responder a las sugerencias de los usuarios en el servicio de atención al cliente, modificar su perfil y gestionar los platos. todo desde la vista "home".</p>
+                                </div>
                                 </div>
                                 <br>
                                 <div class="mt-5 text-center">
-                                    <button class="btn btn-primary profile-button" type="button">Guardar Perfil</button>
+                                <button class="btn btn-primary profile-button" type="submit">Guardar Perfil</button>
                                 </div>
+                            </form>
+                        
+                            <div *ngIf="!editing">
+                                <table class="table table-striped">
+                                <tbody>
+                                    <tr>
+                                    <td>Nombre</td>
+                                    <td>{{ userData.name }}</td>
+                                    </tr>
+                                    <tr>
+                                    <td>Apellidos</td>
+                                    <td>{{ userData.surname }}</td>
+                                    </tr>
+                                    <tr>
+                                    <td>Email</td>
+                                    <td>{{ userData.email }}</td>
+                                    </tr>
+                                    <tr>
+                                    <td>Imagen</td>
+                                    <td>{{ userData.image }}</td>
+                                    </tr>
+                                    <tr>
+                                    <td>Puntos</td>
+                                    <td>{{ userData.points }}</td>
+                                    </tr>
+                                    <tr>
+                                    <td>Rol</td>
+                                    <td>{{ userData.role.name }}</td>
+                                    </tr>
+                                </tbody>
+                                <br>
+                                <div class="d-flex justify-content-between align-items-center mb-3">
+                                <h4 class="text-right">Descripción</h4>
+                                </div>
+                                <hr>
+                                <div class="row mt-2">
+                                <div class="col-md-12">
+                                    <p>El administrador puede gestionar usuarios y premios. además, puede ver la lista de pedidos y sus detalles, responder a las sugerencias de los usuarios en el servicio de atención al cliente, modificar su perfil y gestionar los platos. todo desde la vista "home".</p>
+                                </div>
+                                </div>
+                                <br>
+                                <div class="mt-5 text-center">
+                                <button class="btn btn-primary profile-button" type="submit">Guardar Perfil</button>
+                                </div>
+
+                                </table>
+                            </div>
                             </div>
                         </div>
+                        
+                        <!-- ... Tu código existente ... -->
+                        
+
+
+
+
+
+
+
+
+
+
+
+
                     </div>
                 </div>
             </div>
