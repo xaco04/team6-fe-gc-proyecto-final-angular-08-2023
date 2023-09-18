@@ -11,6 +11,7 @@ export class RewardComponent {
 
   ngOnInit(){
 
-    console.log(this.users_rewards);
+    // console.log(this.users_rewards);
+    // console.log(this.users_rewards.isAvailable);
   }
 }
