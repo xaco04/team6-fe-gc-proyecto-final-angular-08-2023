@@ -12,23 +12,16 @@
           </nav>
 
           <div class="container mt-3">
-            <div class="table-top-leaft-filters d-flex flex-row align-items-center w-20 w-md-auto mb-3 mb-md-0 mx-auto mx-md-0">
-              <select class="custom-width form-select form-select-width" aria-label="Cantidad de elementos mostrar en la tabla">
-                  <option value="1">5</option>
-                  <option value="2" selected>10</option>
-                  <option value="3">50</option>
-              </select>
-          </div>
           <br>
             <div class="container-table">
               <ul class="list-group list-group-light">
                 <li class="list-group-item d-flex justify-content-between align-items-center" *ngFor="let complaint of complaints">
                   <div class="d-flex align-items-center">
-                    <img [src]="complaint.image" alt="" style="width: 45px; height: 45px"
+                    <img [src]="complaint.id" alt="" style="width: 45px; height: 45px"
                       class="rounded-circle" />
                     <div class="ms-3">
-                      <p class="fw-bold mb-1">{{ complaint.username }}</p>
-                      <p class="text-muted mb-0">{{ complaint.subject }} | {{ complaint.date_sent}}</p>
+                      <p class="fw-bold mb-1">{{ complaint.sender.name }}</p>
+                      <p class="text-muted mb-0">{{ complaint.sender.id }} | {{ complaint.dateSend}}</p>
                     </div>
                   </div>
                   <a routerLink="/customerSupport-answer-shared" class="btn btn-primary"><i class="bi bi-chat-left-text-fill"></i></a>

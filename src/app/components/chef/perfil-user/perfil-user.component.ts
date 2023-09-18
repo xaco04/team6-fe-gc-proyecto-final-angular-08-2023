@@ -1,13 +1,14 @@
+
 import { Component, OnInit } from '@angular/core';
 import { TokenStorageServiceService } from 'src/app/services/shared/token-storage-service.service';
 import { UserService } from 'src/app/services/shared/users-shared.service';
 
 @Component({
-  selector: 'app-profile-admin',
-  templateUrl: './profile-admin.component.html',
-  styleUrls: ['./profile-admin.component.css']
+  selector: 'app-perfil-user',
+  templateUrl: './perfil-user.component.html',
+  styleUrls: ['./perfil-user.component.css']
 })
-export class ProfileAdminComponent implements OnInit {
+export class PerfilUserComponent {
   userData: any;
   editing: boolean = false;
   selectedRoleId: number = 0;

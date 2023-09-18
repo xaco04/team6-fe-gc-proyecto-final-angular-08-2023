@@ -24,6 +24,7 @@ import { UserCreateMenuComponent } from './components/user/user-create-menu/user
 import { BoardAdminComponent } from './components/admin/board-admin/board-admin.component';
 import { BoardUserComponent } from './components/user/board-user/board-user.component';
 import { BoardChefComponent } from './components/chef/board-chef/board-chef.component';
+import { PerfilUserComponent } from './components/chef/perfil-user/perfil-user.component';
 
 //Guards
 import { authGuard } from './guards/auth.guard';
@@ -160,6 +161,12 @@ const routes: Routes = [
   {
     path: 'board-chef',
     component: BoardChefComponent,
+    canActivate: [ authGuard, chefGuard ]
+
+  },
+  {
+    path: 'perfil-chef',
+    component: PerfilUserComponent,
     canActivate: [ authGuard, chefGuard ]
 
   },
