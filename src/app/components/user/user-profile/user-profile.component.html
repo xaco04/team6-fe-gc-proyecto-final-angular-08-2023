@@ -1,4 +1,4 @@
-<div *ngIf="user && user_rewards" class="container-fluid">
+<div *ngIf="user && user_rewards && allergens" class="container-fluid">
     <div class="row">
         <div class="col-2 d-none d-xxl-block user_sidebar">
             <app-sidebar-user></app-sidebar-user>
@@ -107,7 +107,7 @@
                         </div>
                         <div class="row w-100 d-flex justify-content-center align-items-center">
                             <div *ngFor="let allergen of allergens" class="col-lg-4 col-md-6 col-sm-6 p-2 d-flex justify-content-around align-items-center">
-                                <a (click)="activateAllergen(allergen)" href="javascript:void(0)" class="ms-2 fs-4 fw-light allergen" [class.allergen_active] = "allergen.is_active"><img src="{{allergen.image}}" alt="" class="me-3">{{allergen.name}}</a>
+                                <!-- <a (click)="activateAllergen(allergen)" href="javascript:void(0)" class="ms-2 fs-4 fw-light allergen" [ngClass]="{'allergen_active': !allergens.isAvailable}"><img src="{{allergen.image}}" alt="" class="me-3">{{allergen.name}}</a> -->
                             </div>
                         </div>
                     </div>      

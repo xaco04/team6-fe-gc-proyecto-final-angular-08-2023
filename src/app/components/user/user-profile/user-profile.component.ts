@@ -3,6 +3,7 @@ import { AllergensService } from '../../../services/shared/allergens.service';
 import { UserRewardsService } from '../../../services/user/user-rewards.service';
 import { TokenStorageServiceService} from 'src/app/services/shared/token-storage-service.service';
 import { UserService } from 'src/app/services/shared/users-shared.service';
+import { UserAllergensService } from 'src/app/services/user/user-allergens.service';
 
 @Component({
   selector: 'app-user-profile',
@@ -20,7 +21,7 @@ export class UserProfileComponent implements OnInit {
   user_points_next_level: number = 0;
   
   constructor(
-    private allergensService: AllergensService,
+    private userAllergensService: UserAllergensService,
     private userRewardsService: UserRewardsService,
     private tokenStorage: TokenStorageServiceService,
     private userService: UserService) {}
@@ -39,9 +40,11 @@ export class UserProfileComponent implements OnInit {
     })
     // this.nextLevelReward();
     
-    this.allergensService.getAllAllergens().subscribe(result => {
+    console.log(this.user_id);
+    this.userAllergensService.getAllAllergensByUser(this.user_id).subscribe(result => {
 
       this.allergens = result;
+      console.log(this.allergens);
     });
   }
 
