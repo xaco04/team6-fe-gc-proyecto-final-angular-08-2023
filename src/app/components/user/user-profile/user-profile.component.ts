@@ -59,15 +59,19 @@ export class UserProfileComponent implements OnInit {
 
   setAvailableRewards(){
 
-    console.log("EStoy dentro");
     for(let i = 0; i < this.user_rewards.length; i++){
 
-      console.log(this.user.points);
-      console.log(this.user_rewards[i].idRewards.cost);
       if(this.user.points > this.user_rewards[i].idRewards.cost){
 
-        this.user_rewards.is_available = true;
-        console.log(this.user_rewards.is_available);
+        console.log(this.user_rewards[i]);
+        this.userRewardsService.changeIsAvailable(this.user_rewards[i].id, true).subscribe(result => {
+
+          console.log("Disponibilidad actualizada correctamente");
+        },
+        error => {
+
+          console.error("Error al actualizar la disponibilidad");
+        });
       }
     }
   }
