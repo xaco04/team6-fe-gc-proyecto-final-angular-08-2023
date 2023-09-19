@@ -25,53 +25,50 @@
       <div class="row recipes_dishes">
         <div *ngIf="showFirsts" class="col-12 pb-5 d-flex justify-content-center align-items-center">
           <div class="row h-100 w-100">
-            <div *ngFor="let dish of firsts" class="col-3 recipe" [style.background-image]="'url(' + dish.image + ')'">
-              <h2>{{dish.name}}</h2>
+            <div *ngFor="let dish of firsts; let i = index" class="col-3 recipe" [style.background-image]="'url(' + dish.image + ')'">
+              <h4>{{dish.name}}</h4>
               <h6>{{dish.description}}</h6>
-              <h4>Ingredientes</h4>
-              <h6>Ingrediente 1</h6>
-              <h6>Ingrediente 2</h6>
-              <h6>Ingrediente 3</h6>
-              <h6>Ingrediente 4</h6>
+              <div class="button-container">
+              <button  class="btn btn-primary">Ver más</button>
+              <button  class="btn btn-success">Editar</button>
+              <button (click)="borrarPlato('firsts', i)" class="btn btn-danger">Borrar</button>
+            </div>
             </div>
           </div>
         </div>
         <div *ngIf="showSeconds" class="col-12 pb-5 d-flex justify-content-center align-items-center">
           <div class="row h-100 w-100">
-            <div *ngFor="let dish of seconds" class="col-3 recipe" [style.background-image]="'url(' + dish.image + ')'">
+            <div *ngFor="let dish of seconds; let i = index" class="col-3 recipe" [style.background-image]="'url(' + dish.image + ')'">
               <h4>{{dish.name}}</h4>
               <h6>{{dish.description}}</h6>
-              <h5>Ingredientes</h5>
-              <h6>Ingrediente 1</h6>
-              <h6>Ingrediente 2</h6>
-              <h6>Ingrediente 3</h6>
-              <h6>Ingrediente 4</h6>
+              <div class="button-container">
+              <button  class="btn btn-primary">Ver más</button>
+              <button  class="btn btn-success">Editar</button>
+              <button (click)="borrarPlato('seconds', i)" class="btn btn-danger">Borrar</button>
             </div>
           </div>
         </div>
         <div *ngIf="showDesserts" class="col-12 pb-5 d-flex justify-content-center align-items-center">
           <div class="row h-100 w-100">
-            <div *ngFor="let dish of desserts" class="col-3 recipe" [style.background-image]="'url(' + dish.image + ')'">
+            <div *ngFor="let dish of desserts; let i = index" class="col-3 recipe" [style.background-image]="'url(' + dish.image + ')'">
               <h4>{{dish.name}}</h4>
               <h6>{{dish.description}}</h6>
-              <h5>Ingredientes</h5>
-              <h6>Ingrediente 1</h6>
-              <h6>Ingrediente 2</h6>
-              <h6>Ingrediente 3</h6>
-              <h6>Ingrediente 4</h6>
+              <div class="button-container">
+              <button  class="btn btn-primary">Ver más</button>
+              <button  class="btn btn-success">Editar</button>
+              <button (click)="borrarPlato('desserts', i)" class="btn btn-danger">Borrar</button>
             </div>
           </div>
         </div>
         <div *ngIf="showStarters" class="col-12 pb-5 d-flex justify-content-center align-items-center">
           <div class="row h-100 w-100">
-            <div *ngFor="let dish of starters" class="col-3 recipe" [style.background-image]="'url(' + dish.image + ')'">
+            <div *ngFor="let dish of starters; let i = index" class="col-3 recipe" [style.background-image]="'url(' + dish.image + ')'">
               <h4>{{dish.name}}</h4>
               <h6>{{dish.description}}</h6>
-              <h5>Ingredientes</h5>
-              <h6>Ingrediente 1</h6>
-              <h6>Ingrediente 2</h6>
-              <h6>Ingrediente 3</h6>
-              <h6>Ingrediente 4</h6>
+              <div class="button-container">
+              <button  class="btn btn-primary">Ver más</button>
+              <button  class="btn btn-success">Editar</button>
+              <button (click)="borrarPlato('starters', i)" class="btn btn-danger">Borrar</button>
             </div>
           </div>
         </div>
