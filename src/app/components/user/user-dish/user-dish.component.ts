@@ -22,11 +22,11 @@ export class UserDishComponent implements OnInit{
 
   ngOnInit(): void {
       
-    console.log(this.dish);
-
     this.dishesService.getIngredientsByDish(this.dish.id).subscribe(result => {
 
       this.ingredients = result;
     })
   }
+
+  addDish(dishID: number){}
 }

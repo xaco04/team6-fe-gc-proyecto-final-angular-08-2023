@@ -30,7 +30,6 @@ export class DishSelectorComponent implements OnInit{
       case 1:
 
         this.dishesService.getAllFirsts().subscribe(result => {
-          console.log("Cargando los primeros");
     
           this.firsts = result;
         });
@@ -38,7 +37,6 @@ export class DishSelectorComponent implements OnInit{
       case 2:
 
         this.dishesService.getAllSeconds().subscribe(result => {
-          console.log("Cargando los segundos");
     
           this.seconds = result;
         });
@@ -46,7 +44,6 @@ export class DishSelectorComponent implements OnInit{
       case 3:
 
         this.dishesService.getAllStarters().subscribe(result => {
-          console.log("Cargando los entrantes");
     
           this.starters = result;
           });
@@ -54,7 +51,6 @@ export class DishSelectorComponent implements OnInit{
       case 4:
 
         this.dishesService.getAllDesserts().subscribe(result => {
-          console.log("Cargando los postres");
     
           this.desserts = result;
         });
@@ -62,7 +58,6 @@ export class DishSelectorComponent implements OnInit{
       case 5:
 
         this.dishesService.getAllDrinks().subscribe(result => {
-          console.log("Cargando las bebidas");
     
           this.drinks = result;
         });

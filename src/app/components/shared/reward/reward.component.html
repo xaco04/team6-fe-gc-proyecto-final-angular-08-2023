@@ -1,4 +1,4 @@
-<div  *ngIf="users_rewards" class="container-fluid w-100 p-0 d-flex flex-column justify-content-around align-items-center reward_container" style="background-image: url('{{users_rewards.idRewards.image}}');" [ngClass]="{'d-none': !users_rewards.isAvailable}"> 
+<div  *ngIf="users_rewards" class="container-fluid w-100 p-0 d-flex flex-column justify-content-around align-items-center reward_container" style="background-image: url('{{users_rewards.idRewards.image}}');"> 
     <div class="row w-100">
         <div class="col p-0 d-flex flex-column justify-content-around align-items-center reward">
             <div class="row">
@@ -13,7 +13,7 @@
             </div>
             <div class="row w-100">
                 <div class="col-12 d-flex justify-content-center align-items-center">
-                    <button class="reward_button w-75 fs-4 btn btn-primary">Canjear</button>
+                    <button class="w-75 fs-4 btn btn-primary reward_button" [ngClass]="{'disabled': !users_rewards.isAvailable}">Canjear</button>
                 </div>
             </div>
         </div>

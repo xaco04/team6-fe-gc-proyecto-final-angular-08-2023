@@ -1,4 +1,4 @@
-<div *ngIf="user && user_rewards && allergens" class="container-fluid">
+<div *ngIf="user && user_rewards && allergens && user_id" class="container-fluid">
     <div class="row">
         <div class="col-2 d-none d-xxl-block user_sidebar">
             <app-sidebar-user></app-sidebar-user>
@@ -24,15 +24,14 @@
                     </div>
                     <div class="col-2 banner_center h-75 align-self-end d-flex flex-column justify-content-around align-items-center">
                         <div class="user_photo">
-                            <img class="img-fluid h-100" src="" />
+                            <img class="img-fluid h-100" src="{{user.image}}" />
                         </div>
                         <div class="user_name">
                             <h2 class="name"> {{user.name}} </h2>
                             <!-- <h2 class="name"> Roberto </h2> -->
                         </div>
                         <div class="user_level d-flex justify-content-between align-items-center">
-                            <h3>Nivel</h3>
-                            <h3>2</h3>
+                            <h3>Nivel {{user_level}}</h3>
                         </div>
                     </div>
                     <div class="col-5 banner_right d-flex justify-content-center align-items-end">
@@ -56,9 +55,9 @@
                     </div>
                 </div>
                 <div class="row main">
-                    <div class="prices col-xxl-9 col-lg-12 d-flex flex-column justify-content-between align-items-center">
-                        <div class="row w-100 d-flex justify-content-center align-items-center">
-                            <div *ngFor="let reward of user_rewards" class="col-xxl-4">
+                    <div class="prices col-xxl-9 col-lg-12 p-0 d-flex flex-column justify-content-between align-items-center">
+                        <div class="row h-100 w-100 d-flex justify-content-center align-items-center">
+                            <div *ngFor="let reward of user_rewards" class="col-xxl-4 p-0 pe-2 pb-2">
                                 <app-reward [users_rewards] = 'reward'></app-reward>
                             </div>
                         </div>
@@ -71,43 +70,46 @@
                         </div>
                         <div class="row w-100">
                             <div class="col-9">
-                                <h5 class="mb-3 fw-light">Puntos totales</h5>
+                                <h5 class="mb-3 fw-light">Totales</h5>
                                 <h5 class="fw-light">Próxima recompensa</h5>
                             </div>
                             <div class="col-3">
                                 <h5 class="text-end mb-3 fw-light">{{user.points}}</h5>
-                                <h5 class="text-end fw-light">122</h5>
+                                <h5 class="text-end fw-light">{{user_points_next_level}}</h5>
+                            </div>
+                        </div>
+                        <div class="row w-100">
+                            <div class="col-12 bar_level w-100">
+                                <div class="row actual_exp h-100" [style.width]="percent_level+ '%'"></div>
                             </div>
                         </div>
                         <div class="row w-100">
                             <div class="col-10">
-                                <h2>Nivel</h2>
+                                <h2>Pedidos</h2>
                             </div>
                         </div>
                         <div class="row w-100">
-                            <div class="col-7">
-                                <h5 class="mb-3 fw-light">Nivel actual</h5>
-                                <h5 class="fw-light">Próximo nivel</h5>
+                            <div class="col-12 d-flex justify-content-center align-items-center">
+                                <button class="btn btn-primary">Ver mis pedidos</button>
                             </div>
-                            <div class="col-5">
-                                <h5 class="text-end mb-3 fw-light">{{this.user_level}}</h5>
-                                <h5 class="text-end fw-light">{{this.user_next_level}} puntos</h5>
-                            </div>
-                        </div>
-                        <div class="row bar_level w-100">
-                            <div class="col-12 actual_exp h-100" style="width: 4vw;"></div>
                         </div>
                     </div>
                     <div class="allergens col-xxl-8 col-lg-12 order-xxl-2 order-lg-3 col-md-12 col-sm-12 order-md-3 mt-3 mt-lg-3 mt-xxl-0 d-flex flex-column justify-content-center align-items-start">
                         <div class="row w-100">
                             <div class="title d-flex justify-content-between align-items-center">
-                                <h2>Alérgenos</h2><i class="bi bi-info-circle-fill fs-4"></i>
-                            </div>
+                                <h2>Alérgenos</h2>
+                                <span >
+                                    <i class="bi bi-info-circle-fill fs-4 d-inline-block" tabindex="0" data-bs-toggle="popover" data-bs-trigger="hover focus" 
+                                    data-bs-title="Popover title" data-bs-content="Aquí puedes modificar tus alergias"></i>
+                                </span>
+                                <button type="button" class="btn btn-lg btn-danger" data-bs-toggle="popover" data-bs-title="Popover title" data-bs-content="And here's some amazing content. It's very engaging. Right?">Click to toggle popover</button>                            </div>
                             <hr class="w-75">
                         </div>
                         <div class="row w-100 d-flex justify-content-center align-items-center">
                             <div *ngFor="let allergen of allergens" class="col-lg-4 col-md-6 col-sm-6 p-2 d-flex justify-content-around align-items-center">
-                                <!-- <a (click)="activateAllergen(allergen)" href="javascript:void(0)" class="ms-2 fs-4 fw-light allergen" [ngClass]="{'allergen_active': !allergens.isAvailable}"><img src="{{allergen.image}}" alt="" class="me-3">{{allergen.name}}</a> -->
+                                <a (click)="activateAllergen(allergen.allergens.id, allergen.isAllergic); setAllergies" href="javascript:void(0)" class="ms-2 fs-4 fw-light allergen" [ngClass]="{'allergen_active': allergen.isAllergic}">
+                                    <img src="{{allergen.allergens.image}}" alt="" class="me-3">{{allergen.allergens.name}}
+                                </a>
                             </div>
                         </div>
                     </div>      

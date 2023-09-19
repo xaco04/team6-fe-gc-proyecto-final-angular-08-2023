@@ -1,24 +1,26 @@
 import { Component, OnInit, Input } from '@angular/core';
-import { AllergensService } from '../../../services/shared/allergens.service';
 import { UserRewardsService } from '../../../services/user/user-rewards.service';
 import { TokenStorageServiceService} from 'src/app/services/shared/token-storage-service.service';
 import { UserService } from 'src/app/services/shared/users-shared.service';
 import { UserAllergensService } from 'src/app/services/user/user-allergens.service';
+import { AfterViewInit } from '@angular/core';
+
+declare var bootstrap: any;
 
 @Component({
   selector: 'app-user-profile',
   templateUrl: './user-profile.component.html',
   styleUrls: ['./user-profile.component.css']
 })
-export class UserProfileComponent implements OnInit {
+export class UserProfileComponent implements OnInit, AfterViewInit {
 
   allergens: any;
   user_rewards: any;
   user_id: number = 0;
   user: any;
   user_level: number = 0;
-  user_next_level: number = 0;
   user_points_next_level: number = 0;
+  percent_level: number = 0;
   
   constructor(
     private userAllergensService: UserAllergensService,
@@ -32,31 +34,49 @@ export class UserProfileComponent implements OnInit {
     this.userService.getOneById(this.user_id).subscribe(result => {
 
       this.user = result;
+      console.log(this.user);
     });
     this.userRewardsService.getAllRewardsByUser(this.user_id).subscribe(result =>{
 
       this.user_rewards = result;
+      console.log(this.user_rewards);
       this.setAvailableRewards();
+      this.calculateLevel();
     })
-    // this.nextLevelReward();
+
+    this.setAllergies();
     
-    console.log(this.user_id);
+    this.user_id = this.tokenStorage.getUser();
+
+  }
+
+  ngAfterViewInit() {
+
+    var popoverTriggerList = [].slice.call(document.querySelectorAll('[data-bs-toggle="popover"]'))
+    var popoverList = popoverTriggerList.map(function (popoverTriggerEl) {
+      
+      return new bootstrap.Popover(popoverTriggerEl)
+    })
+  }
+
+  setAllergies(){
+
     this.userAllergensService.getAllAllergensByUser(this.user_id).subscribe(result => {
 
       this.allergens = result;
-      console.log(this.allergens);
     });
   }
 
-  activateAllergen(allergen: any){
+  activateAllergen(allergen_id: number, isAllergic: boolean){
 
-    if(allergen.isActive == true){
+    if(isAllergic == true){
 
-      allergen.isActive = false;
-    }
-    else{
-      
-      allergen.isActive = true;
+      this.userAllergensService.changeAllergie(this.user_id, allergen_id, false).subscribe(result => {
+      });
+    }else{
+
+      this.userAllergensService.changeAllergie(this.user_id, allergen_id, true).subscribe(result => {
+      });
     }
   }
 
@@ -66,45 +86,39 @@ export class UserProfileComponent implements OnInit {
 
       if(this.user.points > this.user_rewards[i].idRewards.cost){
 
-        console.log(this.user.points);
-        console.log(this.user_rewards[i].idRewards.cost);
         if(this.user_rewards[i].isAvailable == false){
 
-          console.log("Cambiando availability");
           this.userRewardsService.changeIsAvailable(this.user_rewards.id, true).subscribe(result => {
-
-            console.log("Disponibilidad actualizada correctamente");
           },
           error => {
-  
-            console.error("Error al actualizar la disponibilidad");
-          });
-        }else{
 
-          console.log("El reward ya está activo");
+          });
         }
       }
     }
   }
 
-  // nextLevelReward(): void{
+  calculateLevel(){
 
-  //   for(let i = 0; i < this.rewards.length; i++)
-  //   {
-  //     if(i == this.rewards.length-1){
+    let i = 0;
+    let max_levels = this.user_rewards.length-1;
 
-  //       this.user_level = this.rewards[this.rewards.lenght].id;
-  //       this.user_next_level = this.rewards[this.rewards.lenght].id;
-  //       this.user_points_next_level = 0;
-  //     }else{
-  //       if(this.user.points > this.rewards[i].cost){
+    do{
+      
+      if(i == max_levels)
+      {
 
-  //         this.user_level = this.rewards[i].id;
-  //         this.user_next_level = this.rewards[i+1].cost-this.user.points;
-  //         this.user_points_next_level = this.rewards[i+1].points;
-  //         break;
-  //       }
-  //     }
-  //   }
-  // }
+        this.user_level = this.user_rewards[max_levels].idRewards.id;
+        this.user_points_next_level = 0;
+      }else{
+
+        this.user_level = this.user_rewards[i].idRewards.id;
+        this.user_points_next_level = (this.user_rewards[i+1].idRewards.cost-this.user.points);
+      }
+      i++;
+    }while(this.user.points < max_levels);
+
+    this.percent_level = (this.user.points/this.user_rewards[this.user_level].idRewards.cost)*100;
+    console.log(this.percent_level);
+  }
 }
