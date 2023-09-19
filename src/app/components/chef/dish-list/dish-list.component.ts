@@ -1,60 +1,77 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
+import { DishesService } from 'src/app/services/shared/dishes.service';
 
 @Component({
   selector: 'app-dish-list',
   templateUrl: './dish-list.component.html',
   styleUrls: ['./dish-list.component.css']
 })
-export class DishListComponent {
-  dishes = [
+export class DishListComponent implements OnInit{
+
+  firsts: any;
+  seconds: any;
+  desserts: any;
+  starters: any;
+  showFirsts: boolean = false;
+  showSeconds: boolean = false;
+  showDesserts: boolean = false;
+  showStarters: boolean = false;
+
+  constructor(private dishesService: DishesService){}
+
+  ngOnInit(): void {
+
+    this.listDishes(1);
+  }
+
+  restartDishes(){
+
+    this.showFirsts = false;
+    this.showSeconds = false;
+    this.showDesserts = false;
+    this.showStarters = false;
+  }
+
+  listDishes(newCategory: number){
+
+    switch(newCategory)
     {
-      nombre: "Pizza Margarita",
-      image: '../../../../assets/avatar.png',
-      resumenReceta: "Una deliciosa pizza clásica con salsa de tomate, mozzarella y albahaca.",
-      ingredientes: ["Masa de pizza", "Salsa de tomate", "Queso mozzarella", "Albahaca fresca"],
-      alergenos: ["Gluten", "Lactosa"]
-    },
-    {
-      nombre: "Ensalada César",
-      image: '../../../../assets/croquetas.jpg',
-      resumenReceta: "Una ensalada fresca con pollo a la parrilla, lechuga romana y aderezo César.",
-      ingredientes: ["Lechuga romana", "Pollo a la parrilla", "Crutones", "Aderezo César"],
-      alergenos: ["Lácteos", "Huevo"]
-    },
-    {
-      nombre: "Sushi de Salmón",
-      image: '../../../../assets/croquetas.jpg',
-      resumenReceta: "Rollitos de sushi rellenos de salmón fresco y aguacate, servidos con salsa de soja.",
-      ingredientes: ["Salmón fresco", "Aguacate", "Arroz para sushi", "Algas nori"],
-      alergenos: ["Pescado", "Soja"]
-    },
-    {
-      nombre: "Pasta Carbonara",
-      image: '../../../../assets/croquetas.jpg',
-      resumenReceta: "Pasta cremosa con huevo, queso parmesano y panceta crujiente.",
-      ingredientes: ["Pasta", "Huevo", "Queso parmesano", "Panceta"],
-      alergenos: ["Huevo", "Lácteos"]
-    },
-    {
-      nombre: "Tarta de Manzana",
-      image: '../../../../assets/croquetas.jpg',
-      resumenReceta: "Una deliciosa tarta de manzana casera con una base de hojaldre y relleno de manzanas caramelizadas.",
-      ingredientes: ["Hojaldre", "Manzanas", "Azúcar", "Canela"],
-      alergenos: ["Gluten"]
+      case 1:
+
+        this.dishesService.getAllFirsts().subscribe(result => {
+
+          this.firsts = result;
+        });
+        this.restartDishes();
+        this.showFirsts = true;
+        break;
+      case 2:
+
+        this.dishesService.getAllSeconds().subscribe(result => {
+
+          this.seconds = result;
+        });
+        this.restartDishes();
+        this.showSeconds = true;
+        break; 
+      case 3:
+
+        this.dishesService.getAllDesserts().subscribe(result => {
+
+          this.desserts = result;
+        })
+        this.restartDishes();
+        this.showDesserts = true;
+      break;
+      case 4:
+
+      this.dishesService.getAllStarters().subscribe(result => {
+
+        this.starters = result;
+      });
+      this.restartDishes();
+      this.showStarters = true;
+      break;
     }
-  ];
-
-  selectedDish: any | null = null; // Inicialmente, no se ha seleccionado ningún plato
-  isInfoVisible = false;
-
-  toggleDishInfo(dish: any) {
-    if (this.selectedDish === dish) {
-      this.selectedDish = null;
-      this.isInfoVisible = false;
-    } else {
-      this.selectedDish = dish;
-      this.isInfoVisible = true;
-    }
-  } 
-
+  }
 }

@@ -1,34 +1,81 @@
-<div class="container-fluid order vh-100">
-    <div class="row">
-      <ng-container *ngFor="let dish of dishes; let i = index">
-        <div class="col-xxl-4 col-xl-4 col-lg-4 mb-4">
-          <div class="d-flex justify-content-start align-items-center">
-            <h2 class="m-0">{{ dish.nombre }}</h2>
-          </div>
-          <div class="d-flex justify-content-between align-items-center dishes">
-            <button class="h-100 w-100 d-flex justify-content-center align-items-center home_dish"
-              [style.backgroundImage]="'url(' + dish.image + ')'">
-              <h2 class="m-0 dish-name">{{ dish.nombre }}</h2>
-            </button>
-            <div class="d-flex justify-content-center align-items-center">
-              <!-- Botón para mostrar/ocultar información del plato seleccionado -->
-              <button class="button_finished" (click)="toggleDishInfo(dish)">
-                <img src="../../assets/listo.png" class="img-fluid finished">
-              </button>
-              <button class="button_finished">
-                <img src="../../assets/listo.png" class="img-fluid finished">
-              </button>
-              <button class="button_finished">
-                <img src="../../assets/listo.png" class="img-fluid finished">
-              </button>
+<div *ngIf="firsts" class="container-fluid vh-100">
+  <div class="row h-100">
+    <div class="col-2 d-none d-xxl-block user_sidebar">
+      <app-sidebar-user></app-sidebar-user>
+    </div>
+    <div class="col-12 p-0 d-xxl-none user_navbar h-xxl-navbar">
+      <app-user-navbar></app-user-navbar>
+    </div>
+    <div class="col-xxl-10 col-xl-12 user_content h-xxl-content">
+      <div class="row pt-5 pb-3 d-flex justify-content-center align-items-center recipes_menu_container">
+        <div class="col-12 btn-group" role="group" aria-label="Basic radio toggle button group">
+            <input type="radio" class="btn-check" name="btnradio" id="btnradio1" autocomplete="off" checked (click)="listDishes(1)">
+            <label class="btn btn-outline-primary d-flex justify-content-center align-items-center recipes_option" for="btnradio1">Primeros</label>
+          
+            <input type="radio" class="btn-check" name="btnradio" id="btnradio2" autocomplete="off" (click)="listDishes(2)">
+            <label class="btn btn-outline-primary d-flex justify-content-center align-items-center recipes_option" for="btnradio2">Segundos</label>
+          
+            <input type="radio" class="btn-check" name="btnradio" id="btnradio3" autocomplete="off" (click)="listDishes(3)">
+            <label class="btn btn-outline-primary d-flex justify-content-center align-items-center recipes_option" for="btnradio3">Postres</label>
+          
+            <input type="radio" class="btn-check" name="btnradio" id="btnradio4" autocomplete="off" (click)="listDishes(4)">
+            <label class="btn btn-outline-primary d-flex justify-content-center align-items-center recipes_option" for="btnradio4">Entrantes</label>
+        </div>
+      </div>
+      <div class="row recipes_dishes">
+        <div *ngIf="showFirsts" class="col-12 pb-5 d-flex justify-content-center align-items-center">
+          <div class="row h-100 w-100">
+            <div *ngFor="let dish of firsts" class="col-3 recipe" [style.background-image]="'url(' + dish.image + ')'">
+              <h2>{{dish.name}}</h2>
+              <h6>{{dish.description}}</h6>
+              <h4>Ingredientes</h4>
+              <h6>Ingrediente 1</h6>
+              <h6>Ingrediente 2</h6>
+              <h6>Ingrediente 3</h6>
+              <h6>Ingrediente 4</h6>
             </div>
           </div>
-          <!-- Utiliza el componente dish-info para mostrar la información -->
-          <app-dish-info [dish]="dish" *ngIf="isInfoVisible && selectedDish === dish"></app-dish-info>
         </div>
-        <!-- Separador para una sola fila al final -->
-        <div *ngIf="(i + 1) % 3 === 0" class="w-100"></div>
-      </ng-container>
+        <div *ngIf="showSeconds" class="col-12 pb-5 d-flex justify-content-center align-items-center">
+          <div class="row h-100 w-100">
+            <div *ngFor="let dish of seconds" class="col-3 recipe" [style.background-image]="'url(' + dish.image + ')'">
+              <h4>{{dish.name}}</h4>
+              <h6>{{dish.description}}</h6>
+              <h5>Ingredientes</h5>
+              <h6>Ingrediente 1</h6>
+              <h6>Ingrediente 2</h6>
+              <h6>Ingrediente 3</h6>
+              <h6>Ingrediente 4</h6>
+            </div>
+          </div>
+        </div>
+        <div *ngIf="showDesserts" class="col-12 pb-5 d-flex justify-content-center align-items-center">
+          <div class="row h-100 w-100">
+            <div *ngFor="let dish of desserts" class="col-3 recipe" [style.background-image]="'url(' + dish.image + ')'">
+              <h4>{{dish.name}}</h4>
+              <h6>{{dish.description}}</h6>
+              <h5>Ingredientes</h5>
+              <h6>Ingrediente 1</h6>
+              <h6>Ingrediente 2</h6>
+              <h6>Ingrediente 3</h6>
+              <h6>Ingrediente 4</h6>
+            </div>
+          </div>
+        </div>
+        <div *ngIf="showStarters" class="col-12 pb-5 d-flex justify-content-center align-items-center">
+          <div class="row h-100 w-100">
+            <div *ngFor="let dish of starters" class="col-3 recipe" [style.background-image]="'url(' + dish.image + ')'">
+              <h4>{{dish.name}}</h4>
+              <h6>{{dish.description}}</h6>
+              <h5>Ingredientes</h5>
+              <h6>Ingrediente 1</h6>
+              <h6>Ingrediente 2</h6>
+              <h6>Ingrediente 3</h6>
+              <h6>Ingrediente 4</h6>
+            </div>
+          </div>
+        </div>
+      </div>
     </div>
   </div>
-  
+</div>

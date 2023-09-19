@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, Output, Input } from '@angular/core';
 
 @Component({
   selector: 'app-board-user',
@@ -7,4 +7,7 @@ import { Component } from '@angular/core';
 })
 export class BoardUserComponent {
 
+  @Input() selected_dish: number = 0;
+  @Output() send_selected_dish: number = 0;
+  @Output() get_selected_dish: number = 0;
 }

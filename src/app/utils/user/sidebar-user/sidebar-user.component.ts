@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Input } from '@angular/core';
 import { TokenStorageServiceService } from 'src/app/services/shared/token-storage-service.service';
 
 @Component({
@@ -10,6 +10,7 @@ import { TokenStorageServiceService } from 'src/app/services/shared/token-storag
 export class SidebarUserComponent implements OnInit {
 
   user_role: any;
+  @Input() selected_dish: number = 0;
 
   order = [
     {
@@ -52,6 +53,11 @@ export class SidebarUserComponent implements OnInit {
   constructor(private tokeStorage: TokenStorageServiceService){
 
     this.user_role = this.tokeStorage.getRole();
+  }
+
+  addDish(dishId: number){
+
+    this.tokeStorage.setDish(dishId);
   }
 
   ngOnInit(): void {

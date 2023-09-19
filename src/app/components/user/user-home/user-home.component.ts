@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, EventEmitter, OnInit, Output } from '@angular/core';
 import { DishesService } from 'src/app/services/shared/dishes.service';
 
 @Component({
@@ -37,5 +37,4 @@ export class UserHomeComponent implements OnInit{
       this.section4 = result;
     })
   }
-
 }

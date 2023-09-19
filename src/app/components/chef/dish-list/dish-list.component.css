@@ -1,40 +1,37 @@
-.home_dish{
+.recipe{
 
-   
+    background-repeat: no-repeat;
+    background-position: center;
     background-size: cover;
-    background-repeat: none;
-    
-    border-radius: 0.3em;
-}
-.dishes{
-
-    height: 10vh;
 }
 
-.button_finished{
+.recipes_option{
 
-    border-radius: 0.3em;
-    border: none;
-    background: none;
+    border-color: #0052AB;
+    color: #0052AB;
 }
 
-.finished{
+.recipes_option:active{
 
-    max-height: 80px;
+    background-color: #0052AB;
+}
+/*
+.recipes_option:hover{
+
+    text-decoration: underline;
 }
 
-.order{
+.recipes_option:active{
 
-    overflow-y: scroll;
+    background-color: #0052AB;
+} */
+
+.recipes_menu_container{
+
+    height: 20vh;
 }
 
-.order::-webkit-scrollbar{
+.recipes_dishes{
 
-    width: 0;
-    display: none;
-}
-.dish-name{
-    font-size: 25px;
-    color: white;
-    text-shadow: rgb(0, 0, 0) 4px 0 10px;
+    height: 80vh;
 }
