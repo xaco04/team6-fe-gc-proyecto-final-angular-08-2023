@@ -306,5 +306,4 @@ export class OrdersComponent {
   sortDishesByCategory(dishes: any[]) {
     return dishes.sort((a, b) => a.category - b.category);
   }
-  
 }
