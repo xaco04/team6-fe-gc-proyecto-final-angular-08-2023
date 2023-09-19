@@ -74,4 +74,29 @@ export class DishListComponent implements OnInit{
       break;
     }
   }
+  borrarPlato(category: string, index: number): void {
+    let categoryArray: any[];
+  
+    switch (category) {
+      case 'firsts':
+        categoryArray = this.firsts;
+        break;
+      case 'seconds':
+        categoryArray = this.seconds;
+        break;
+      case 'desserts':
+        categoryArray = this.desserts;
+        break;
+      case 'starters':
+        categoryArray = this.starters;
+        break;
+      default:
+        return;
+    }
+  
+    if (index >= 0 && index < categoryArray.length) {
+      categoryArray.splice(index, 1);
+    }
+  }
+
 }
