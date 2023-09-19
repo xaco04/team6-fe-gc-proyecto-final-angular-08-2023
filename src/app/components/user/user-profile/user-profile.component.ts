@@ -3,16 +3,13 @@ import { UserRewardsService } from '../../../services/user/user-rewards.service'
 import { TokenStorageServiceService} from 'src/app/services/shared/token-storage-service.service';
 import { UserService } from 'src/app/services/shared/users-shared.service';
 import { UserAllergensService } from 'src/app/services/user/user-allergens.service';
-import { AfterViewInit } from '@angular/core';
-
-declare var bootstrap: any;
 
 @Component({
   selector: 'app-user-profile',
   templateUrl: './user-profile.component.html',
   styleUrls: ['./user-profile.component.css']
 })
-export class UserProfileComponent implements OnInit, AfterViewInit {
+export class UserProfileComponent implements OnInit {
 
   allergens: any;
   user_rewards: any;
@@ -31,37 +28,35 @@ export class UserProfileComponent implements OnInit, AfterViewInit {
   ngOnInit() {
     
     this.user_id = this.tokenStorage.getUser();
-    this.userService.getOneById(this.user_id).subscribe(result => {
-
-      this.user = result;
-      console.log(this.user);
-    });
-    this.userRewardsService.getAllRewardsByUser(this.user_id).subscribe(result =>{
-
-      this.user_rewards = result;
-      console.log(this.user_rewards);
-      this.setAvailableRewards();
-      this.calculateLevel();
-    })
-
-    this.setAllergies();
+    this.getThisUser(this.user_id);
+    this. getAllRewards(this.user_id);
+    this.setAllergies(this.user_id);
     
     this.user_id = this.tokenStorage.getUser();
 
   }
 
-  ngAfterViewInit() {
+  getThisUser(user_id: number){
 
-    var popoverTriggerList = [].slice.call(document.querySelectorAll('[data-bs-toggle="popover"]'))
-    var popoverList = popoverTriggerList.map(function (popoverTriggerEl) {
-      
-      return new bootstrap.Popover(popoverTriggerEl)
+    this.userService.getOneById(user_id).subscribe(result => {
+
+      this.user = result;
+    });
+  }
+
+  getAllRewards(user_id: number){
+
+    this.userRewardsService.getAllRewardsByUser(user_id).subscribe(result =>{
+
+      this.user_rewards = result;
+      this.setAvailableRewards();
+      this.calculateLevel();
     })
   }
 
-  setAllergies(){
+  setAllergies(user_id: number){
 
-    this.userAllergensService.getAllAllergensByUser(this.user_id).subscribe(result => {
+    this.userAllergensService.getAllAllergensByUser(user_id).subscribe(result => {
 
       this.allergens = result;
     });
@@ -88,7 +83,7 @@ export class UserProfileComponent implements OnInit, AfterViewInit {
 
         if(this.user_rewards[i].isAvailable == false){
 
-          this.userRewardsService.changeIsAvailable(this.user_rewards.id, true).subscribe(result => {
+          this.userRewardsService.changeIsAvailable(this.user_rewards[i].id, true).subscribe(result => {
           },
           error => {
 
@@ -119,6 +114,5 @@ export class UserProfileComponent implements OnInit, AfterViewInit {
     }while(this.user.points < max_levels);
 
     this.percent_level = (this.user.points/this.user_rewards[this.user_level].idRewards.cost)*100;
-    console.log(this.percent_level);
   }
 }
