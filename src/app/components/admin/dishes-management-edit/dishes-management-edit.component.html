@@ -1,0 +1,77 @@
+
+<div class="container-fluid">
+    <div class="row">
+        <div class="col-2 p-0">
+            <app-sidebar-admin></app-sidebar-admin>
+        </div>
+        <div class="col-10 content">
+            <div class="custom-cont">
+                <nav class="navbar navbar-dark bg-dark">
+                    <div class="title">
+                        <h1 class="h1" style="color: #c7d5e0;">Gestión de Platos</h1>
+                    </div>
+                </nav>
+                <div class="container mt-3 full-height d-flex align-items-center">
+                    <div class="cont-form col-xl-7 col-lg-11 col-md-11 col-xs-2">
+                        <h1>Modificar Plato</h1>
+                        <br /><br />
+                        <form (ngSubmit)="updateUser()">
+                            <div class="form-group row">
+                                <label class="col-form-label col-sm-2">Categoria</label>
+                                <div class="parametros col-sm-9">
+                                    <select class="form-select" aria-label="Default select example" [(ngModel)]="selectedCategoryId" [disabled]="!editRole" name="inputRole">
+                                        <option [ngValue]="1">Primeros</option>
+                                        <option [ngValue]="2">Segundos</option>
+                                        <option [ngValue]="3">Entrantes</option>
+                                        <option [ngValue]="4">Postres</option>
+                                        <option [ngValue]="5">Bebidas</option>
+                                    </select>                                    
+                                    <input class="check" type="checkbox" (change)="toggleEditRole()">
+                                </div>
+                            </div>
+
+
+                            <div class="form-group row">
+                              <label for="inputNombre" class="col-sm-2 col-form-label">Nombre</label>
+                              <div class="parametros col-sm-9">
+                                <input type="text" class="form-control" id="inputNombre" [(ngModel)]="dishes.name" [disabled]="!editNombre" name="inputNombre">
+                                <input class="check" type="checkbox" (change)="toggleEditNombre()">
+                              </div>
+                            </div>
+
+                            <div class="form-group row">
+                                <label for="inputEmail" class="col-sm-2 col-form-label">Precio</label>
+                                <div class="parametros col-sm-9">
+                                  <input type="number" class="form-control" id="inputEmail" [(ngModel)]="dishes.cost" [disabled]="!editEmail" name="inputEmail">
+                                  <input class="check" type="checkbox" (change)="toggleEditEmail()">
+                                </div>
+                              </div>
+
+                            <div class="form-group row">
+                                <label for="inputSurname" class="col-sm-2 col-form-label">Imagen</label>
+                                <div class="parametros col-sm-9 d-flex">
+                                    <div class="custom-file">
+                                        <input type="file" class="custom-file-input" id="fileInput" aria-describedby="fileInput">
+                                    </div>
+
+                                </div>
+                              </div>
+                              <div class="form-group row">
+                                <label for="inputPoints" class="col-sm-2 col-form-label">Descripción</label>
+                                <div class="parametros col-sm-9">
+                                  <textarea  rows="10" type="text" class="form-control" id="inputPoints" [(ngModel)]="dishes.description" [disabled]="!editPoints" name="inputPoints"></textarea>
+                                  <input class="check" type="checkbox" (change)="toggleEditPoints()">
+                                </div>
+                              </div>
+                            <div class="form-group row">
+                              <div class="col-sm-10">
+                                <button type="submit" class="btn btn-primary">Modificar Plato</button>
+                              </div>
+                            </div>
+                          </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

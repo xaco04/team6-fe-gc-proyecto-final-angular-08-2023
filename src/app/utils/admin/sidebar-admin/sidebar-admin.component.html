@@ -1,7 +1,7 @@
 
 <div class="custom-sidebar  d-flex flex-column align-items-center align-items-sm-start px-3 pt-2 text-white min-vh-100 bg-dark">
     <img class="jet-image" src="../../../../assets/jetxperience.png" alt="">
-    <a href="/" class="d-flex align-items-center pb-3 mb-md-0 me-md-auto text-white text-decoration-none">
+    <a class="d-flex align-items-center pb-3 mb-md-0 me-md-auto text-white text-decoration-none">
         <span class="fs-5 d-none d-sm-inline">Hola Admin</span>
     </a>
     <ul class="nav nav-pills flex-column mb-sm-auto mb-0 align-items-center align-items-sm-start" id="menu">
@@ -44,8 +44,8 @@
                     <i class="fs-4 bi-person-circle"></i> <span class="ms-1 d-none d-sm-inline">Perfil</span> </a>
             </li>
             <li>
-                <a href="#" class="nav-link px-0 align-middle">
-                    <i class="fs-4 bi-door-open"></i> <span class="ms-1 d-none d-sm-inline">Cerrar Sessión</span> </a>
+                <a href="#" class="nav-link px-0 align-middle"  (click)="logout()">
+                    <i class="fs-4 bi-door-open"></i> <span class="ms-1 d-none d-sm-inline">Cerrar sesión</span> </a>
             </li>
         </ul>
     </div>

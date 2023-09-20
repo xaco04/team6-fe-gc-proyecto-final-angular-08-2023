@@ -1,9 +1,9 @@
 <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css" rel="stylesheet">
-<div class="custom-cont d-flex align-items-center">
-    <div class="container">
+<div class="custom-cont d-flex align-items-center" style="max-height: 100vh; overflow-y: auto;">
+    <div class="container" >
         <div class="row">
             <div class="col-lg-4 col-sm-6">
-                <div class="card-box card-box-color1">
+                <div routerLink="/analysis-list-admin" class="card-box card-box-color1">
                     <div class="inner">
                         <h3> Información y análisis </h3>
                         <p> Datos que guían </p>
@@ -15,7 +15,7 @@
                 </div>
             </div>
             <div class="col-lg-8 col-sm-6">
-                <div class="card-box card-box-color2">
+                <div routerLink="/customerSupport-list-shared" class="card-box card-box-color2">
                     <div class="inner">
                         <h3> Atención al cliente</h3>
                         <p> Siempre aquí para ti </p>
@@ -27,7 +27,7 @@
                 </div>
             </div>
             <div class="col-lg-4 col-sm-6">
-                <div class="card-box card-box-color3">
+                <div routerLink="/usrManagement-list-admin" class="card-box card-box-color3">
                     <div class="inner">
                         <h3> Gestión de usuarios </h3>
                         <p> Controla con facilidad </p>
@@ -39,7 +39,7 @@
                 </div>
             </div>
             <div class="col-lg-4 col-sm-6">
-                <div class="card-box card-box-color4">
+                <div routerLink="/dish-management" class="card-box card-box-color4">
                     <div class="inner">
                         <h3> Gestión de Platos </h3>
                         <p> Sabores excepcionales </p>
@@ -47,12 +47,12 @@
                     <div class="icon">
                         <i class="bi bi-egg-fried"></i>
                     </div>
-                    <a href="/dish-management" class="card-box-footer">Ver Más <i class="fa fa-arrow-circle-right"></i></a>
+                    <a routerLink="/dish-management" class="card-box-footer">Ver Más <i class="fa fa-arrow-circle-right"></i></a>
                 </div>
             </div>
 
             <div class="col-lg-4 col-sm-6">
-                <div class="card-box card-box-color5">
+                <div routerLink="/rewarmanagement-madm-admin" class="card-box card-box-color5">
                     <div class="inner">
                         <h3> Gestión de Premios </h3>
                         <p> Premios que brillan </p>
