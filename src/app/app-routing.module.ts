@@ -30,6 +30,9 @@ import { DishesManagementSegundosComponent } from './components/admin/dishes-man
 import { DishesManagementEntrantesComponent } from './components/admin/dishes-management-entrantes/dishes-management-entrantes.component';
 import { DishesManagementPostresComponent } from './components/admin/dishes-management-postres/dishes-management-postres.component';
 import { DishesManagementBebidasComponent } from './components/admin/dishes-management-bebidas/dishes-management-bebidas.component';
+import { DishesManagementEditComponent } from './components/admin/dishes-management-edit/dishes-management-edit.component';
+import { DishesManagementCreateComponent } from './components/admin/dishes-management-create/dishes-management-create.component';
+
 
 //Guards
 import { authGuard } from './guards/auth.guard';
@@ -91,6 +94,16 @@ const routes: Routes = [
 
   },
   {
+    path: 'dish-management-edit/:id',
+    component: DishesManagementEditComponent,
+    canActivate: [ authGuard, adminGuard ]
+  },
+  {
+    path: 'dish-management-create',
+    component: DishesManagementCreateComponent,
+    canActivate: [ authGuard, adminGuard ]
+  },
+  {
     path: 'perfil',
     component: UserProfileComponent,
     canActivate: [ authGuard, userGuard ]
@@ -135,11 +148,11 @@ const routes: Routes = [
   }
   ,
   {
-    path: 'customerSupport-answer-shared',
+    path: 'customerSupport-answer-shared/:id',
     component: CustomerSupportAnswerSharedComponent,
-    canActivate: [ authGuard, adminGuard ]
-
-  },
+    canActivate: [authGuard, adminGuard]
+  }
+  ,
   {
     path: 'profile-admin',
     component: ProfileAdminComponent,

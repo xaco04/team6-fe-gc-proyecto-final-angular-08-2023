@@ -15,7 +15,7 @@
                     <div class="row">
                         <div class="col-md-3 border-right">
                             <div class="d-flex flex-column align-items-center text-center p-3 py-5">
-                                <img class="rounded-circle mt-5" width="150px" src="../../../../assets/avatar.png">
+                                <img class="rounded-circle mt-5" width="150px" [src]="userData.image">
                                 <span class="font-weight-bold">{{ userData.name }}</span>
                                 <span class="text-black-50">{{ userData.email }}</span>
                             </div>
@@ -24,11 +24,11 @@
 
                         <!-- ... Tu código existente ... -->
 
-                        <div class="col-md-9 border-right">
+                        <div class="col-md-7 border-right">
                             <div class="p-3 py-5">
                             <div class="d-flex justify-content-between align-items-center mb-3">
                                 <h4 class="text-right">Mi Perfil</h4>
-                                <button class="btn btn-link edit-button" (click)="toggleEditing()">Editar</button>
+                                <button class="btn btn-success" (click)="toggleEditing()">Editar</button>
                             </div>
                             <hr>
                         
@@ -47,23 +47,10 @@
                                         <td>Email</td>
                                         <td><input type="text" [(ngModel)]="userData.email" name="email" class="form-control"></td>
                                     </tr>
-                                    <tr>
-                                        <td>Imagen</td>
-                                        <td><input type="text" [(ngModel)]="userData.image" name="image" class="form-control"></td>
-                                    </tr>
+
                                     <tr>
                                         <td>Puntos</td>
                                         <td><input type="text" [(ngModel)]="userData.points" name="points" class="form-control"></td>
-                                    </tr>
-                                    <tr>
-                                        <td>Rol</td>
-                                        <td>
-                                            <select name="role" [(ngModel)]="selectedRoleId" class="form-control">
-                                                <option [ngValue]="1">Administrador</option>
-                                                <option [ngValue]="2">Usuario</option>
-                                                <option [ngValue]="3">Encargado</option>
-                                            </select>
-                                        </td>
                                     </tr>
                                     
                                 </tbody>
@@ -83,12 +70,11 @@
                                 <button class="btn btn-primary profile-button" type="submit">Guardar Perfil</button>
                                 </div>
                             </form>
-                        
                             <div *ngIf="!editing">
                                 <table class="table table-striped">
                                 <tbody>
                                     <tr>
-                                    <td>Nombre</td>
+                                    <td class="col-7">Nombre</td>
                                     <td>{{ userData.name }}</td>
                                     </tr>
                                     <tr>
@@ -100,10 +86,6 @@
                                     <td>{{ userData.email }}</td>
                                     </tr>
                                     <tr>
-                                    <td>Imagen</td>
-                                    <td>{{ userData.image }}</td>
-                                    </tr>
-                                    <tr>
                                     <td>Puntos</td>
                                     <td>{{ userData.points }}</td>
                                     </tr>
@@ -112,6 +94,8 @@
                                     <td *ngIf="userData?.role" >{{ userData?.role?.name }}</td>
                                     </tr>
                                 </tbody>
+                                </table>
+
                                 <br>
                                 <div class="d-flex justify-content-between align-items-center mb-3">
                                 <h4 class="text-right">Descripción</h4>
@@ -126,8 +110,6 @@
                                 <div class="mt-5 text-center">
                                 <button class="btn btn-primary profile-button" type="submit">Guardar Perfil</button>
                                 </div>
-
-                                </table>
                             </div>
                             </div>
                         </div>

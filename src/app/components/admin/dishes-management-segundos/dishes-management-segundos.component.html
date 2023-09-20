@@ -6,28 +6,27 @@
         </div>
         <div class="col-10 content ">
             <section class="jumbotron text-center">
-                <nav class="navbar navbar-dark bg-dark ">
+                <nav class="navbar navbar-dark bg-dark">
                     <div class="title">
                         <h1 class="h1" style="color: #c7d5e0;">Gestión de Platos</h1>
                     </div>
                 </nav>
-                <div class="container">
-                    
-                  <p>
-                    <a routerLink="/dish-management" class="btn btn-secondary my-2">Primeros</a>
-                    <a routerLink="/dish-management-segundos" class="btn btn-primary my-2">Segundos</a>
-                    <a routerLink="/dish-management-entrantes" class="btn btn-secondary my-2">Entrantes</a>
-                    <a routerLink="/dish-management-postres" class="btn btn-secondary my-2">Postres</a>
-                    <a routerLink="/dish-management-bebidas" class="btn btn-secondary my-2">Bebidas</a>
-
-                  </p>
+                <div class="container d-flex justify-content-between align-items-center">
+                    <p>
+                        <a routerLink="/dish-management" class="btn btn-secondary my-2">Primeros</a>
+                        <a routerLink="/dish-management-segundos" class="btn btn-primary my-2">Segundos</a>
+                        <a routerLink="/dish-management-entrantes" class="btn btn-secondary my-2">Entrantes</a>
+                        <a routerLink="/dish-management-postres" class="btn btn-secondary my-2">Postres</a>
+                        <a routerLink="/dish-management-bebidas" class="btn btn-secondary my-2">Bebidas</a>
+                    </p>
+                    <button routerLink="/dish-management-create" class="btn btn-success">Añadir</button>
                 </div>
-              </section>
+            </section>
             <main role="main" style="max-height: 80vh; overflow-y: auto;">
                 <div class="album py-5 bg-light ">
                 <div class="container ">
                     <div class="row d-flex">
-                    <div class="col-md-4 " *ngFor="let dish of firstDishes">
+                    <div class="col-md-4 " *ngFor="let dish of dishes">
                         <div class="card mb-4 box-shadow">
                         <img class="card-img-top" data-src="holder.js/100px225?theme=thumb&amp;bg=55595c&amp;fg=eceeef&amp;text=Thumbnail" alt="Thumbnail [100%x225]" style="height: 225px; width: 100%; display: block;" [src]="dish.image" data-holder-rendered="true">
                         <div class="card-body">
@@ -35,7 +34,8 @@
                             <p class="card-text">{{ dish.description}}</p>
                             <div class="d-flex justify-content-between align-items-center">
                             <div class="btn-group">
-                                <button type="button" class="btn btn-sm btn-outline-secondary">Edit</button>
+                                <button [routerLink] = "['/dish-management-edit', dish.id]" type="button" class="btn btn-sm btn-outline-secondary">Editar</button>
+                                <button (click)="deleteUser(dish.id)" type="button" class="btn btn-sm btn-outline-secondary">Borrar</button>    
                             </div>
                             </div>
                         </div>

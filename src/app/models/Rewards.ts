@@ -1,4 +1,4 @@
-import { Categories } from "./Categories";
+import { Category } from "./Category";
 
 export interface Rewards {
 
@@ -9,6 +9,6 @@ export interface Rewards {
     discount: number;
     image: string;
     active: boolean;
-    category: Categories;
+    category: Category;
 
 }
