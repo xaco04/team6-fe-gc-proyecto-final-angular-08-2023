@@ -10,7 +10,7 @@ export class DishesService {
 
   private dishes: any;
 
-  private api_dishes: string = 'http://localhost:8080/dishes';
+  private api_dishes: string = 'https://team6-fe-gc-proyecto-final-api-production.up.railway.app/dishes';
   private firsts: string = '?category=1';
   private seconds: string = '?category=2';
   private starters: string = '?category=3';

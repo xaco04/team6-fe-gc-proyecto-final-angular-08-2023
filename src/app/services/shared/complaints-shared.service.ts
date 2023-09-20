@@ -11,7 +11,7 @@ export class ComplaintsSharedService {
 
   constructor(private http: HttpClient) {}
 
-  endpoint: string = 'http://localhost:8080/';
+  endpoint: string = 'https://team6-fe-gc-proyecto-final-api-production.up.railway.app/';
 
   getAll(): Observable<Complaints[]> {
     

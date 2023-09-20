@@ -7,7 +7,7 @@ import { Injectable } from '@angular/core';
 export class UserRewardsService {
 
   // private api_user_rewards: string = 'https://team6-fe-gc-proyecto-final-api-production.up.railway.app/users_rewards/';
-  private api_user_rewards: string = 'http://localhost:8080/users_rewards/';
+  private api_user_rewards: string = 'https://team6-fe-gc-proyecto-final-api-production.up.railway.app/users_rewards/';
 
   constructor(private http: HttpClient) { }
 
