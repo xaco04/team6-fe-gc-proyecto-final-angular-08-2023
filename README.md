@@ -9,12 +9,10 @@ Permite a los empleados realizar pedidos personalizados, saludables y deliciosos
 
 |     Izquierda     |     Centro       |     Derecha      |
 |:-----------------:|:----------------:|:----------------:|
-| <img src="![image](https://github.com/xaco04/team6-fe-gc-proyecto-final-angular-08-2023/assets/93447803/cdfc913d-f1cf-457e-be9c-06e14cedf758)
-" width="100" height="100"> <img src="![image](https://github.com/xaco04/team6-fe-gc-proyecto-final-angular-08-2023/assets/93447803/cdfc913d-f1cf-457e-be9c-06e14cedf758)
-" width="100" height="100"> <img src="![image](https://github.com/xaco04/team6-fe-gc-proyecto-final-angular-08-2023/assets/93447803/cdfc913d-f1cf-457e-be9c-06e14cedf758)
-" width="100" height="100"> 
-| <img src="url2" width="100" height="100"> 
-| <img src="url3" width="100" height="100"> |
+| <img src="https://github.com/xaco04/team6-fe-gc-proyecto-final-angular-08-2023/assets/93447803/cdfc913d-f1cf-457e-be9c-06e14cedf758" width="100" height="100"> | <img src="https://github.com/xaco04/team6-fe-gc-proyecto-final-angular-08-2023/assets/93447803/cdfc913d-f1cf-457e-be9c-06e14cedf758" width="100" height="100"> | <img src="https://github.com/xaco04/team6-fe-gc-proyecto-final-angular-08-2023/assets/93447803/cdfc913d-f1cf-457e-be9c-06e14cedf758" width="100" height="100"> |
+|     Texto         |      Texto       |      Texto       |
+|    Alineado       |     Alineado     |     Alineado     |
+|    Izquierda      |      Centro      |     Derecha      |
 
 
 
