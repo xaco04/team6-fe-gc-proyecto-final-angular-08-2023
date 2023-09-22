@@ -1,32 +1,37 @@
 # JetXpeRience
 
-![jetxperience](https://github.com/xaco04/team6-fe-gc-proyecto-final-angular-08-2023/assets/24571167/b36bdb1a-3268-4534-b96a-f4e0a46fc2a8)
+![image](https://github.com/xaco04/team6-fe-gc-proyecto-final-angular-08-2023/assets/93447803/f2c977e2-0be8-4c4b-81b5-4740dddeb7ae)
+
 
 JetXperience es la solución que cambiará la forma en que los empleados piden comida para llevar. 
 Permite a los empleados realizar pedidos personalizados, saludables y deliciosos desde sus escritorios y recogerlos sin demora en el restaurante, ahorrando tiempo y manteniéndolos satisfechos y concentrados en su trabajo.
 
 ## Tecnologías y herramientas utilizadas
 
+### Frontend
+| Icono | Nombre |
+|:--------:|:--------:|
+| <img src="https://github.com/xaco04/team6-fe-gc-proyecto-final-angular-08-2023/assets/93447803/cdfc913d-f1cf-457e-be9c-06e14cedf758" width="50" height="50"> | HTML5 |
+| <img src="https://github.com/xaco04/team6-fe-gc-proyecto-final-angular-08-2023/assets/93447803/461d9235-b067-442e-a1ba-99fe3c352eaf" width="50" height="50"> | CSS3 |
+| <img src="https://github.com/xaco04/team6-fe-gc-proyecto-final-angular-08-2023/assets/93447803/69ab8048-296e-49d2-b449-658413d63d94" width="50" height="50"> | Typescript |
+| <img src="https://github.com/xaco04/team6-fe-gc-proyecto-final-angular-08-2023/assets/93447803/ae241788-60df-449a-9e79-706bf223f70e" width="50" height="50"> | Bootstrap |
+| <img src="https://github.com/xaco04/team6-fe-gc-proyecto-final-angular-08-2023/assets/93447803/3f52d9ad-1bd6-4125-a23c-01547939669c" width="50" height="50"> | Angular |
+          
+### Database
+| Icono | Nombre |
+|:--------:|:--------:|
+| <img src="https://github.com/xaco04/team6-fe-gc-proyecto-final-angular-08-2023/assets/93447803/606ca528-04c5-4421-8a75-6351d82ee321" width="50" height="50"> | MySQL |
+| <img src="https://github.com/xaco04/team6-fe-gc-proyecto-final-angular-08-2023/assets/93447803/615dff6c-9282-4c1b-a800-919669d2e57b" width="50" height="50"> | Railway | 
+          
 
-| Frontend |
-|:--------:|
-|   **icono**   |   **nombre**   |
-| <img src="https://github.com/xaco04/team6-fe-gc-proyecto-final-angular-08-2023/assets/93447803/cdfc913d-f1cf-457e-be9c-06e14cedf758" width="50" height="50"> | HTML5
-| <img src="https://github.com/xaco04/team6-fe-gc-proyecto-final-angular-08-2023/assets/93447803/461d9235-b067-442e-a1ba-99fe3c352eaf" width="50" height="50"> | CSS3
-| <img src="https://github.com/xaco04/team6-fe-gc-proyecto-final-angular-08-2023/assets/93447803/69ab8048-296e-49d2-b449-658413d63d94" width="50" height="50"> | Typescript
-| <img src="https://github.com/xaco04/team6-fe-gc-proyecto-final-angular-08-2023/assets/93447803/ae241788-60df-449a-9e79-706bf223f70e" width="50" height="50"> | Bootstrap
-| <img src="https://github.com/xaco04/team6-fe-gc-proyecto-final-angular-08-2023/assets/93447803/3f52d9ad-1bd6-4125-a23c-01547939669c" width="50" height="50"> | Angular
+### Backend    
+| Icono | Nombre |
+|:--------:|:--------:|
+| <img src="https://github.com/xaco04/team6-fe-gc-proyecto-final-angular-08-2023/assets/93447803/8f93841d-2b41-4e87-8b7c-9bb205fc386e" width="50" height="50">  | Spring |
+        
 
-| Database |
-|:--------:|
-|   **icono**   |   **nombre**   |
-| <img src="https://github.com/xaco04/team6-fe-gc-proyecto-final-angular-08-2023/assets/93447803/606ca528-04c5-4421-8a75-6351d82ee321" width="50" height="50"> | MySQL
-| <img src="https://github.com/xaco04/team6-fe-gc-proyecto-final-angular-08-2023/assets/93447803/615dff6c-9282-4c1b-a800-919669d2e57b" width="50" height="50"> | Railway
 
-| Backend |
-|:--------:|
-|   **icono**   |   **nombre**   |
-| <img src="https://github.com/xaco04/team6-fe-gc-proyecto-final-angular-08-2023/assets/93447803/3f52d9ad-1bd6-4125-a23c-01547939669c" width="50" height="50"> | Spring
+
 
 
 
