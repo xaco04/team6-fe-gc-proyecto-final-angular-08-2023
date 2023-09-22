@@ -85,6 +85,7 @@ Para acceder a diferentes interfaces en la aplicación, los usuarios deben inici
 
 ## Team
 
-* [Joan de la Huerta Planas] (https://github.com/joandelahuerta)
-* [Xavier Jordi Vico Martí] (https://github.com/xaco04)
-* [Roberto Carrera Santamaria] (https://github.com/RobertoCarrera)
+* [Joan de la Huerta Planas](https://github.com/joandelahuerta)
+* [Xavier Jordi Vico Martí](https://github.com/xaco04)
+* [Roberto Carrera Santamaria](https://github.com/RobertoCarrera)
+
