@@ -9,7 +9,7 @@ Permite a los empleados realizar pedidos personalizados, saludables y deliciosos
 
 |     Izquierda     |     Centro       |     Derecha      |
 |:-----------------:|:----------------:|:----------------:|
-| <img src="https://github.com/xaco04/team6-fe-gc-proyecto-final-angular-08-2023/assets/93447803/cdfc913d-f1cf-457e-be9c-06e14cedf758" width="100" height="100"> <img src="https://github.com/xaco04/team6-fe-gc-proyecto-final-angular-08-2023/assets/93447803/cdfc913d-f1cf-457e-be9c-06e14cedf758" width="100" height="100"> <img src="https://github.com/xaco04/team6-fe-gc-proyecto-final-angular-08-2023/assets/93447803/cdfc913d-f1cf-457e-be9c-06e14cedf758" width="100" height="100"> |
+| <img src="https://github.com/xaco04/team6-fe-gc-proyecto-final-angular-08-2023/assets/93447803/cdfc913d-f1cf-457e-be9c-06e14cedf758" width="100" height="100"> <img src="https://github.com/xaco04/team6-fe-gc-proyecto-final-angular-08-2023/assets/93447803/461d9235-b067-442e-a1ba-99fe3c352eaf" width="100" height="100"> <img src="https://github.com/xaco04/team6-fe-gc-proyecto-final-angular-08-2023/assets/93447803/cdfc913d-f1cf-457e-be9c-06e14cedf758" width="100" height="100"> |
 |     Texto         |      Texto       |      Texto       |
 |    Alineado       |     Alineado     |     Alineado     |
 |    Izquierda      |      Centro      |     Derecha      |
