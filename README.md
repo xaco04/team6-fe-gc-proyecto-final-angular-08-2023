@@ -33,7 +33,7 @@ Permite a los empleados realizar pedidos personalizados, saludables y deliciosos
 
 ## Nuestra aplicación
 
-Nuestra aplicación se encuentra alojada en la plataforma de servicios web de Amazon, conocida como Amplify. Si desea explorar nuestra aplicación, le invitamos a visitarla haciendo clic en el siguiente enlace.
+Nuestra aplicación se encuentra alojada en la plataforma de servicios web de Amazon, conocida como Amplify. Si desea explorar nuestra aplicación, le invitamos a visitarla haciendo clic [aqui](https://main.dvpioe88mwwf7.amplifyapp.com/).
 
 > Es fundamental utilizar uno de los tres usuarios que detallamos en la siguiente sección para iniciar sesión en nuestra aplicación. Recomendamos encarecidamente leer toda la información proporcionada antes de proceder.
 
