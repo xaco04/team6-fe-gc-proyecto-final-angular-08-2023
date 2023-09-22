@@ -9,12 +9,11 @@ Permite a los empleados realizar pedidos personalizados, saludables y deliciosos
 
 |     Frontend     |     Database       |     Backend      |
 |:-----------------:|:----------------:|:----------------:|
-| <img src="https://github.com/xaco04/team6-fe-gc-proyecto-final-angular-08-2023/assets/93447803/cdfc913d-f1cf-457e-be9c-06e14cedf758" width="50" height="50"> <img src="https://github.com/xaco04/team6-fe-gc-proyecto-final-angular-08-2023/assets/93447803/461d9235-b067-442e-a1ba-99fe3c352eaf" width="50" height="50"> <img src="https://github.com/xaco04/team6-fe-gc-proyecto-final-angular-08-2023/assets/93447803/69ab8048-296e-49d2-b449-658413d63d94" width="50" height="50">  <img src="https://github.com/xaco04/team6-fe-gc-proyecto-final-angular-08-2023/assets/93447803/ae241788-60df-449a-9e79-706bf223f70e" width="50" height="50"> <img src="https://github.com/xaco04/team6-fe-gc-proyecto-final-angular-08-2023/assets/93447803/3f52d9ad-1bd6-4125-a23c-01547939669c" width="50" height="50"> |
-|     Texto         |      Texto       |      Texto       |
-|    Alineado       |     Alineado     |     Alineado     |
-|    Izquierda      |      Centro      |     Derecha      |
+| <img src="https://github.com/xaco04/team6-fe-gc-proyecto-final-angular-08-2023/assets/93447803/cdfc913d-f1cf-457e-be9c-06e14cedf758" width="50" height="50"> <img src="https://github.com/xaco04/team6-fe-gc-proyecto-final-angular-08-2023/assets/93447803/461d9235-b067-442e-a1ba-99fe3c352eaf" width="50" height="50"> <img src="https://github.com/xaco04/team6-fe-gc-proyecto-final-angular-08-2023/assets/93447803/69ab8048-296e-49d2-b449-658413d63d94" width="50" height="50">  <img src="https://github.com/xaco04/team6-fe-gc-proyecto-final-angular-08-2023/assets/93447803/ae241788-60df-449a-9e79-706bf223f70e" width="50" height="50"> <img src="https://github.com/xaco04/team6-fe-gc-proyecto-final-angular-08-2023/assets/93447803/3f52d9ad-1bd6-4125-a23c-01547939669c" width="50" height="50"> | <img src="https://github.com/xaco04/team6-fe-gc-proyecto-final-angular-08-2023/assets/93447803/606ca528-04c5-4421-8a75-6351d82ee321" width="50" height="50"> <img src="https://github.com/xaco04/team6-fe-gc-proyecto-final-angular-08-2023/assets/93447803/615dff6c-9282-4c1b-a800-919669d2e57b" width="50" height="50"> | <img src="https://github.com/xaco04/team6-fe-gc-proyecto-final-angular-08-2023/assets/93447803/e0c37e6b-d8b1-429b-8bb5-c13a8c9f63ee" width="50" height="50">  |
 
 
+
+![image](https://github.com/xaco04/team6-fe-gc-proyecto-final-angular-08-2023/assets/93447803/e0c37e6b-d8b1-429b-8bb5-c13a8c9f63ee)
 
 
 
