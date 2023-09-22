@@ -1,0 +1,67 @@
+.title {
+  margin-left: 5vw;
+}
+.navbar {
+  border-top-right-radius: 10px ;
+  border-top-left-radius: 10px;
+}
+
+.custom-width{
+  width: 4vw;
+  margin-right: 0.5vw;
+}
+
+
+.custom-cont{
+  background-image: url(../../../../assets/background4.jpg);
+  border-radius: 10px;
+  height: 100%;
+
+}
+
+.custom-parameters {
+  display: flex;
+  align-items: center;
+}
+
+
+.custom-btn {
+  float: right; /* Hace que el botón flote a la derecha */
+}
+.card-text {
+  float: left; /* Hace que el párrafo flote a la izquierda */
+  width: calc(100% - 100px); /* Ajusta el ancho para dejar espacio al botón */
+}
+
+.card-table {
+    display: table;
+    width: 100%;
+  }
+  
+  .card-row {
+    display: table-row;
+  }
+
+  .card-header {
+    background-color: #0052AB;
+    color: white;
+  }
+  
+  .card {
+    display: table-cell;
+    border: 1px solid #ddd;
+    padding: 15px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  }
+  
+  @media (max-width: 768px) {
+    .card-table {
+      display: block;
+    }
+  
+    .card-row {
+      display: block;
+      margin-bottom: 20px;
+    }
+  }
+  

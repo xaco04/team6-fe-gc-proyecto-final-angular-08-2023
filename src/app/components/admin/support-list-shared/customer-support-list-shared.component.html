@@ -1,0 +1,66 @@
+<div class="container-fluid">
+  <div class="row">
+      <div class="col-2 p-0">
+          <app-sidebar-admin></app-sidebar-admin>
+      </div>
+      <div class="col-10 content">
+        <div class="custom-cont">
+          <nav class="navbar navbar-dark bg-dark ">
+            <div class="title">
+                <h1 class="h1" style="color: #c7d5e0;">Atención al cliente</h1>
+            </div>
+          </nav>
+
+          <div class="container mt-3">
+
+            <div class="table-top-filters d-flex flex-column flex-md-row justify-content-between mt-5">
+              <div class="table-top-leaft-filters d-flex flex-row align-items-center w-20 w-md-auto mb-3 mb-md-0 mx-auto mx-md-0">
+                  <div class="input-group w-100 mw-md-50">
+                      
+                      <div class="input-group rounded w-100">
+                          <input
+                              type="search"
+                              class="form-control rounded"
+                              placeholder="Search"
+                              aria-label="Search"
+                              aria-describedby="search-addon"
+                          />
+                          <span class="input-group-text border-0" id="search-addon">
+                          <i class="bi bi-search"></i>
+                      </span>
+                      </div>
+                  </div>
+              </div>
+          </div>
+          <br>
+            <div class="container-table">
+              <ul class="list-group list-group-light">
+                <li class="list-group-item d-flex justify-content-between align-items-center" *ngFor="let complaint of pagedComplaints">
+                  <div class="d-flex align-items-center">
+                    <img [src]="complaint.sender.image" alt="" style="width: 45px; height: 45px"
+                      class="rounded-circle" />
+                    <div class="ms-3">
+                      <p class="fw-bold mb-1">{{ complaint.sender.name }}</p>
+                      <p class="text-muted mb-0">{{ complaint.dateSend}} | {{ complaint.message }}</p>
+                    </div>
+                  </div>
+                  <a [routerLink]="['/customerSupport-answer-shared', complaint.id]" class="btn btn-primary"><i class="bi bi-chat-left-text-fill"></i> </a>
+                </li>
+              </ul>
+              <br>
+              <div class="table-bootom d-flex flex-column flex-md-row justify-content-between">
+                <div class="table-bootom-right d-flex flex-column flex-md-row order-md-2">
+                    <div class="btn-group" role="group" aria-label="Basic mixed styles example">
+                        <button (click)="previousPage()" type="button" class="btn btn-light" [disabled]="currentPage === 1">Anterior</button>
+                        <button type="button" class="btn btn-primary">{{ currentPage }}</button>
+                        <button (click)="nextPage()" type="button" class="btn btn-light" [disabled]="currentPage === totalPages">Siguiente</button>
+                    </div>
+                </div>
+                <div class="table-bootom-leaft mb-2 mb-md-0 order-md-1 mt-4 mt-md-2">Mostrando del {{ startIndex + 1 }} al {{ endIndex }} de un total de {{ totalRecords }} registros</div>
+              </div> 
+            </div>
+          </div>
+        </div>
+      </div>
+  </div>
+</div>

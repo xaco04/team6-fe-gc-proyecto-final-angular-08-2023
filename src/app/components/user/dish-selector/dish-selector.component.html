@@ -1,0 +1,48 @@
+<!-- <div *ngIf="isHome" class="container-fluid">
+    <div class="row h-100"> 
+        <div class="col-12 mb-2 menus" *ngFor="let dish of recommended_dishes; let i = index">
+            <app-user-dish *ngIf="recommended" [dish]="dish" [isHome] = "true" [index] = "i"></app-user-dish>
+        </div>
+        <div class="col-12 mb-2 menus" *ngFor="let dish of suggested_dishes; let i = index">
+            <app-user-dish *ngIf="suggested" [dish]="dish" [isHome] = "true" [index] = "i"></app-user-dish>
+        </div>
+        <div class="col-12 mb-2 menus" *ngFor="let dish of highlighted_dishes; let i = index">
+            <app-user-dish *ngIf="highlighted" [dish]="dish" [isHome] = "true" [index] = "i"></app-user-dish>
+        </div>
+    </div>
+</div> -->
+<div *ngIf="(!isHome) && (category == 1)" [ngClass]="{'dish_selection': !responsiveness, 'responsiveness': responsiveness}" class="container-fluid d-flex justify-content-around align-items-start">
+    <div class="row d-flex justify-content-center align-items-center">
+        <div class="col-12 p-0" *ngFor="let dish of firsts; let i = index">
+            <app-user-dish [dish]="dish" [isHome] = "false" [index] = "i" [ngClass]="{'dish': !responsiveness, 'responsiveness': responsiveness}"></app-user-dish>
+        </div>
+    </div>
+</div>
+<div *ngIf="(!isHome) && (category == 2)" [ngClass]="{'dish_selection': !responsiveness, 'responsiveness': responsiveness}" class="container-fluid d-flex justify-content-around align-items-start">
+    <div class="row d-flex justify-content-center align-items-center">
+        <div class="col-12 p-0" *ngFor="let dish of seconds; let i = index">
+            <app-user-dish [dish]="dish" [isHome] = "false" [index] = "i" [ngClass]="{'dish': !responsiveness, 'responsiveness': responsiveness}"></app-user-dish>
+        </div>
+    </div>
+</div>
+<div *ngIf="(!isHome) && (category == 3)" [ngClass]="{'dish_selection_small': !responsiveness, 'responsiveness': responsiveness}" class="container-fluid d-flex justify-content-around align-items-start">
+    <div class="row d-flex justify-content-center align-items-center">
+        <div class="col-12 p-0" *ngFor="let dish of starters; let i = index">
+            <app-user-dish [dish]="dish" [isHome] = "false" [index] = "i" [ngClass]="{'small_dish': !responsiveness, 'responsiveness': responsiveness}"></app-user-dish>
+        </div>
+    </div>
+</div>
+<div *ngIf="(!isHome) && (category == 4)" [ngClass]="{'dish_selection_small': !responsiveness, 'responsiveness': responsiveness}" class="container-fluid d-flex justify-content-around align-items-start">
+    <div class="row d-flex justify-content-center align-items-center">
+        <div class="col-12 p-0" *ngFor="let dish of desserts; let i = index">
+            <app-user-dish [dish]="dish" [isHome] = "false" [index] = "i" [ngClass]="{'small_dish': !responsiveness, 'responsiveness': responsiveness}"></app-user-dish>
+        </div>
+    </div>
+</div>
+<div *ngIf="(!isHome) && (category == 5)" [ngClass]="{'dish_selection_small': !responsiveness, 'responsiveness': responsiveness}" class="container-fluid d-flex justify-content-around align-items-start">
+    <div class="row d-flex justify-content-center align-items-center">
+        <div class="col-12 p-0" *ngFor="let dish of drinks; let i = index">
+            <app-user-dish [dish]="dish" [isHome] = "false" [index] = "i" [ngClass]="{'small_dish': !responsiveness, 'responsiveness': responsiveness}"></app-user-dish>
+        </div>
+    </div>
+</div>

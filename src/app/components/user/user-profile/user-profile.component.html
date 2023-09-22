@@ -1,0 +1,136 @@
+<div *ngIf="user && user_rewards && allergens && user_id" class="container-fluid">
+    <div class="row">
+        <div class="col-2 d-none d-xxl-block user_sidebar">
+            <app-sidebar-user></app-sidebar-user>
+        </div>
+        <div class="col-12 p-0 d-xxl-none user_navbar h-xxl-navbar">
+            <app-user-navbar></app-user-navbar>
+        </div>
+        <div class="col-xxl-10 col-xl-12 user_content h-xxl-content">
+            <div class="container-fluid user_profile">
+                <div class="row banner">
+                    <div class="col-5 banner_left d-flex justify-content-center align-items-end">
+                        <div class="mountains row d-flex justify-content-between align-items-end">
+                            <div class="col-4">
+                                <div class="left_mountain"></div>
+                            </div>
+                            <div class="col-5">
+                                <div class="center_mountain"></div>
+                            </div>
+                            <div class="col-3">
+                                <div class="right_mountain"></div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-2 banner_center h-75 align-self-end d-flex flex-column justify-content-around align-items-center">
+                        <div class="user_photo">
+                            <img class="img-fluid h-100" src="{{user.image}}" />
+                        </div>
+                        <div class="user_name">
+                            <h2 class="name"> {{user.name}} </h2>
+                            <!-- <h2 class="name"> Roberto </h2> -->
+                        </div>
+                        <div class="user_level d-flex justify-content-between align-items-center">
+                            <h3>Nivel {{user_level}}</h3>
+                        </div>
+                    </div>
+                    <div class="col-5 banner_right d-flex justify-content-center align-items-end">
+                        <div class="row h-100 d-flex justify-content-around align-items-end d-xxl-none">
+                            <div class="col-5">
+                                <div class="left_mountain"></div>
+                            </div>
+                            <div class="col-3">
+                                <div class="center_mountain"></div>
+                            </div>
+                            <div class="col-4">
+                                <div class="right_mountain"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col">
+                        <h2>Premios</h2>
+                        <hr>
+                    </div>
+                </div>
+                <div class="row main">
+                    <div class="prices col-xxl-9 col-lg-12 p-0 d-flex flex-column justify-content-between align-items-center">
+                        <div class="row h-100 w-100 d-flex justify-content-center align-items-center">
+                            <div *ngFor="let reward of user_rewards" class="col-xxl-4 p-0 pe-2 pb-2">
+                                <app-reward [users_rewards] = 'reward'></app-reward>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="points_level col-xxl-3 col-lg-6 col-md-6 order-md-1 order-lg-1 d-flex flex-column justify-content-around align-items-center">
+                        <div class="row w-100">
+                            <div class="col-10">
+                                <h2>Puntos</h2>
+                            </div>
+                        </div>
+                        <div class="row w-100">
+                            <div class="col-9">
+                                <h5 class="mb-3 fw-light">Totales</h5>
+                                <h5 class="fw-light">Próxima recompensa</h5>
+                            </div>
+                            <div class="col-3">
+                                <h5 class="text-end mb-3 fw-light">{{user.points}}</h5>
+                                <h5 class="text-end fw-light">{{user_points_next_level}}</h5>
+                            </div>
+                        </div>
+                        <div class="row w-100">
+                            <div class="col-12 bar_level w-100">
+                                <div class="row actual_exp h-100" [style.width]="percent_level+ '%'"></div>
+                            </div>
+                        </div>
+                        <div class="row w-100">
+                            <div class="col-10">
+                                <h2>Pedidos</h2>
+                            </div>
+                        </div>
+                        <div class="row w-100">
+                            <div class="col-12 d-flex justify-content-center align-items-center">
+                                <button class="btn btn-primary">Ver mis pedidos</button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="allergens col-xxl-8 col-lg-12 order-xxl-2 order-lg-3 col-md-12 col-sm-12 order-md-3 mt-3 mt-lg-3 mt-xxl-0 d-flex flex-column justify-content-center align-items-start">
+                        <div class="row w-100">
+                            <div class="title d-flex justify-content-between align-items-center">
+                                <h2>Alérgenos</h2>
+                                <span >
+                                    <i class="bi bi-info-circle-fill fs-4 d-inline-block" title="Aquí puedes modificar tus alergias"></i>
+                                </span>
+                            </div>
+                            <hr class="w-75">
+                        </div>
+                        <div class="row w-100 d-flex justify-content-center align-items-center">
+                            <div *ngFor="let allergen of allergens" class="col-lg-4 col-md-6 col-sm-6 p-2 d-flex justify-content-around align-items-center">
+                                <a (click)="activateAllergen(allergen.allergens.id, allergen.isAllergic); setAllergies" href="javascript:void(0)" class="ms-2 fs-4 fw-light allergen" [ngClass]="{'allergen_active': allergen.isAllergic}">
+                                    <img src="{{allergen.allergens.image}}" alt="" class="me-3">{{allergen.allergens.name}}
+                                </a>
+                            </div>
+                        </div>
+                    </div>      
+                    <div class="change_password col-xxl-3 offset-xxl-1 col-lg-5 order-xxl-3 offset-md-1 col-md-5 order-md-2 order-lg-2 mt-3 mt-md-0">
+                        <div class="row text-center">
+                            <h2>Contraseña</h2>
+                            <hr>
+                        </div>
+                        <div class="row h-100">
+                            <div class="col-12 d-flex justify-content-center align-items-end">
+                                <label class="text-center" for="">Contraseña antigua</label>
+                            </div>
+                            <div class="col-12 d-flex justify-content-center align-items-center">
+                                <input type="password">
+                            </div>
+                            <div class="col-12 d-flex justify-content-center align-items-start">
+                                <button class="btn btn-primary">Cambiar</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

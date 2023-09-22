@@ -1,0 +1,86 @@
+<div class="container-fluid">
+    <div class="row">
+        <div class="col-2 p-0">
+            <app-sidebar-admin></app-sidebar-admin>
+        </div>
+        <div class="col-10 content">
+            <div class="custom-cont">
+                <nav class="navbar navbar-dark bg-dark">
+                    <div class="title">
+                        <h1 class="h1" style="color: #c7d5e0;">Gestión de Usuarios</h1>
+                    </div>
+                </nav>
+                <div class="container mt-3 full-height d-flex align-items-center">
+                    <div class="cont-form col-xl-7 col-lg-11 col-md-11 col-xs-2">
+                        <h1>Añadir Nuevo Usuario</h1>
+                        <br><br>
+                        <form (ngSubmit)="crearUsuario()">
+                            <div class="form-group row">
+                                <label for="inputNombre" class="col-sm-2 col-form-label">Nombre</label>
+                                <div class="parametros col-sm-8">
+                                    <input type="text" class="form-control" id="inputNombre" name="name" [(ngModel)]="nuevoUsuario.name">
+                                </div>
+                            </div>
+                            <div class="form-group row">
+                                <label for="inputApellidos" class="col-sm-2 col-form-label">Apellidos</label>
+                                <div class="parametros col-sm-8">
+                                    <input type="text" class="form-control" id="inputApellidos" name="surname" [(ngModel)]="nuevoUsuario.surname">
+                                </div>
+                            </div>
+                            <div class="form-group row">
+                                <label for="inputEmail" class="col-sm-2 col-form-label">Email</label>
+                                <div class="parametros col-sm-8">
+                                    <input type="email" class="form-control" id="inputEmail" name="email" [(ngModel)]="nuevoUsuario.email">
+                                </div>
+                            </div>
+                            <div class="form-group row">
+                                <label for="inputPassword" class="col-sm-2 col-form-label">Contraseña</label>
+                                <div class="parametros col-sm-8">
+                                    <input type="password" class="form-control" id="inputPassword" name="password" [(ngModel)]="nuevoUsuario.password">
+                                </div>
+                            </div>
+                            <div class="form-group row">
+                                <label for="inputPuntos" class="col-sm-2 col-form-label">Puntos</label>
+                                <div class="parametros col-sm-8">
+                                    <input type="number" class="form-control" id="inputPuntos" name="points" [(ngModel)]="nuevoUsuario.points">
+                                </div>
+                            </div>
+
+                            <div class="form-group row">
+                                <label for="inputImage" class="col-sm-2 col-form-label">Avatar</label>
+                                <div class="parametros col-sm-8">
+                                    <input type="file" class="custom-file-input" id="fileInput" aria-describedby="fileInput">
+                                </div>
+                            </div>
+
+                            <div class="form-group row">
+                                <label for="activo" class="col-sm-2 col-form-label">Status</label>
+                                <div class="parametros col-sm-8">
+                                    <input type="checkbox" id="activo" name="activo" [(ngModel)]="nuevoUsuario.active">
+                                    <label for="activo">Activo</label>
+                                </div>
+                            </div>
+
+
+                            <div class="form-group row">
+                                <legend class="col-form-label col-sm-2">Rol</legend>
+                                <div class="parametros col-sm-3">
+                                    <select class="form-select" aria-label="Default select example" [(ngModel)]="nuevoUsuario.role.id" name="roleId" [ngModelOptions]="{ standalone: true }">
+                                        <option [ngValue]="1">Administrador</option>
+                                        <option [ngValue]="2">Usuario</option>
+                                        <option [ngValue]="3">Encargado</option>
+                                    </select>
+                                </div>
+                            </div>
+                            <div class="form-group row">
+                                <div class="col-sm-10">
+                                    <button type="submit" class="btn btn-primary">Añadir Nuevo Usuario</button>
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

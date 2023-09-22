@@ -1,0 +1,21 @@
+<div  *ngIf="users_rewards" class="container-fluid w-100 p-0 d-flex flex-column justify-content-around align-items-center reward_container" style="background-image: url('{{users_rewards.idRewards.image}}');"> 
+    <div class="row w-100">
+        <div class="col p-0 d-flex flex-column justify-content-around align-items-center reward">
+            <div class="row">
+                <div class="col-12 d-flex justify-content-center align-items-end">
+                    <h2 class="m-0 fs-2">{{users_rewards.idRewards.name}}</h2>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-12 d-flex justify-content-center align-items-center">
+                    <p class="m-0 p-1 d-flex justify-content-center align-items-center">{{users_rewards.idRewards.description}}</p>
+                </div>
+            </div>
+            <div class="row w-100">
+                <div class="col-12 d-flex justify-content-center align-items-center">
+                    <button class="w-75 fs-4 btn btn-primary reward_button" [ngClass]="{'disabled': !users_rewards.isAvailable}">Canjear</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

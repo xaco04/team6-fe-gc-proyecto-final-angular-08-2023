@@ -1,0 +1,47 @@
+.title {
+    margin-left: 5vw;
+}
+
+.custom-cont{
+    background-image: url(../../../../assets/background-admin.jpg);
+    border-radius: 10px;
+    height: 100%;
+
+}
+
+.navbar {
+    border-top-right-radius: 10px ;
+    border-top-left-radius: 10px;
+}
+
+.full-height {
+    height: 85vh;
+}
+
+
+.cont-form {
+    margin: 0 auto; /* Centra horizontalmente */
+}
+
+
+.form-group {
+    margin-bottom: 2vw;
+}
+.form-group div input{
+    margin-left: 2vw;
+}
+
+.form-group div select{
+    margin-left: 2vw;
+}
+.campos{
+    margin-left: 100px;
+
+}
+.parametros{
+    display: flex;
+    margin-left: 2vw
+}
+.check {
+    margin-left: none;
+}

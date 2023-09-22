@@ -1,0 +1,17 @@
+.hour_container{
+
+    height: 70vh;
+    width: 60vw;
+}
+
+.hour{
+
+    border: none;
+    border-radius: 0.2em;
+}
+
+.hour:hover{
+
+    background-color: #0052AB;
+    color: white;
+}

@@ -1,0 +1,140 @@
+.big_container_create_menu{
+
+    height: 90vh;
+}
+
+.small_container_create_menu{
+
+    height: 30vh;
+}
+
+.add_dish{
+
+    height: 80vh;
+
+    background-color: rgba(230, 230, 230, 0.233);
+    box-shadow: rgba(0, 0, 0, 0.1) 0px 1px 3px 0px, rgba(0, 0, 0, 0.06) 0px 1px 2px 0px;
+    
+    border-radius: 0.5em;
+    border: 1px solid rgb(218, 218, 218);
+
+    cursor: pointer;
+}
+
+.create_menu_category{
+
+    height: 8vh;
+}
+
+.small_category{
+
+    height: 40vh;
+}
+
+.adding_dish{
+
+    height: 80vh;
+
+    border-radius: 0.5em;
+
+    overflow-y: auto;
+}
+
+.adding_dish::-webkit-scrollbar{
+
+    width: 0;
+    display: 0;
+}
+
+.add_dish:hover .add_icon{
+
+    transform: scale(1.5);
+}
+
+.add_icon{
+
+    color: #0052AB;
+    transition: transform 0.5s;
+}
+
+@media (max-width: 1700px) {
+    .w-xxl-75 {
+
+        width: 75% !important;
+    }
+}
+
+@media (max-width: 1540px) {
+    .w-xxl-100 {
+
+        width: 100% !important;
+    }
+}
+
+@media (max-width: 1300px) {
+    .w-xl-100 {
+
+        width: 100% !important;
+    }
+}
+
+@media (max-width: 1400px) {
+    
+    .h-xxl-container {
+
+        height: 95% !important;
+    }
+
+    .h-xxl-small_dish{
+
+        height: 25vh;
+    }
+
+    .h-xxl-small_category{
+
+        height: 8vh;
+    }
+
+    .h-xxl-small_dishes{
+
+        height: 19vh;
+    }
+}
+
+.user_sidebar{
+
+    height: 100vh;
+}
+
+/* Preguntar qué les parece mejor, que haya marco, o no (mirar user-navbar, clase row_user_navbar */
+
+.user_navbar:hover{
+
+    overflow: hidden;
+}
+
+.user_content{
+
+    height: 100vh;
+
+    overflow-y: auto;
+}
+
+.user_content::-webkit-scrollbar{
+
+    width: 0;
+    display: none;
+}
+
+@media (max-width: 1400px) {
+
+    .h-xxl-navbar {
+
+        height: 20vh !important;
+    }
+
+    .h-xxl-content {
+
+        height: 80vh !important;
+    }
+}

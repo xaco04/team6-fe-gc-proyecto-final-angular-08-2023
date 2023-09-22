@@ -1,0 +1,125 @@
+
+<div class="container-fluid">
+    <div class="row">
+        <div class="col-2">
+            <app-sidebar-admin></app-sidebar-admin>
+        </div>
+        <div class="col-10 content">
+            <div class="custom-cont">
+                <nav class="navbar navbar-dark bg-dark ">
+                    <div class="title">
+                        <h1 class="h1" style="color: #c7d5e0;">Mi perfil</h1>
+                    </div>
+                </nav>
+                <div class="container rounded bg-white mt-5 mb-5">
+                    <div class="row">
+                        <div class="col-md-3 border-right">
+                            <div class="d-flex flex-column align-items-center text-center p-3 py-5">
+                                <img class="rounded-circle mt-5" width="150px" src="../../../../assets/avatar.png">
+                                <span class="font-weight-bold">{{ userData.name }}</span>
+                                <span class="text-black-50">{{ userData.email }}</span>
+                            </div>
+                        </div>
+                        
+
+                        <!-- ... Tu código existente ... -->
+
+                        <div class="col-md-9 border-right">
+                            <div class="p-3 py-5">
+                            <div class="d-flex justify-content-between align-items-center mb-3">
+                                <h4 class="text-right">Mi Perfil</h4>
+                                <button class="btn btn-link edit-button" (click)="toggleEditing()">Editar</button>
+                            </div>
+                            <hr>
+                        
+                            <form *ngIf="editing" (ngSubmit)="saveProfile()">
+                                <table class="table table-striped">
+                                <tbody>
+                                    <tr>
+                                        <td>Nombre</td>
+                                        <td><input type="text" [(ngModel)]="userData.name" name="name" class="form-control"></td>
+                                    </tr>
+                                    <tr>
+                                        <td>Apellidos</td>
+                                        <td><input type="text" [(ngModel)]="userData.surname" name="surname" class="form-control"></td>
+                                    </tr>
+                                    <tr>
+                                        <td>Email</td>
+                                        <td><input type="text" [(ngModel)]="userData.email" name="email" class="form-control"></td>
+                                    </tr>
+                                    <tr>
+                                        <td>Imagen</td>
+                                        <td><input type="text" [(ngModel)]="userData.image" name="image" class="form-control"></td>
+                                    </tr>
+                                    
+                                </tbody>
+                                </table>
+                                <br>
+                                <div class="d-flex justify-content-between align-items-center mb-3">
+                                <h4 class="text-right">Descripción</h4>
+                                </div>
+                                <hr>
+                                <div class="row mt-2">
+                                <div class="col-md-12">
+                                    <p>El chef tiene la capacidad de crear platos deliciosos y únicos para deleitar a los comensales. Además, puede diseñar menús especiales, supervisar la preparación de alimentos en la cocina, gestionar el inventario de ingredientes frescos, colaborar con otros chefs en la creación de recetas innovadoras y garantizar la calidad y presentación de cada plato servido en el restaurante. Todo esto se realiza con pasión y dedicación desde la cocina principal del restaurante.</p>
+                                </div>
+                                </div>
+                                <br>
+                                <div class="mt-5 text-center">
+                                <button class="btn btn-primary profile-button" type="submit">Guardar Perfil</button>
+                                </div>
+                            </form>
+                        
+                            <div *ngIf="!editing">
+                                <table class="table table-striped">
+                                <tbody>
+                                    <tr>
+                                    <td>Nombre</td>
+                                    <td>{{ userData.name }}</td>
+                                    </tr>
+                                    <tr>
+                                    <td>Apellidos</td>
+                                    <td>{{ userData.surname }}</td>
+                                    </tr>
+                                    <tr>
+                                    <td>Email</td>
+                                    <td>{{ userData.email }}</td>
+                                    </tr>
+                                    <tr>
+                                    <td>Imagen</td>
+                                    <td>{{ userData.image }}</td>
+                                    </tr>
+                                    <tr>
+                                    <td>Puntos</td>
+                                    <td>{{ userData.points }}</td>
+                                    </tr>
+                                    <tr>
+                                    <td>Rol</td>
+                                    <td *ngIf="userData?.role" >{{ userData?.role?.name }}</td>
+                                    </tr>
+                                </tbody>
+                                <br>
+                                <div class="d-flex justify-content-between align-items-center mb-3">
+                                <h4 class="text-right">Descripción</h4>
+                                </div>
+                                <hr>
+                                <div class="row mt-2">
+                                <div class="col-md-12">
+                                    <p>El chef tiene la capacidad de crear platos deliciosos y únicos para deleitar a los comensales. Además, puede diseñar menús especiales, supervisar la preparación de alimentos en la cocina, gestionar el inventario de ingredientes frescos, colaborar con otros chefs en la creación de recetas innovadoras y garantizar la calidad y presentación de cada plato servido en el restaurante. Todo esto se realiza con pasión y dedicación desde la cocina principal del restaurante.</p>
+                                </div>
+                                </div>
+                                <br>
+                                <div class="mt-5 text-center">
+                                <button class="btn btn-primary profile-button" type="submit">Guardar Perfil</button>
+                                </div>
+
+                                </table>
+                            </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

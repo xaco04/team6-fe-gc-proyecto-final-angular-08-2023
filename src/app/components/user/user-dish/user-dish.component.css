@@ -1,0 +1,61 @@
+.dish_menu, .dish{
+
+    height: 20vh;
+
+    background-size: cover;
+    background-position: center;
+
+    color: white;
+
+    border-radius: 0.3em;
+}
+
+.small_dish{
+
+    height: 20vh;
+
+    background-size: cover;
+    background-position: center;
+
+    color: white;
+
+    border-radius: 0.3em;
+    
+    scroll-snap-align: center;
+}
+
+.dish_gradient{
+
+    background-image: linear-gradient(to top, rgba(0, 0, 0, 0.5) 20%, rgba(197, 197, 197, 0.2) 90%);
+    border-radius: 0.3em;
+}
+
+.dish_name i{
+
+    color: black;
+}
+
+.dish_name i, .dish_add{
+
+    cursor: pointer;
+}
+
+.dish_add:hover i{
+
+    color: black;
+}
+
+.responsiveness{
+
+    height: 25vh;
+    background-size: cover;
+    background-position: center;
+}
+
+@media (max-width: 1400px){
+
+    .dish_name{
+
+        font-size: 24px;
+    }
+}

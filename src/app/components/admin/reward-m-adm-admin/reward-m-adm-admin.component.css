@@ -1,0 +1,103 @@
+
+.title {
+    margin-left: 5vw;
+}
+
+.navbar {
+    border-top-right-radius: 10px ;
+    border-top-left-radius: 10px;
+}
+
+
+.custom-cont{
+    background-image: url(../../../../assets/background4.jpg);
+
+    border-radius: 10px;
+    height: 100%;
+}
+
+
+h2, h5{
+
+    margin: 0;
+}
+
+.user_profile{
+    overflow-y: auto;
+    padding: 13px;
+}
+
+.user_profile::-webkit-scrollbar {
+    
+    width: 0;
+    background: transparent;
+}
+
+.banner{
+
+    height: 20vh;
+    background-color: rgba(252, 252, 252, 0);
+}
+
+.banner_center{
+
+    z-index: 1;
+}
+
+.left_mountain, .center_mountain, .right_mountain{
+
+    height: 5vh;
+}
+
+.left_mountain{
+
+
+    border-top: 2em solid transparent;
+    border-right: 11em solid transparent;
+    border-left: 8em solid transparent;
+    border-bottom: 7em solid #0052AB;
+}
+.center_mountain{
+
+    border-top: 1em solid transparent;
+    border-right: 9em solid transparent;
+    border-left: 10em solid transparent;
+    border-bottom: 5em solid blue;
+}
+.right_mountain{
+
+
+    border-top: 1em solid transparent;
+    border-right: 7em solid transparent;
+    border-left: 8em solid transparent;
+    border-bottom: 3.5em solid #0052AB;
+}
+
+.user_photo{
+
+    max-height: 8vh;
+    border-radius: 50%;
+}
+
+
+
+.price_button{
+
+    background-color: #0052AB;
+}
+
+
+
+
+
+.points_level {
+    background-color: white ;
+    border: 0.2em solid #0052AB;
+    border-radius: 0.5em;
+}
+
+
+.h-custom {
+    height: 90vh;
+
+}
