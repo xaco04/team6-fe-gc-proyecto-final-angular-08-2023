@@ -7,14 +7,15 @@ Permite a los empleados realizar pedidos personalizados, saludables y deliciosos
 
 ## Tecnologías y herramientas utilizadas
 
-| Frontend      | Database     | Backend      |
-|:-------------:|:------------:|:------------:|
-| ![image](https://github.com/xaco04/team6-fe-gc-proyecto-final-angular-08-2023/assets/93447803/a8359e7e-a147-4f44-84d8-24237f505fa0)
-         | Texto        | Texto        |
-| ![image](https://github.com/xaco04/team6-fe-gc-proyecto-final-angular-08-2023/assets/93447803/a8a55a36-e514-44c2-bc7c-369cdeef5d13)
-      | Alineado     | Alineado     |
-| ![image](https://github.com/xaco04/team6-fe-gc-proyecto-final-angular-08-2023/assets/93447803/8a562d01-852f-4f53-a468-f84d015e7b0c)
-     | Centro       | Derecha      |
+|     Izquierda     |     Centro       |     Derecha      |
+|:-----------------:|:----------------:|:----------------:|
+| <img src="![image](https://github.com/xaco04/team6-fe-gc-proyecto-final-angular-08-2023/assets/93447803/cdfc913d-f1cf-457e-be9c-06e14cedf758)
+" width="100" height="100"> <img src="![image](https://github.com/xaco04/team6-fe-gc-proyecto-final-angular-08-2023/assets/93447803/cdfc913d-f1cf-457e-be9c-06e14cedf758)
+" width="100" height="100"> <img src="![image](https://github.com/xaco04/team6-fe-gc-proyecto-final-angular-08-2023/assets/93447803/cdfc913d-f1cf-457e-be9c-06e14cedf758)
+" width="100" height="100"> 
+| <img src="url2" width="100" height="100"> 
+| <img src="url3" width="100" height="100"> |
+
 
 
 
