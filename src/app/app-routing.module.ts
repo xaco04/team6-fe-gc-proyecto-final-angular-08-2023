@@ -145,14 +145,12 @@ const routes: Routes = [
     component: RewardMUsrAdminComponent,
     canActivate: [ authGuard, adminGuard ]
 
-  }
-  ,
+  },
   {
     path: 'customerSupport-answer-shared/:id',
     component: CustomerSupportAnswerSharedComponent,
     canActivate: [authGuard, adminGuard]
-  }
-  ,
+  },
   {
     path: 'profile-admin',
     component: ProfileAdminComponent,

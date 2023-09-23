@@ -45,6 +45,12 @@
     color: black;
 }
 
+.info_add_button{
+
+    background-color: #0052AB;
+    border: none;
+}
+
 .responsiveness{
 
     height: 25vh;
