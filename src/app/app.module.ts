@@ -43,7 +43,6 @@ import { RewardMAdmAdminComponent } from './components/admin/reward-m-adm-admin/
 import { EditPriceSharedComponent } from './components/shared/edit-price-shared/edit-price-shared.component';
 import { SidebarUserComponent } from './utils/user/sidebar-user/sidebar-user.component';
 import { UserDishComponent } from './components/user/user-dish/user-dish.component';
-import { UserDishInfoComponent } from './components/user/user-dish-info/user-dish-info.component';
 import { DishSelectorComponent } from './components/user/dish-selector/dish-selector.component';
 import { UserCreateMenuComponent } from './components/user/user-create-menu/user-create-menu.component';
 import { DishListComponent } from './components/chef/dish-list/dish-list.component';
@@ -96,7 +95,6 @@ import { DishesManagementCreateComponent } from './components/admin/dishes-manag
     UserDishComponent,
     DishSelectorComponent,
     UserCreateMenuComponent,
-    UserDishInfoComponent,
     UserNavbarComponent,
     DishInfoComponent,
     HourSelectionComponent,

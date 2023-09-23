@@ -93,6 +93,12 @@ h2, h5{
     border-bottom-left-radius: 0.3em;
 }
 
+.gc_button{
+
+    background-color: #0052AB;
+    border: none;
+}
+
 .allergen{
 
     width: 30vh;
